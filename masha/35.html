@@ -1,0 +1,157 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link href="css/style-animate.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+<style>
+html
+{
+  background-image:url(images/34/01.jpg);
+  background-size:cover;
+}
+
+#submit_btn
+{
+    width: 35%;
+    margin: auto;
+    height: 25%;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    background-color: transparent;
+    border-style: hidden;
+}
+.btn-class
+{
+   display:inline-block;
+   width: 45%;
+   height: 20%;
+   border-style: hidden;
+   background-color: transparent;
+}
+</style>
+</head>
+<body onload="reload(0.355,0.25,0.28,0.15)">
+<div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/35/02.png" width="100%" alt=""/></div>
+<div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/logo2.png" width="100%" alt=""/></div>
+<!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/35/04.png" width="100%" alt=""/></div-->
+<!--div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/35/05.png" width="100%" alt=""/></div-->
+
+<!-- <div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/35/05.png" width="100%" alt="" style="display:none" id="btn1_img"/></div>
+<div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/35/06.png" width="100%" alt="" style="display:none" id="btn2_img"/></div>
+<div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/35/07.png" width="100%" alt="" style="display:none" id="btn3_img"/></div>
+<div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/35/08.png" width="100%" alt="" style="display:none" id="btn4_img"/></div> -->
+<!-- <div class="question1" id ="question">
+    <button id = "btn1"  class="btn-class" ></button>
+    <button id = "btn2"  class="btn-class"></button>
+    <button id = "btn3"  class="btn-class"></button>
+    <button id = "btn4"  class="btn-class" ></button>
+    <button id = "submit_btn" onclick="submit_mans()"></button>
+</div>
+
+
+<div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(36)" id="right_text">确认进入下一页</button></span>
+</div>
+
+<div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(33)" id="error_text">确认并返回第33页</button></span>
+</div> -->
+
+<div class="p-n-r">
+  <div class="p-r">
+    <a href="#">
+      <div class="out fr">退出</div>
+    </a>
+    <div class="page fr">35/57</div> 
+    <div class="next fr disabled"  disabled data="36.html"></div>
+    <a href="34.html">
+      <div class="prev fr"></div>
+    </a> 
+  </div>
+</div>
+<script type="text/javascript">
+  
+  var select_count = 0;
+  var front_ans = -1
+  var second_and = -1
+  var status1 = new Array();
+  var ans_array = new Array()
+  for(i=1;i<=4;i ++)
+  {
+    key = "btn"+i;
+    status1[key]=1
+    ans_array[key] = 1;
+  }
+
+  ans_array["btn2"] = 0;
+
+  ans_array["btn4"] = 0;
+
+  $(".question1 button").on("click",function(){
+    id=this.id;
+    if(id == "submit_btn")
+    {
+      return;
+    }
+    if(status1[id] == 0)
+    {
+      document.getElementById(id+"_img").style.display='none';
+      status1[id] = 1;
+    }
+    else
+    {
+      document.getElementById(id+"_img").style.display='block';
+      status1[id] = 0;
+    }
+  })
+
+  function submit_mans()
+  {
+      flag = 1;
+      for (i =1;i <=4; i ++)
+      {
+          key = "btn"+i;
+          if( status1[key]!=  ans_array[key])
+          {
+            flag = 0;
+          }
+      }
+     
+      if(flag)
+      {
+        document.getElementById('right_div').style.display='block';
+        document.getElementById('btn1').style.visibility='hidden';
+        document.getElementById('btn2').style.visibility='hidden';
+        document.getElementById('btn3').style.visibility='hidden';
+        document.getElementById('btn4').style.visibility='hidden';
+         return ;
+      }
+      else
+      {
+         document.getElementById('error_div').style.display='block';
+        document.getElementById('btn1').style.visibility='hidden';
+        document.getElementById('btn2').style.visibility='hidden';
+        document.getElementById('btn3').style.visibility='hidden';
+        document.getElementById('btn4').style.visibility='hidden';
+         return ;
+      }
+     
+  }
+</script>
+</body>
+</html>

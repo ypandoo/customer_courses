@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link href="css/style-animate.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+<style>
+html
+{
+  background-image:url(images/54/01.png);
+  background-size:cover;
+}
+#submit_btn
+{
+    width: 20%;
+    margin: auto;
+    height: 25%;
+    position: absolute;
+    top: 70%;
+    left: 27%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    background-color: transparent;
+    border-style: hidden;
+}
+
+.btn-class
+{
+   display:inline-block;
+   width: 45%;
+   height: 20%;
+   border-style: hidden;
+   background-color: transparent;
+}
+</style>
+</head>
+<body onload="reload(0.364,0.21,0.43,0.1)">
+<div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/54/02.png" width="100%" alt=""/></div>
+<div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/54/03.png" width="100%" alt=""/></div>
+<!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/54/04.png" width="100%" alt=""/></div-->
+<!--div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/54/05.png" width="100%" alt=""/></div-->
+<div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/09/05.png" width="100%" alt="" style="display:none" id="ans_img"/></div>
+<div class="question1" id ="question">
+    <button id = "btnA" onclick="select_ans(1,54)" class="btn-class"></button>
+    <button id = "btnB" onclick="select_ans(2,54)" class="btn-class"></button>
+    <button id = "btnC" onclick="select_ans(3,54)" class="btn-class"></button>
+    <button id = "btnD" onclick="select_ans(4,54)" class="btn-class"></button>
+    <button id = "submit_btn" onclick="submit_ans(1)"></button>
+</div>
+
+<div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(55)" id="right_text">确认进入下一页</button></span>
+</div>
+
+<div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(48)" id="error_text">确认并返回第48页</button></span>
+</div>
+<div class="p-n-r">
+  <div class="p-r">
+    <a href="#">
+      <div class="out fr">退出</div>
+    </a>
+    <div class="page fr">54/57</div> 
+    <div class="next fr disabled"  disabled data="False"></div>
+    <a href="53.html">
+      <div class="prev fr"></div>
+    </a> 
+  </div>
+</div>
+<script type="text/javascript">
+  $(function(){
+    setTimeout(function(){
+      $(".title1").addClass("bounceInleft");
+      $(".title1").removeClass("hide");
+    },1000); 
+  })
+</script>
+</body>
+</html>
