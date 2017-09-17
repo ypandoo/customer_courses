@@ -112,21 +112,23 @@ html
   })
 
     var answer = 0;
+    var checkArr = {1:0, 2:0, 3:0, 4:0};
       function check(num) {
-        answer = 0;
-        $('#item1').attr('src', 'images/radio.png');
-        $('#item2').attr('src', 'images/radio.png');
-        $('#item3').attr('src', 'images/radio.png');
-        $('#item4').attr('src', 'images/radio.png');
-
-        $('#item' + num).attr('src', 'images/radio-select.png');
-
-        if (num == 2) {
-          answer = 1;
+        if(checkArr[num] == 0)
+        {
+          $('#item' + num).attr('src', 'images/radio-select.png');
+          checkArr[num] = 1;
+        }else{
+          $('#item' + num).attr('src', 'images/radio.png');
+          checkArr[num] = 0;
         }
       }
 
       function page_check() {
+        if(checkArr[1] == 0 && checkArr[2] == 1 && checkArr[3] == 0 && checkArr[4] == 1)
+        {
+          answer = 1;
+        }
         if (answer) {
           event.stopPropagation();
           $('#right_div').fadeIn();

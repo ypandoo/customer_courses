@@ -22,9 +22,67 @@ html
 </head>
 <body onload="reload()">
 <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div>
-<!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/19/03.png" width="100%" alt=""/></div>
-<div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/19/04.png" width="100%" alt=""/></div>
+<div class="animated fadeInDown" style="width:100%; top: 0%; left: 0"><img  id="audioID" src="images/19/02.png" width="100%" alt=""/></div> 
+<!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/19/04.png" width="100%" alt=""/></div>
 <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/19/05.png" width="100%" alt=""/></div> -->
+
+<!-- question layer -->
+<div style="position:relative; width:830px; height:330px; margin: 0 auto; z-index:998; border:1px solid black">
+  <!-- 4 questions -->  
+  <div style="position:absolute; width:200px; height:120px; top:0; left:0;
+              background:url(images/19/q1.png);
+              background-size:100% 100%" onclick="clickQuestion(0)"></div>
+  <div style="position:absolute; width:200px; height:120px; top:0; left:210;
+              margin-right:5px;background:url(images/19/q2.png);
+              background-size:100% 100%" onclick="clickQuestion(1)"></div>
+  <div style="position:absolute; width:200px; height:120px; top:0; left:420;
+              margin-right:5px;background:url(images/19/q3.png);
+              background-size:100% 100%" onclick="clickQuestion(2)"></div>
+  <div style="position:absolute; width:200px; height:120px; top:0; left:630;
+              margin-right:5px;background:url(images/19/q4.png);
+              background-size:100% 100%" onclick="clickQuestion(3)"></div>
+
+
+  <!-- 4 questions -->
+  <div style="position:absolute; width:200px; height:30px; top:300; left:0;
+              background:url(images/19/a1.png);
+              background-size:100% 100%" onclick="clickAnswer(0)"></div>
+  <div style="position:absolute; width:200px; height:30px; top:300; left:210;
+              margin-right:5px;background:url(images/19/a2.png);
+              background-size:100% 100%" onclick="clickAnswer(1)"></div>
+  <div style="position:absolute; width:200px; height:30px; top:300; left:420;
+              margin-right:5px;background:url(images/19/a3.png);
+              background-size:100% 100%" onclick="clickAnswer(2)"></div>
+  <div style="position:absolute; width:200px; height:30px; top:300; left:630;
+              margin-right:5px;background:url(images/19/a4.png);
+              background-size:100% 100%" onclick="clickAnswer(3)"></div>
+
+
+  <!-- lines -->
+  <div style="position:absolute; height:30px; top:130; left:100;
+            background:url(images/19/line00.png);
+            background-size:100% 100%; height:160px; width:3px; display:none" id="line00"></div>
+
+
+            
+  <div style="position:absolute; height:30px; top:130; left:310;
+            background:url(images/19/line00.png);
+            background-size:100% 100%; height:160px; width:3px;display:none" id="line11"></div>
+
+            
+  <div style="position:absolute; height:30px; top:130; left:510;
+            background:url(images/19/line00.png);
+            background-size:100% 100%; height:160px; width:3px;display:none" id="line22"></div>
+
+  <div style="position:absolute; height:30px; top:130; left:710;
+            background:url(images/19/line00.png);
+            background-size:100% 100%; height:160px; width:3px;display:none" id="line33"></div>
+</div>
+<!-- end question layer-->
+
+
+
+
 <div class="p-n-r">
   <div class="p-r">
     <a href="#">
@@ -44,6 +102,34 @@ html
       $(".title1").removeClass("hide");
     },1000); 
   })
+
+  qArray=[0,0,0,0];
+  aArray=['','','',''];
+  var currentQ = -1;
+  var answerNum = 0;
+
+  function clickQuestion(index){
+    currentQ = index;
+  }
+
+  function clickAnswer(index) {
+      if(currentQ != -1 && currentQ <= 3 && !qArray[currentQ])
+      {
+        qArray[currentQ] = 1;
+        var currentLine =  currentQ + "" + index;
+        aArray[answerNum] = currentLine;
+        answerNum++;
+        currentQ = -1;
+        $('#line'+ currentLine).fadeIn();
+      }
+
+      if(answerNum >= 4)
+      {
+        alert('finish');
+      }
+  }
+  
+
 </script>
 </body>
 </html>
