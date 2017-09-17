@@ -15,7 +15,7 @@
 <style>
 html
 {
-  background-image:url(images/39/01.png);
+  background-image:url(images/bg.jpg);
   background-size:cover;
 }
 
@@ -46,34 +46,57 @@ html
 </style>
 </head>
 <body onload="reload(0.36,0.26,0.25,0.1)">
-<div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/39/02.png" width="100%" alt=""/></div>
-<div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/39/03.png" width="100%" alt=""/></div>
+<div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div>
+<!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/39/03.png" width="100%" alt=""/></div> -->
 <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/39/04.png" width="100%" alt=""/></div-->
 <!--div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/39/05.png" width="100%" alt=""/></div-->
-<div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/09/05.png" width="100%" alt="" style="display:none" id="ans_img"/></div>
-<div class="question1" id ="question">
-    <button id = "btnA" onclick="select_ans(1,39)" class="btn-class"></button>
-    <button id = "btnB" onclick="select_ans(2,39)" class="btn-class" ></button>
-    <button id = "btnC" onclick="select_ans(3,39)" class="btn-class"></button>
-    <button id = "btnD" onclick="select_ans(4,39)" class="btn-class"></button>
-    <button id = "submit_btn" onclick="submit_ans(3)"></button>
+<!-- <div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/09/05.png" width="100%" alt="" style="display:none" id="ans_img"/></div> -->
+<!---  Question -->
+<div class="animated fadeInDown" style="width:100%; z-index:2">
+  <img id="audioID" src="images/question.png" width="100%" alt="" />
 </div>
+<div style="width:50%; margin: 0 auto; text-align:center; overflow:hidden; z-index:999">
+  <div style="color:#002f73; font-size:24px; text-align:left; margin:40px auto">
+     2018款Ghibli目前可提供哪两个功率的发动机（ ）。
+  </div>
+  <div style=" margin:0 auto;">
+    <div class="item" onclick="check(1)">
+      <img src="images/radio.png" id="item1" class="radio-img">
+      <p class="radio-text">330匹马力</p>
+    </div>
 
+    <div class="item" onclick="check(2)">
+      <img src="images/radio.png" id="item2" class="radio-img">
+      <p class="radio-text">350匹马力</p>
+    </div>
+
+    <div class="item" onclick="check(3)">
+      <img src="images/radio.png" id="item3" class="radio-img">
+      <p class="radio-text">410匹马力</p>
+    </div>
+
+    <div class="item" onclick="check(4)">
+      <img src="images/radio.png" id="item4" class="radio-img">
+      <p class="radio-text">430匹马力</p>
+    </div>
+  </div>
+</div>
+<div class="confirm" onclick="page_check()">确定</div>
 <div id="right_div" class="mydiv" style="display:none;">
-    <span>恭喜你答对了!</span>
-    <span><button  onclick="gotoBack(40)" id="right_text">确认进入下一页</button></span>
+  <span>恭喜你答对了!</span>
+  <span><button  onclick="gotoBack(40)" id="right_text">确认进入下一页</button></span>
 </div>
 
 <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回重新学习!</span>
-    <span><button  onclick="gotoBack(36)" id="error_text">确认并返回第36页</button></span>
+  <span>错了，请返回重新学习!</span>
+  <span><button  onclick="gotoBack(34)" id="error_text">确认并返回第34页</button></span>
 </div>
 <div class="p-n-r">
   <div class="p-r">
     <a href="#">
       <div class="out fr">退出</div>
     </a>
-    <div class="page fr">39/57</div> 
+    <div class="page fr">39/50</div> 
     <div class="next fr disabled"  disabled data="False"></div>
     <a href="38.html">
       <div class="prev fr"></div>
@@ -87,6 +110,31 @@ html
       $(".title1").removeClass("hide");
     },1000); 
   })
+
+    var answer = 0;
+      function check(num) {
+        answer = 0;
+        $('#item1').attr('src', 'images/radio.png');
+        $('#item2').attr('src', 'images/radio.png');
+        $('#item3').attr('src', 'images/radio.png');
+        $('#item4').attr('src', 'images/radio.png');
+
+        $('#item' + num).attr('src', 'images/radio-select.png');
+
+        if (num == 2) {
+          answer = 1;
+        }
+      }
+
+      function page_check() {
+        if (answer) {
+          event.stopPropagation();
+          $('#right_div').fadeIn();
+        } else {
+          event.stopPropagation();
+          $('#error_div').fadeIn();
+        }
+      }
 </script>
 </body>
 </html>

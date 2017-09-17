@@ -252,3 +252,37 @@ th, td /* table elements è¡¨æ ¼å…ƒç´  */ {
     color: #ffffff;
     background:url("../btnbg.png") no-repeat center;
 }
+
+/* radio button */
+.item{
+  float:left;
+  width: 50%;
+  text-align:left;
+  color:#808080;
+  font-size:16px;
+  margin-top: 40px;
+
+}
+
+.radio-text{
+  font-size: 16px;
+  line-height: 40px
+}
+
+.radio-img{
+  width: 20px;
+  height: 20px;
+      float: left;
+    margin: 10px;
+}
+
+.confirm{
+  font-size: 20px;
+  line-height: 40px;
+  width: 80px;
+  color:#002f73;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 60px auto;
+  border: 1px solid #002f73;
+}
