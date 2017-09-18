@@ -27,7 +27,7 @@ html
 <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/19/05.png" width="100%" alt=""/></div> -->
 
 <!-- question layer -->
-<div style="position:relative; width:830px; height:330px; margin: 0 auto; z-index:998; border:1px solid black">
+<div style="position:relative; width:830px; height:330px; margin: 0 auto; z-index:998">
   <!-- 4 questions -->  
   <div style="position:absolute; width:200px; height:120px; top:0; left:0;
               background:url(images/19/q1.png);
@@ -59,28 +59,72 @@ html
 
 
   <!-- lines -->
-  <div style="position:absolute; height:30px; top:130; left:100;
+  <div style="position:absolute; height:30px; top:130; left:110;
             background:url(images/19/line00.png);
-            background-size:100% 100%; height:160px; width:3px; display:none" id="line00"></div>
+            background-size:100% 100%; height:160px; width:3px;display:none" id="line00"></div>
+  <div style="position:absolute; height:30px; top:130; left:110;
+            background:url(images/19/line01.png);
+            background-size:100% 100%; height:160px; width:200px;display:none" id="line01"></div>
+  <div style="position:absolute; height:30px; top:130; left:110;
+            background:url(images/19/line01.png);
+            background-size:100% 100%; height:160px; width:400px;display:none" id="line02"></div>
+  <div style="position:absolute; height:30px; top:130; left:110;
+            background:url(images/19/line01.png);
+            background-size:100% 100%; height:160px; width:600px;display:none" id="line03"></div>
 
 
-            
   <div style="position:absolute; height:30px; top:130; left:310;
             background:url(images/19/line00.png);
             background-size:100% 100%; height:160px; width:3px;display:none" id="line11"></div>
+  <div style="position:absolute; height:30px; top:130; left:310;
+            background:url(images/19/line01.png);
+            background-size:100% 100%; height:160px; width:200px;display:none" id="line12"></div>
+  <div style="position:absolute; height:30px; top:130; left:310;
+            background:url(images/19/line01.png);
+            background-size:100% 100%; height:160px; width:400px;display:none" id="line13"></div>
+  <div style="position:absolute; height:30px; top:130; left:110;
+            background:url(images/19/line02.png);
+            background-size:100% 100%; height:160px; width:200px;display:none" id="line10"></div>
 
-            
+
   <div style="position:absolute; height:30px; top:130; left:510;
             background:url(images/19/line00.png);
             background-size:100% 100%; height:160px; width:3px;display:none" id="line22"></div>
+  <div style="position:absolute; height:30px; top:130; left:510;
+            background:url(images/19/line01.png);
+            background-size:100% 100%; height:160px; width:200px;display:none" id="line23"></div>
+  <div style="position:absolute; height:30px; top:130; left:110;
+            background:url(images/19/line02.png);
+            background-size:100% 100%; height:160px; width:400px;display:none" id="line20"></div>
+  <div style="position:absolute; height:30px; top:130; left:310;
+            background:url(images/19/line02.png);
+            background-size:100% 100%; height:160px; width:200px;display:none" id="line21"></div>
 
   <div style="position:absolute; height:30px; top:130; left:710;
             background:url(images/19/line00.png);
             background-size:100% 100%; height:160px; width:3px;display:none" id="line33"></div>
+  <div style="position:absolute; height:30px; top:130; left:110;
+            background:url(images/19/line02.png);
+            background-size:100% 100%; height:160px; width:600px;display:none" id="line30"></div>
+  <div style="position:absolute; height:30px; top:130; left:310;
+            background:url(images/19/line02.png);
+            background-size:100% 100%; height:160px; width:400px;display:none" id="line31"></div>
+  <div style="position:absolute; height:30px; top:130; left:510;
+            background:url(images/19/line02.png);
+            background-size:100% 100%; height:160px; width:200px;display:none" id="line32"></div>
+
 </div>
 <!-- end question layer-->
 
+<div id="right_div" class="mydiv" style="display:none;">
+  <span>恭喜你答对了!</span>
+  <span><button  onclick="gotoBack(14)" id="right_text">确认进入下一页</button></span>
+</div>
 
+<div id="error_div" class="mydiv" style="display:none;">
+  <span>错了，请返回重新学习!</span>
+  <span><button  onclick="gotoBack(13)" id="error_text">确认并返回第13页</button></span>
+</div> 
 
 
 <div class="p-n-r">
@@ -103,31 +147,83 @@ html
     },1000); 
   })
 
-  qArray=[0,0,0,0];
-  aArray=['','','',''];
+  var qArray=[0,0,0,0];
+  var aaArray =[0,0,0,0];
+  var aArray=['','','',''];
   var currentQ = -1;
   var answerNum = 0;
+  var correct = 0;
+
+  //createLine(130,110, 130, 160, document.getElementById('line00'));
 
   function clickQuestion(index){
     currentQ = index;
   }
 
   function clickAnswer(index) {
-      if(currentQ != -1 && currentQ <= 3 && !qArray[currentQ])
+      if(currentQ != -1 && currentQ <= 3 && !qArray[currentQ] && !aaArray[index])
       {
         qArray[currentQ] = 1;
+        aaArray[index] = 1;
         var currentLine =  currentQ + "" + index;
         aArray[answerNum] = currentLine;
         answerNum++;
-        currentQ = -1;
         $('#line'+ currentLine).fadeIn();
+
+        //check answer
+        if(currentQ == 0 && index == 2){
+          correct++;
+        }else if(currentQ == 1 && index == 1){
+          correct++;
+        }else if (currentQ == 2 && index == 0){
+          correct++;
+        }else if (currentQ == 3 && index == 3){
+          correct++;
+        }
+        currentQ = -1;
       }
 
       if(answerNum >= 4)
       {
-        alert('finish');
+        if(correct == 4){
+          $('#right_div').fadeIn();
+        }else{
+          $('#error_div').fadeIn();
+        }
       }
   }
+
+  // function createLineElement(x, y, length, angle, div) {
+  //     var line = div;
+  //     var styles = 'border: 1px solid black; '
+  //       + 'width: ' + length + 'px; '
+  //       + 'height: 0px; '
+  //       + '-moz-transform: rotate(' + angle + 'rad); '
+  //       + '-webkit-transform: rotate(' + angle + 'rad); '
+  //       + '-o-transform: rotate(' + angle + 'rad); '
+  //       + '-ms-transform: rotate(' + angle + 'rad); '
+  //       + 'position: absolute; '
+  //       + 'top: ' + y + 'px; '
+  //       + 'left: ' + x + 'px; ';
+  //     line.setAttribute('style', styles);
+  //     return line;
+  //   }
+
+  //   function createLine(x1, y1, x2, y2, div) {
+  //     var a = x1 - x2,
+  //       b = y1 - y2,
+  //       c = Math.sqrt(a * a + b * b);
+
+  //     var sx = (x1 + x2) / 2,
+  //       sy = (y1 + y2) / 2;
+
+  //     var x = sx - c / 2,
+  //       y = sy;
+
+  //     var alpha = Math.PI - Math.atan2(-b, a);
+
+  //     return createLineElement(x, y, c, alpha, div);
+  //   }
   
 
 </script>
