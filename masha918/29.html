@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link href="css/style-animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <style>
+    html {
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+    }
+
+    .radio-text{
+      line-height: 28px;
+    }
+  </style>
+</head>
+
+<body onload="reload()">
+  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/11/02.png" width="100%" alt=""/></div>
+<div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/11/03.png" width="100%" alt=""/></div> -->
+  <div class="animated fadeInUp" style="width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt="" /></div>
+
+  <!---  Question -->
+  <div class="animated fadeInDown" style="width:100%; z-index:2">
+    <img id="audioID" src="images/question.png" width="100%" alt="" />
+  </div>
+  <div style="width:85%; margin: 0 auto; text-align:center; overflow:hidden; z-index:999">
+    <div style="color:#002f73; font-size:24px; text-align:left; margin:30px auto">
+       2018款Ghibli驾驶辅助套件以下描述正确的是?
+    </div>
+    <div style=" margin:0 auto;">
+      <div class="item" onclick="check(1)">
+        <img src="images/radio.png" id="item1" class="radio-img">
+        <p class="radio-text" style="line-height:28px">带有启停功能的自适应巡航控制(ACC)</p>
+        <p class="radio-text" style="margin-left:40px;line-height:28px">向前碰撞预警(FCW,先进制动辅助(ABA)</p>
+        <p class="radio-text" style="margin-left:40px;line-height:28px">自动紧急制动系统(AEB),车道偏离预警(LDW)</p>
+      </div>
+
+      <div class="item" onclick="check(2)">
+        <img src="images/radio.png" id="item2" class="radio-img">
+        <p class="radio-text" style="line-height:28px">带有启停功能的自适应巡航控制(ACC)，</p>
+        <p class="radio-text" style="margin-left:40px;line-height:28px">向前碰撞预警(FCW)，先进制动辅助(ABA)，</p>
+        <p class="radio-text" style="margin-left:40px;line-height:28px">自动紧急制动(AEB)，车道偏离预警(LDW)，车道保持辅助(LKA)</p>
+      </div>
+
+      <div class="item" onclick="check(3)">
+        <img src="images/radio.png" id="item3" class="radio-img">
+        <p class="radio-text" style="line-height:28px">带有启停功能的自适应巡航控制 (ACC)，</p>
+          <p class="radio-text" style="margin-left:40px;line-height:28px">向前碰撞预警(FCW)，先进制动辅助(ABA)，自动紧急制动系统(AEB)，</p>
+          <p class="radio-text" style="margin-left:40px;line-height:28px">车道保持辅助(LKA)，主动型盲点辅助</p>
+      </div>
+
+      <div class="item" onclick="check(4)">
+        <img src="images/radio.png" id="item4" class="radio-img">
+        <p class="radio-text" style="line-height:28px">带有启停功能的自适应巡航控制 (ACC)，</p>
+          <p class="radio-text" style="margin-left:40px;line-height:28px">向前碰撞预警(FCW)，先进制动辅助(ABA)，动自紧急制动系统(AEB)，</p>
+          <p class="radio-text" style="margin-left:40px;line-height:28px">车道保持辅助(LKA)，主动型盲点辅助，交通标志识别 (TSR)</p>
+      </div>
+    </div>
+  </div>
+  <div class="confirm" onclick="page_check()">确定</div>
+  <div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(30)" id="right_text">确认进入下一页</button></span>
+  </div>
+
+  <div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(24)" id="error_text">确认并返回第24页</button></span>
+  </div>
+
+  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/11/05.png" width="100%" alt=""/></div> -->
+  <div class="p-n-r">
+    <div class="p-r">
+      <a href="#">
+        <div class="out fr">退出</div>
+      </a>
+      <div class="page fr">29/53</div>
+      <div class="next fr disabled" disabled data="False"></div>
+      <a href="28.html">
+        <div class="prev fr"></div>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".title1").addClass("bounceInleft");
+        $(".title1").removeClass("hide");
+      }, 1000);
+    })
+
+
+    var answer = 0;
+    function check(num) {
+      answer = 0;
+      $('#item1').attr('src', 'images/radio.png');
+      $('#item2').attr('src', 'images/radio.png');
+      $('#item3').attr('src', 'images/radio.png');
+      $('#item4').attr('src', 'images/radio.png');
+
+      $('#item' + num).attr('src', 'images/radio-select.png');
+
+      if (num == 3) {
+        answer = 1;
+      }
+    }
+
+    function page_check() {
+      if (answer) {
+        event.stopPropagation();
+        $('#right_div').fadeIn();
+      } else {
+        event.stopPropagation();
+        $('#error_div').fadeIn();
+      }
+    }
+
+  </script>
+</body>
+
+</html>
