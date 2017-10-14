@@ -286,3 +286,11 @@ th, td /* table elements è¡¨æ ¼å…ƒç´  */ {
   margin: 60px auto;
   border: 1px solid #002f73;
 }
+
+.hidden{
+	display: none;
+}
+
+.show{
+	display: block;
+}
