@@ -49,6 +49,7 @@ html
     font-size: 12px;
     line-height: 20px;
     position: absolute;
+    cursor: pointer;
 }
 
 .circle-pos1{
@@ -87,6 +88,7 @@ html
 }
 
 .answer1{
+  cursor: pointer;
   background-image: url(images/04/03-1.png);
   background-size: 100% 100%;
   width: 130px;
@@ -129,31 +131,31 @@ html
 .answer22{
   background-image: url(images/04/04-2.png);
   background-size: 100% 100%;
-  width: 130px;
-  height: 85px;
-  position: absolute;
+    width: 130px;
+    height: 35px;
+    position: absolute;
     top: 0px;
-    left: 340px;
+    left: 740px;
 }
 
 .answer33{
   background-image: url(images/04/04-3.png);
   background-size: 100% 100%;
   width: 130px;
-  height: 85px;
+  height: 35px;
   position: absolute;
-    top: 0px;
-    left: 340px;
+    top: 50px;
+    left: 540px;
 }
 
 .answer44{
   background-image: url(images/04/04-4.png);
   background-size: 100% 100%;
-  width: 130px;
-  height: 85px;
-  position: absolute;
-    top: 0px;
-    left: 340px;
+    width: 130px;
+    height: 35px;
+    position: absolute;
+    top: 50px;
+    left: 740px;
 }
 
 .hidden{
@@ -175,13 +177,13 @@ html
   </div>
 
   <div class="pos2">
-    <div class="answer1" id="0"></div>
-    <div class="answer2" id="1"></div>
-    <div class="answer3" id="2"></div>
-    <div class="answer11" id="3"></div>
-    <div class="answer22" id="4"></div>
-    <div class="answer33" id="5"></div>
-    <div class="answer44" id="6"></div>
+    <div class="answer1 hidden" id="0"></div>
+    <div class="answer2 hidden" id="1"></div>
+    <div class="answer3 hidden" id="2"></div>
+    <div class="answer11 hidden" id="3"></div>
+    <div class="answer22 hidden" id="4"></div>
+    <div class="answer33 hidden" id="5"></div>
+    <div class="answer44 hidden" id="6"></div>
   </div>
 
 
@@ -195,7 +197,7 @@ html
       <div class="out fr">退出</div>
     </a>
     <div class="page fr">04/53</div> 
-    <div class="next fr disabled"  disabled data="05.html"></div>
+    <div class="next fr disabled hidden"  disabled data="05.html" id='next'></div>
     <a href="03.html">
       <div class="prev fr"></div>
     </a> 
@@ -209,15 +211,16 @@ html
     },1000); 
   })
 
-  var show = [0,0,0,0,0,0,0];
+  var showArr = [0,0,0,0,0,0,0];
   function show(id)
   {
-    $(id).fadeIn();
-    show[parseInt(id)] = 1;
+    $('#'+id).fadeIn();
+    showArr[parseInt(id)] = 1;
 
     if(check() == 1)
     {
-      alert('finish!');
+      //alert('finish!');
+      $('#next').fadeIn();
     }
 
   }
@@ -225,10 +228,12 @@ html
   function check(){
     var bFinish = 0;
     
-    if(show[0] == 1 && show[1] == 1 && show[2] == 1 && show[3] == 1 
-    && show[4] == 1 && show[5] == 1 && show[6] == 1){
+    if(showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1 
+    && showArr[4] == 1 && showArr[5] == 1 && showArr[6] == 1){
       bFinish = 1;
     }
+
+    return bFinish;
   }
 </script>
 </body>
