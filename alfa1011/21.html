@@ -18,68 +18,224 @@
       background-image: url(images/bg.jpg);
       background-size: cover;
     }
+
+    .pos1 {
+      position: absolute;
+      width: 1000px;
+      height: 630px;
+      background-image: url(images/21/02.png);
+      background-size: 100% 100%;
+      left: 50%;
+      margin-left: -500px;
+      top: 60px;
+    }
+
+    .pos2 {
+      position: absolute;
+      width: 1000px;
+      left: 50%;
+      margin-left: -500px;
+      top: 580px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 20px;
+      border: 1px solid white;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+      position: absolute;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .circle-pos1 {
+    top: 325px;
+    right: 225px;
+    }
+
+    .circle-pos2 {
+top: 420px;
+    right: 250px;
+    }
+
+    .circle-pos3 {
+    top: 450px;
+    right: 280px;
+    }
+
+    .circle-pos4 {
+top: 460px;
+    right: 200px;
+    }
+
+    .circle-pos5 {
+    top: 495px;
+    left: 282px;
+    }
+
+    .circle-pos6 {
+    top: 399px;
+    left: 262px;
+    }
+
+    .circle-pos7 {
+    top: 445px;
+    left: 70px;
+    }
+    .circle-pos8 {
+    left: 210px;
+    top: 405px;
+    }
+
+    .answer1 {
+    cursor: pointer;
+    background-image: url(images/21/a1.jpg);
+    background-size: 100% 100%;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -30px;
+    left: 490px;
+    }
+
+    .answer2 {
+    background-image: url(images/21/a2.jpg);
+    background-size: 100% 100%;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -30px;
+    left: 610px;
+    }
+
+    .answer3 {
+background-image: url(images/21/a3.jpg);
+    background-size: 100% 100%;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -30px;
+    right: 160px;
+    }
+
+    .answer4 {
+    background-image: url(images/21/a4.jpg);
+    background-size: 100% 100%;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -30px;
+    right: 40px;
+    }
+
+    .answer5 {
+width: 200px;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    left: 275px;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    }
+
+    .answer6 {
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    top: -125px;
+    left: 255px;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    }
+
+    .answer7 {
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    top: -80px;
+    left: 65px;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    }
+
+    .answer8 {
+    width: 220px;
+    height: 30px;
+    position: absolute;
+    top: -120px;
+    left: 20px;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 
 <body onload="reload()">
-  <div class="animated fadeInUp" style="width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt="" /></div>
-  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/15/03.png" width="100%" alt=""/></div!-->
-  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/15/04.png" width="100%" alt=""/></div> -->
+  <div class="pos1">
+    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
+    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
+    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
+    <div class="circle circle-pos4 animated infinite pulse" onclick="show(3)">4</div>
+
+    <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">1</div>
+    <div class="circle circle-pos6 animated infinite pulse" onclick="show(5)">2</div>
+    <div class="circle circle-pos7 animated infinite pulse" onclick="show(6)">3</div>
+    <div class="circle circle-pos8 animated infinite pulse" onclick="show(7)">4</div>
+  </div>
+
+  <div class="pos2">
+    <div class="answer1 hidden" id="0"></div>
+    <div class="answer2 hidden" id="1"></div>
+    <div class="answer3 hidden" id="2"></div>
+    <div class="answer4 hidden" id="3"></div>
+
+    <div class="answer5 hidden" id="4">铝合金材质后下护板</div>
+    <div class="answer6 hidden" id="5">横向线条（宽体效果）</div>
+    <div class="answer7 hidden" id="6">黑色保险杠（越野风格）</div>
+    <div class="answer8 hidden" id="7">L型尾灯（家族设计）</div>
+  </div>
+
+
+  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
+  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
+  <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/04.png" width="100%" alt=""/></div-->
   <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div> -->
-
-  <!---  Question -->
-  <div class="animated fadeInDown" style="width:100%; z-index:2">
-    <img id="audioID" src="images/question.png" width="100%" alt="" />
-  </div>
-  <div style="width:65%; margin: 0 auto; text-align:center; overflow:hidden; z-index:999">
-    <div style="color:#002f73; font-size:24px; text-align:left; margin:40px auto">
-       2018款：全新Ghibli、GranLusso、GranSport 配置表以下描述正确的是?
-    </div>
-    <div style=" margin:0 auto;">
-      <div class="item" onclick="check(1)">
-        <img src="images/radio.png" id="item1" class="radio-img">
-        <p class="radio-text">全新Ghibli标配8向驾驶席电动调节
-        </p>
-      </div>
-
-      <div class="item" onclick="check(2)">
-        <img src="images/radio.png" id="item2" class="radio-img">
-        <p class="radio-text">全系标配EPS电动转向系统</p>
-      </div>
-
-      <div class="item" onclick="check(3)">
-        <img src="images/radio.png" id="item3" class="radio-img">
-        <p class="radio-text">GranLusso标配Harman Kardon音响</p>
-      </div>
-
-      <div class="item" onclick="check(4)">
-        <img src="images/radio.png" id="item4" class="radio-img">
-        <p class="radio-text">GranSport标配全高端皮革装饰</p>
-      </div>
-    </div>
-  </div>
-  <div class="confirm" onclick="page_check()">确定</div>
-  <div id="right_div" class="mydiv" style="display:none;">
-    <span>恭喜你答对了!</span>
-    <span><button  onclick="gotoBack(22)" id="right_text">确认进入下一页</button></span>
-  </div>
-
-  <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回重新学习!</span>
-    <span><button  onclick="gotoBack(20)" id="error_text">确认并返回第20页</button></span>
-  </div>
-
-
-
-
-
   <div class="p-n-r">
     <div class="p-r">
       <a href="#">
         <div class="out fr">退出</div>
       </a>
       <div class="page fr">21/53</div>
-      <div class="next fr disabled" disabled data="False"></div>
+      <div class="next fr disabled hidden" disabled data="22.html" id='next'></div>
       <a href="20.html">
         <div class="prev fr"></div>
       </a>
@@ -93,29 +249,27 @@
       }, 1000);
     })
 
-    var answer = 0;
-    var checkArr = { 1: 0, 2: 0, 3: 0, 4: 0 };
-    function check(num) {
-      if (checkArr[num] == 0) {
-        $('#item' + num).attr('src', 'images/radio-select.png');
-        checkArr[num] = 1;
-      } else {
-        $('#item' + num).attr('src', 'images/radio.png');
-        checkArr[num] = 0;
+    var showArr = [0, 0, 0, 0, 0, 0, 0,0];
+    function show(id) {
+      $('#' + id).fadeIn();
+      showArr[parseInt(id)] = 1;
+
+      if (check() == 1) {
+        //alert('finish!');
+        $('#next').fadeIn();
       }
+
     }
 
-    function page_check() {
-      if (checkArr[1] == 0 && checkArr[2] == 1 && checkArr[3] == 1 && checkArr[4] == 0) {
-        answer = 1;
+    function check() {
+      var bFinish = 0;
+
+      if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1
+        && showArr[4] == 1 && showArr[5] == 1 && showArr[6] == 1 && showArr[7] == 1) {
+        bFinish = 1;
       }
-      if (answer) {
-        event.stopPropagation();
-        $('#right_div').fadeIn();
-      } else {
-        event.stopPropagation();
-        $('#error_div').fadeIn();
-      }
+
+      return bFinish;
     }
   </script>
 </body>
