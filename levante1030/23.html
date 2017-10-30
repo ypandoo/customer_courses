@@ -1,0 +1,240 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link href="css/style-animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <style>
+    html {
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+    }
+
+    .pos1 {
+      position: absolute;
+      width: 1000px;
+      height: 630px;
+      background-image: url(images/23/02.png);
+      background-size: 100% 100%;
+      left: 50%;
+      margin-left: -500px;
+      top: 60px;
+    }
+
+    .pos2 {
+      position: absolute;
+      width: 1000px;
+      left: 50%;
+      margin-left: -500px;
+      top: 580px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 20px;
+      border: 1px solid white;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+      position: absolute;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .circle-pos1 {
+top: 365px;
+    left: 110px;
+    }
+
+    .circle-pos2 {
+    top: 360px;
+    left: 320px;
+    }
+
+    .circle-pos3 {
+      top: 390px;
+      left: 375px;
+    }
+
+    .circle-pos4 {
+    top: 420px;
+    left: 260px;
+    }
+
+    .circle-pos5 {
+    top: 325px;
+    right: 435px;
+    }
+
+    .circle-pos6 {
+top: 380px;
+    right: 382px;
+    }
+
+    .circle-pos7 {
+    top: 285px;
+    right: 330px;
+    }
+
+    .answer1 {
+    cursor: pointer;
+    background-image: url(images/23/a1.png);
+    background-size: 100% 100%;
+    width: 130px;
+    height: 150px;
+    position: absolute;
+    top: -60px;
+    left: 45px;
+    }
+
+    .answer2 {
+    background-image: url(images/23/a2.png);
+    background-size: 100% 100%;
+    width: 200px;
+    height: 75px;
+    position: absolute;
+    top: -60px;
+    left: 182px;
+    }
+
+    .answer3 {
+    background-image: url(images/23/a3.png);
+    background-size: 100% 100%;
+    width: 200px;
+    height: 75px;
+    position: absolute;
+    top: 15px;
+    left: 182px;
+    }
+
+    .answer4 {
+    background-image: url(images/23/a4.png);
+    background-size: 100% 100%;
+    width: 130px;
+    height: 150px;
+    position: absolute;
+    top: -60px;
+    left: 387px;
+    }
+
+    .answer5 {
+    background-image: url(images/23/a5.png);
+    background-size: 100% 100%;
+    width: 190px;
+    height: 150px;
+    position: absolute;
+    top: -60px;
+    right: 280px;
+    }
+
+    .answer6 {
+    background-image: url(images/23/a6.png);
+    background-size: 100% 100%;
+    width: 240px;
+    height: 70px;
+    position: absolute;
+    top: -60px;
+    right: 30px;
+    }
+
+    .answer7 {
+background-image: url(images/23/a7.png);
+    right: 30px;
+    background-size: 100% 100%;
+    width: 240px;
+    height: 75px;
+    position: absolute;
+    top: 15px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body onload="reload()">
+  <div class="pos1">
+    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
+    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
+    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
+
+    <div class="circle circle-pos4 animated infinite pulse" onclick="show(3)">4</div>
+    <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">1</div>
+    <div class="circle circle-pos6 animated infinite pulse" onclick="show(5)">2</div>
+    <div class="circle circle-pos7 animated infinite pulse" onclick="show(6)">3</div>
+  </div>
+
+  <div class="pos2">
+    <div class="answer1 hidden" id="0"></div>
+    <div class="answer2 hidden" id="1"></div>
+    <div class="answer3 hidden" id="2"></div>
+    <div class="answer4 hidden" id="3"></div>
+    <div class="answer5 hidden" id="4"></div>
+    <div class="answer6 hidden" id="5"></div>
+    <div class="answer7 hidden" id="6"></div>
+  </div>
+
+
+  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
+  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
+  <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/04.png" width="100%" alt=""/></div-->
+  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div> -->
+  <div class="p-n-r">
+    <div class="p-r">
+      <a href="#">
+        <div class="out fr">退出</div>
+      </a>
+      <div class="page fr">23/59</div>
+      <div class="next fr disabled hidden" disabled data="24.html" id='next'></div>
+      <a href="22.html">
+        <div class="prev fr"></div>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".title1").addClass("bounceInleft");
+        $(".title1").removeClass("hide");
+      }, 1000);
+    })
+
+    var showArr = [0, 0, 0, 0, 0, 0, 0];
+    function show(id) {
+      $('#' + id).fadeIn();
+      showArr[parseInt(id)] = 1;
+
+      if (check() == 1) {
+        //alert('finish!');
+        $('#next').fadeIn();
+      }
+
+    }
+
+    function check() {
+      var bFinish = 0;
+
+      if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1
+        && showArr[4] == 1 && showArr[5] == 1 && showArr[6] == 1) {
+        bFinish = 1;
+      }
+
+      return bFinish;
+    }
+  </script>
+</body>
+
+</html>

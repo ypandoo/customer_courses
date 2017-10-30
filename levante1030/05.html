@@ -1,0 +1,214 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link href="css/style-animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <style>
+    html {
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+    }
+
+    .pos1 {
+      position: absolute;
+      width: 1000px;
+      height: 570px;
+      background-image: url(images/05/02.png);
+      background-size: 100% 100%;
+      left: 50%;
+      margin-left: -500px;
+      top: 90px;
+    }
+
+    .pos2 {
+      position: absolute;
+      width: 1000px;
+      left: 50%;
+      margin-left: -500px;
+      top: 580px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 20px;
+      border: 1px solid white;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+      position: absolute;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .circle-pos1 {
+top: 443px;
+    left: 503px;
+    }
+
+    .circle-pos2 {
+top: 442px;
+    left: 137px;
+    }
+
+    .circle-pos3 {
+    top: 440px;
+    left: 829px;
+    }
+
+    .circle-pos4 {
+    top: 224px;
+    left: 570px;
+    }
+
+    .circle-pos5 {
+top: 424px;
+    left: 366px;
+    }
+
+    .circle-pos55 {
+    top: 333px;
+    left: 389px;
+    }
+
+
+    .answer1 {
+    cursor: pointer;
+    background-image: url(images/05/03-1.png);
+    background-size: 100% 100%;
+    width: 532px;
+    height: 100px;
+    position: absolute;
+    top: 433px;
+    left: 233px;
+    }
+
+    .answer2 {
+    background-image: url(images/05/03-2.png);
+    background-size: 100% 100%;
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    top: 434px;
+    left: 103px;
+    }
+
+    .answer3 {
+    background-image: url(images/05/03-3.png);
+    background-size: 100% 100%;
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    top: 433px;
+    left: 765px;
+    }
+
+    .answer4 {
+    background-image: url(images/05/03-4.png);
+    background-size: 100% 100%;
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    top: 220px;
+    left: 565px;
+    }
+
+    .answer5 {
+background-image: url(images/05/03-5.png);
+    background-size: 100% 100%;
+    width: 280px;
+    height: 130px;
+    position: absolute;
+    top: 325px;
+    left: 240px;
+    }
+
+
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body onload="reload()">
+  <div class="pos1">
+    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
+    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
+    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
+    <div class="circle circle-pos4 animated infinite pulse" onclick="show(3)">4</div>
+    <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">5</div>
+    <div class="circle circle-pos55 animated infinite pulse" onclick="show(4)">5</div>
+
+    <div class="answer1 hidden" id="0"></div>
+    <div class="answer2 hidden" id="1"></div>
+    <div class="answer3 hidden" id="2"></div>
+    <div class="answer4 hidden" id="3"></div>
+    <div class="answer5 hidden" id="4"></div>
+
+  </div>
+
+
+  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
+  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
+  <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/04.png" width="100%" alt=""/></div-->
+  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div> -->
+  <div class="p-n-r">
+    <div class="p-r">
+      <a href="#">
+        <div class="out fr">退出</div>
+      </a>
+      <div class="page fr">05/59</div>
+      <div class="next fr disabled hidden" disabled data="06.html" id='next'></div>
+      <a href="04.html">
+        <div class="prev fr"></div>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".title1").addClass("bounceInleft");
+        $(".title1").removeClass("hide");
+      }, 1000);
+    })
+
+    var showArr = [0, 0, 0, 0, 0, 0, 0];
+    function show(id) {
+      $('#' + id).fadeIn();
+      showArr[parseInt(id)] = 1;
+
+      if (check() == 1) {
+        //alert('finish!');
+        $('#next').fadeIn();
+      }
+
+    }
+
+    function check() {
+      var bFinish = 0;
+
+      if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1
+        && showArr[4] == 1 ) {
+        bFinish = 1;
+      }
+
+      return bFinish;
+    }
+
+  </script>
+</body>
+
+</html>

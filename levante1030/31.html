@@ -1,0 +1,496 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link href="css/style-animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <style>
+    html {
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+    /* .hidden{
+      display: block;
+    } */
+  </style>
+</head>
+
+<body onload="reload()">
+  <div class="animated fadeInUp" style="position: absolute; width:1200px; height:760px; top: 0; left: 50%; margin-left:-600px;">
+    <img src="images/13/02.png" width="100%" height="100%" alt="" />
+  </div>
+
+
+  <!-- question layer -->
+  <div style="position:relative; width:1000px; height:530px; margin: 0 auto; z-index:998">
+
+    <!-- q1 -->
+    <div class="cursor" style="    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 250px;
+    left: 0;
+    background: url(images/31/q1.jpg);
+    background-size: 100% 100%;" onclick="clickQuestion('u1')"></div>
+
+    <div class="cursor" style="    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 400px;
+    left: 0;
+    margin-right: 5px;
+    background: url(images/31/q2.jpg);
+    background-size: 100% 100%;" onclick="clickQuestion('m1')"></div>
+
+    <div class="cursor" style="    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 550px;
+    left: 0;
+    margin-right: 5px;
+    background: url(images/31/q3.jpg);
+    background-size: 100% 100%;" onclick="clickQuestion('d1')"></div>
+
+    <!-- q2 -->
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 290px;
+    left: 360px;
+    line-height: 60px;
+    text-align: center;
+    " onclick="clickQuestion('u2')">标准真皮座椅</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 440px;
+    left: 360px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('m2')">后排空调出风口usb接口</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 590px;
+    left: 360px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('d2')">Sensatec合成皮</div>
+
+    <!-- q3 -->
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 290px;
+    left: 770px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('u3')">合成革、低端车的做法</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 14px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 440px;
+    left: 770px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('m3')">更高级的材料、来自意大利</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 14px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 590px;
+    left: 770px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('d3')">更高级、更舒适、更方便</div>
+
+    <!-- button2 -->
+    <div style="    position: absolute;
+    font-size: 12px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    top: 140px;
+    right: 40px;
+    line-height: 30px;
+    text-align: center; cursor:pointer" onclick="confirm()">确定</div>
+    <div style="    position: absolute;
+    font-size: 12px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    top: 190px;
+    right: 40px;
+    line-height: 30px;
+    text-align: center;cursor:pointer" onclick="reset()">重做</div>
+
+    <!-- lines -->
+    <!-- 横 -->
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 240px;
+    left: 215px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-u1-u2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 240px;
+    left: 625px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-u2-u3"></div>
+
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 390px;
+    left: 215px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-m1-m2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 390px;
+    left: 625px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-m2-m3"></div>
+
+    <div class="hidden" style="position: absolute;
+    top: 540px;
+    left: 215px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-d1-d2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 540px;
+    left: 625px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-d2-d3"></div>
+
+
+    <!-- 斜 u1-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-u1-m2"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-u1-d2"></div>
+
+
+
+
+    <!-- 斜 m1-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m1-u2"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 470px;
+    left: 215px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m1-d2"></div>
+
+
+
+    <!-- 斜 d1-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-d1-u2"></div>
+    <div class="hidden" style="   position: absolute;
+    top: 470px;
+    left: 215px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-d1-m2"></div>
+
+
+    <!-- 斜 u2-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-u2-m3"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-u2-d3"></div>
+
+
+
+
+    <!-- 斜 m2-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m2-u3"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 470px;
+    left: 625px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m2-d3"></div>
+
+
+
+    <!-- 斜 d2-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-d2-u3"></div>
+    <div class="hidden" style="   position: absolute;
+    top: 470px;
+    left: 625px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-d2-m3"></div>
+
+
+  </div>
+  <!-- end question layer-->
+
+  <div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(32)" id="right_text">确认进入下一页</button></span>
+  </div>
+
+  <div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(29)" id="error_text">确认并返回第29页</button></span>
+  </div>
+
+
+  <div class="p-n-r">
+    <div class="p-r">
+      <a href="#">
+        <div class="out fr">退出</div>
+      </a>
+      <div class="page fr">31/59</div>
+      <div class="next fr disabled" disabled data="False"></div>
+      <a href="30.html">
+        <div class="prev fr"></div>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".title1").addClass("bounceInleft");
+        $(".title1").removeClass("hide");
+      }, 1000);
+    })
+
+    Array.prototype.in_array = function (e) {
+      for (i = 0; i < this.length; i++) {
+        if (this[i] == e)
+          return true;
+      }
+      return false;
+    }
+
+    var lines = {
+      'u1-u2': 0, 'u2-u3': 0, 'm1-m2': 0, 'm2-m3': 0, 'd1-d2': 0, 'd2-d3': 0,
+      'u1-m2': 0, 'u1-d2': 0, 'm1-u2': 0, 'm1-d2': 0, 'd1-u2': 0, 'd1-m2': 0,
+      'u2-m3': 0, 'u2-d3': 0, 'm2-u3': 0, 'm2-d3': 0, 'd2-u3': 0, 'd2-m3': 0
+    };
+
+    var relation = {
+      'u1-u2': ['u1-d2', 'u1-m2'],
+      'u2-u3': ['u2-d3', 'u2-m3'],
+      'm1-m2': ['m1-d2', 'm1-u2'],
+      'm2-m3': ['m2-d3', 'm2-u3'],
+      'd1-d2': ['d1-m2', 'd1-u2'],
+      'd2-d3': ['d2-m3', 'd2-u3'],
+
+      'u1-m2': ['u1-d2', 'u1-u2'],
+      'u1-d2': ['u1-u2', 'u1-m2'],
+      'm1-u2': ['m1-d2', 'm1-m2'],
+      'm1-d2': ['m1-u2', 'm1-m2'],
+      'd1-u2': ['d1-d2', 'd1-m2'],
+      'd1-m2': ['d1-u2', 'd1-d2'],
+
+      'u2-m3': ['u2-d2', 'u2-u2'],
+      'u2-d3': ['u2-u2', 'u2-m2'],
+      'm2-u3': ['m2-d2', 'u2-m2'],
+      'm2-d3': ['m2-u2', 'u2-m2'],
+      'd2-u3': ['d2-d2', 'd2-m2'],
+      'd2-m3': ['d2-u2', 'd2-d2']
+    }
+    var answer = [];
+    var correct_answer = ['u1-d2', 'm1-u2', 'd1-m2', 'u2-m3', 'm2-d3', 'd2-u3'];
+
+    var currentQ = 'none';
+
+    function clickQuestion(index) {
+
+      if (currentQ == 'none') {
+        currentQ = index;
+      } else {
+        var lineNum = '';
+        if (checkreverse(currentQ, index) == 2) {
+          currentQ = index;
+          return;
+        } else if (checkreverse(currentQ, index) == 1) {
+          lineNum = index + '-' + currentQ;
+        } else {
+          lineNum = currentQ + '-' + index;
+        }
+
+        if (checklines(lineNum)) {
+          answer.push(lineNum);
+
+          //set used 
+          setUsed(lineNum);
+
+          //show lines
+          $('#line-' + lineNum).fadeIn();
+          currentQ = 'none';
+        } else {
+          currentQ = index;
+        }
+      }
+    }
+
+    function setUsed(lineNum) {
+      lines[lineNum] = 1;
+
+      relatedArr = relation[lineNum];
+
+      for (var i = 0; i < relatedArr.length; i++) {
+        if (lines.hasOwnProperty(relatedArr[i])) {
+          lines[relatedArr[i]] = 1;
+        }
+      }
+    }
+
+    function checkreverse(index1, index2) {
+      var lineNum1 = index1 + '-' + index2;
+      var lineNum2 = index2 + '-' + index1;
+      if (lines.hasOwnProperty(lineNum1) || lines.hasOwnProperty(lineNum2)) {
+        if (lines.hasOwnProperty(lineNum1)) {
+          return 0;
+        } else {
+          return 1;
+        }
+      } else {
+        return 2; //not exist
+      }
+    }
+
+    function checklines(id) {
+      return (lines.hasOwnProperty(id) && (lines[id] == 0));
+    }
+
+    function confirm() {
+
+      var correct = 1;
+
+      for (var i = 0; i < answer.length; i++) {
+        if (correct_answer.in_array(answer[i])) {
+
+        }
+        else {
+          correct = 0;
+          break;
+        }
+      }
+
+      if (correct && answer.length == 6) {
+        $('#right_div').fadeIn();
+      } else {
+        $('#error_div').fadeIn();
+      }
+    }
+
+    function reset() {
+      $.each(lines, function (key, val) {
+        lines[key] = 0;//可以输出成绩
+        $('#line-' + key).hide();
+        answer = [];
+      });
+    }
+  </script>
+</body>
+
+</html>

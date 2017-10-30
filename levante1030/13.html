@@ -1,0 +1,360 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link href="css/style-animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <style>
+    html {
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+    }
+
+    .cursor{
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+
+<body onload="reload()">
+  <div class="animated fadeInUp" 
+        style="position: absolute; width:1200px; height:760px; top: 0; left: 50%; margin-left:-600px;">
+        <img src="images/13/02.png" width="100%" height="100%" alt="" />
+  </div>
+
+
+  <!-- question layer -->
+  <div style="position:relative; width:1000px; height:530px; margin: 0 auto; z-index:998">
+    
+    <!-- q1 -->
+    <div class="cursor" style="position: absolute;
+    width: 250px;
+    height: 150px;
+    top: 300px;
+    left: 0;
+    background: url(images/13/q1.jpg);
+    background-size: 100% 100%;" onclick="clickQuestion('u1')"></div>
+
+    <div class="cursor" style="    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 500px;
+    left: 0;
+    margin-right: 5px;
+    background: url(images/13/q2.jpg);
+    background-size: 100% 100%;" onclick="clickQuestion('d1')"></div>
+
+    <!-- q2 -->
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 340px;
+    left: 400px;
+    line-height: 60px;
+    text-align: center;
+    " onclick="clickQuestion('u2')">12项不同的系统/设定</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 540px;
+    left: 400px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('d2')">5种驾驶模式</div>
+
+    <!-- q3 -->
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 340px;
+    left: 750px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('u3')">赛道、动态、正常、高效</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 12px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 540px;
+    left: 750px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('d3')">Sport+、Sport、Comfort Individual、Eco</div>
+
+    <!-- button2 -->
+    <div style="    position: absolute;
+    font-size: 12px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    top: 140px;
+    right: 40px;
+    line-height: 30px;
+    text-align: center; cursor:pointer" onclick="confirm()">确定</div>
+    <div style="    position: absolute;
+    font-size: 12px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    top: 190px;
+    right: 40px;
+    line-height: 30px;
+    text-align: center;cursor:pointer" onclick="reset()">重做</div>
+
+    <!-- lines -->
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 290px;
+    left: 260;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-u1-u2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 290px;
+    left: 660px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 80px;" id="line-u2-u3"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 490px;
+    left: 260px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-d1-d2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 490px;
+    left: 660px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 80px;" id="line-d2-d3"></div>
+
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 380px;
+    left: 260px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 190px;
+    width: 135px;" id="line-u1-d2"></div>
+
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 370px;
+    left: 658px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 190px;
+    width: 90px;" id="line-u2-d3"></div>
+
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 380px;
+    left: 260px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 190px;
+    width: 135px;" id="line-d1-u2"></div>
+        <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 370px;
+    left: 658px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 190px;
+    width: 90px;" id="line-d2-u3"></div>
+
+  </div>
+  <!-- end question layer-->
+
+  <div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(14)" id="right_text">确认进入下一页</button></span>
+  </div>
+
+  <div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(12)" id="error_text">确认并返回第12页</button></span>
+  </div>
+
+
+  <div class="p-n-r">
+    <div class="p-r">
+      <a href="#">
+        <div class="out fr">退出</div>
+      </a>
+      <div class="page fr">13/50</div>
+      <div class="next fr disabled" disabled data="False"></div>
+      <a href="13.html">
+        <div class="prev fr"></div>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".title1").addClass("bounceInleft");
+        $(".title1").removeClass("hide");
+      }, 1000);
+    })
+
+    Array.prototype.in_array = function (e) {
+        for (i = 0; i < this.length; i++) {
+          if (this[i] == e)
+            return true;
+        }
+        return false;
+      }
+
+    var lines = {'u1-u2':0, 'u2-u3':0, 'd1-d2':0, 'd2-d3':0, 'u1-d2':0, 'u2-d3':0, 'd1-u2':0, 'd2-u3':0};
+
+    var relation ={
+      'u1-u2': ['u1-d2'],
+      'u2-u3': ['u2-d3'],
+      'd1-d2': ['d1-u2'],
+      'd2-d3': ['d2-u3'],
+      'u1-d2': ['u1-u2'],
+      'u2-d3': ['u2-u3'],
+      'd1-u2': ['d1-d2'],
+      'd2-u3': ['d2-d3'],
+    }
+    var answer = [];
+    var correct_answer=['u1-d2', 'u2-u3', 'd1-u2', 'd2-d3'];
+
+    var currentQ = 'none';
+
+    function clickQuestion(index) {
+
+      if(currentQ == 'none')
+      {
+        currentQ = index;
+      }else{
+        var lineNum = '';
+        if(checkreverse(currentQ, index) == 2){
+          currentQ = index;
+          return;
+        }else if(checkreverse(currentQ, index) == 1){
+          lineNum = index + '-' + currentQ;
+        }else{
+          lineNum = currentQ + '-' + index;
+        }
+
+        if(checklines(lineNum)){
+          answer.push(lineNum);
+
+          //set used 
+          setUsed(lineNum);
+
+          //show lines
+          $('#line-'+ lineNum).fadeIn();
+          currentQ = 'none';
+        }else{
+          currentQ = index;
+        }
+      }
+    }
+
+    function setUsed(lineNum){
+      lines[lineNum] = 1;
+
+      relatedArr = relation[lineNum];
+
+      for (var i = 0; i < relatedArr.length; i++) {
+          if(lines.hasOwnProperty(relatedArr[i])){
+            lines[relatedArr[i]] = 1;
+          }
+        }
+    }
+
+    function checkreverse(index1, index2)
+    {
+      var lineNum1 = index1 + '-' + index2;
+      var lineNum2 = index2 + '-' + index1;
+      if(lines.hasOwnProperty(lineNum1) || lines.hasOwnProperty(lineNum2))
+      {
+        if(lines.hasOwnProperty(lineNum1))
+        {
+          return 0;
+        }else{
+          return 1;
+        }
+      }else{
+        return 2; //not exist
+      }
+    }
+
+    function checklines(id){
+      return (lines.hasOwnProperty(id) && (lines[id] == 0));
+    }
+
+    function confirm() {
+
+      var correct = 1;
+
+      for (var i = 0; i < answer.length; i++) {
+        if(correct_answer.in_array(answer[i])){
+
+        }
+        else{
+          correct = 0;
+          break;
+        }
+      }
+
+        if (correct && answer.length == 4) {
+          $('#right_div').fadeIn();
+        } else {
+          $('#error_div').fadeIn();
+        }
+    }
+
+    function reset(){
+        $.each(lines, function (key, val) {
+          lines[key] = 0;//可以输出成绩
+          $('#line-'+key).hide();
+          answer = [];
+        });
+    }
+
+
+  </script>
+</body>
+
+</html>
