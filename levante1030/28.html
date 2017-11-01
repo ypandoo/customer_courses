@@ -15,169 +15,116 @@
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <style>
     html {
+
+
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      min-width: 1200px;
+      min-height: 800px;
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
       background-image: url(images/bg.jpg);
       background-size: cover;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      min-width: 1200px;
+      min-height: 800px;
     }
 
-    .pos1 {
-      position: absolute;
-      width: 1100px;
-      height: 580px;
-      background-image: url(images/28/02.png);
+    .question_layer {
+      background-image: url(images/27/02.png);
       background-size: 100% 100%;
-      left: 50%;
-      margin-left: -550px;
-      top: 60px;
-    }
-
-    .pos2 {
       position: absolute;
-      width: 1000px;
+      width: 1200px;
+      height: 600px;
+      top: 100px;
       left: 50%;
       margin-left: -500px;
-      top: 580px;
     }
 
-    .circle {
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 20px;
-      border: 1px solid white;
-      color: white;
-      text-align: center;
-      font-size: 12px;
-      line-height: 20px;
-      position: absolute;
-      cursor: pointer;
-      z-index: 999;
-    }
-
-    .circle-pos1 {
-      top: 290px;
-      left: 93px;
-    }
-
-    .circle-pos2 {
-      top: 290px;
-      left: 283px;
-    }
-
-    .circle-pos3 {
-      top: 290px;
-      left: 470px;
-    }
-
-    .circle-pos4 {
-      top: 290px;
-      left: 643px;
-    }
-
-    .circle-pos5 {
-      top: 290px;
-      left: 823px;
-    }
-
-    .circle-pos6 {
-      top: 290px;
-      left: 988px;
-    }
-
-    .answer {
-      position: absolute;
+    .item {
+      float: left;
+      width: 50%;
+      text-align: left;
+      color: #808080;
       font-size: 16px;
-      color: #bdbaba;
-    }
-
-    .answer0 {
-      top: 160px;
-      left: 39px;
-    }
-
-    .answer1 {
-      top: 350px;
-      left: 39px;
-    }
-
-    .answer2 {
-      top: 380px;
-      left: 39px;
-    }
-
-    .answer3 {
-      top: 410px;
-      left: 39px;
-    }
-
-    .answer4 {
-      top: 440px;
-      left: 39px;
-    }
-
-    .answer5 {
-      top: 470px;
-      left: 39px;
-    }
-
-    .answer6 {
-      top: 500px;
-      left: 39px;
-    }
-
-    .answer7 {
-      top: 530px;
-      left: 39px;
-    }
-
-    .answer8 {
-      top: 575px;
-      left: 39px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .text-title {
-      color: red
+      margin-top: 0px;
+      margin-left: -10px;
     }
   </style>
 </head>
 
 <body onload="reload()">
-  <div class="pos1">
-    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
-    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
-    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
-    <div class="circle circle-pos4 animated infinite pulse" onclick="show(3)">4</div>
-    <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">5</div>
-    <div class="circle circle-pos6 animated infinite pulse" onclick="show(5)">6</div>
 
-    <!-- <div class="answer answer0 " id="">提到高科技，感觉往往并不是奔驰擅长的技能，但在近几年奔驰的产品中，还确实出现不少先进的且夺人眼球的高科技装备，GLC也是如此。</div> -->
-    <div class="answer answer1 hidden" id="0"><span class="text-title">1. 8.8英寸显示屏</span>，内嵌式设计，不可触摸</div>
-    <div class="answer answer2 hidden" id="1"><span class="text-title">2. 安全套装（中低配不提供，其余¥5,700</span>，包含远光辅助功能及LED随动控制大灯，不可单独选择</div>
-    <div class="answer answer3 hidden" id="2"><span class="text-title">3. 全彩平视显示系统（¥11,000）</span>，可显示带禁止超车指示的速度限制等信息，同时还可显示并操作电话和娱乐服务等常用功能。</div>
-    <div class="answer answer4 hidden" id="3"><span class="text-title">4. 全景摄像头（¥7,200）</span>，通过外部后视镜中的摄像头、前视广角摄像头和后视摄像头提供车辆四周的360°全景视图。</div>
-    <div class="answer answer5 hidden" id="4"><span class="text-title">5. 第四代iDrive触控系统</span>, 搭载了ConnectedDrive娱乐互联系统，同时还配备汉字手写功能。低配车型功能略有差别。</div>
-    <div class="answer answer6 hidden" id="5"><span class="text-title">6. 行李箱盖自动操控（低配选装，其余标配）</span>，在后保险杠下方快速、定向移动脚部即可通过传感器开启尾门。</div>
+  <!---  Question -->
+  <div class="animated fadeInDown question_layer" style=" z-index:999">
+    <div style="    position: absolute;
+    top: 310px;
+    left: 450px;">
+      <div style="    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    margin: 0px 0 20px 0;">
+         Levante的中控显示屏为（ ）英寸。
+      </div>
+      <div style=" margin:0 auto;">
+        <div class="item" onclick="check(1)">
+          <img src="images/radio.png" id="item1" class="radio-img">
+          <p class="radio-text">8 </p>
+        </div>
 
-    <!-- <div class="answer answer7 hidden" id="7" style="font-size:16px; color:red; border:1px solid red; line-height:25px; height:25px; width:250px; border-radius:25px; text-align:center">技术虽全面，但并无优势</div>
-    <div class="answer answer8 hidden" id="8">多功能触摸板、车道保持辅助和盲点辅助系统早已在奔驰车型上使用，并不是最新的科技装配。GLC SUV装配的碰撞预防辅助系统增强版</div> -->
+        <div class="item" onclick="check(2)">
+          <img src="images/radio.png" id="item2" class="radio-img">
+          <p class="radio-text">8.2 </p>
+        </div>
 
+        <div class="item" onclick="check(3)">
+          <img src="images/radio.png" id="item3" class="radio-img">
+          <p class="radio-text">8.4 </p>
+        </div>
+
+        <div class="item" onclick="check(4)">
+          <img src="images/radio.png" id="item4" class="radio-img">
+          <p class="radio-text">9</p>
+        </div>
+
+        <div style="    position: absolute;
+    top: 155px;
+    left: 90px;
+    height: 45px;
+    width: 130px;" onclick="page_check()">
+
+        </div>
+      </div>
+    </div>
   </div>
 
+  <div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span>
+      <button onclick="gotoBack(29)" id="right_text">确认进入下一页</button>
+    </span>
+  </div>
 
-  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
-  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
-  <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/04.png" width="100%" alt=""/></div-->
-  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div> -->
+  <div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span>
+      <button onclick="gotoBack(26)" id="error_text">确认并返回第26页</button>
+    </span>
+  </div>
+
+  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/11/05.png" width="100%" alt=""/></div> -->
   <div class="p-n-r">
     <div class="p-r">
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">28/59</div>
-      <div class="next fr disabled hidden" disabled data="29.html" id='next'></div>
+      <div class="page fr">28/53</div>
+      <div class="next fr disabled" disabled data="False"></div>
       <a href="27.html">
         <div class="prev fr"></div>
       </a>
@@ -191,29 +138,30 @@
       }, 1000);
     })
 
-    var showArr = [0, 0, 0, 0, 0, 0, 0];
-    function show(id) {
-      $('#' + id).fadeIn();
-      showArr[parseInt(id)] = 1;
 
-      if (check() == 1) {
-        $('#7').fadeIn();
-        $('#8').fadeIn();
-        //alert('finish!');
-        $('#next').fadeIn();
+    var answer = 0;
+    function check(num) {
+      answer = 0;
+      $('#item1').attr('src', 'images/radio.png');
+      $('#item2').attr('src', 'images/radio.png');
+      $('#item3').attr('src', 'images/radio.png');
+      $('#item4').attr('src', 'images/radio.png');
+
+      $('#item' + num).attr('src', 'images/radio-select.png');
+
+      if (num == 3) {
+        answer = 1;
       }
-
     }
 
-    function check() {
-      var bFinish = 0;
-
-      if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1
-        && showArr[4] == 1 && showArr[5] == 1) {
-        bFinish = 1;
+    function page_check() {
+      if (answer) {
+        event.stopPropagation();
+        $('#right_div').fadeIn();
+      } else {
+        event.stopPropagation();
+        $('#error_div').fadeIn();
       }
-
-      return bFinish;
     }
   </script>
 </body>
