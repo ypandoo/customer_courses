@@ -26,187 +26,11 @@
 </head>
 
 <body onload="reload()">
-  <div class="animated fadeInUp" style="position: absolute; width:1200px; height:760px; top: 0; left: 50%; margin-left:-600px;">
-    <img src="images/13/02.png" width="100%" height="100%" alt="" />
-  </div>
+<div class="animated fadeInUp" style="position: absolute; width:100%; height:100%; top: 0%; left: 0">
+  <img src="images/50/01.jpg" width="100%" height="100%" alt="" />
+</div>
 
 
-  <!-- question layer -->
-  <div style="position:relative; width:1000px; height:530px; margin: 0 auto; z-index:998">
-
-    <!-- q1 -->
-    <div class="cursor" style="position: absolute;
-    width: 250px;
-    height: 150px;
-    top: 300px;
-    left: 0;
-    background: url(images/13/q1.jpg);
-    background-size: 100% 100%;" onclick="clickQuestion('u1')"></div>
-
-    <div class="cursor" style="    position: absolute;
-    width: 250px;
-    height: 200px;
-    top: 500px;
-    left: 0;
-    margin-right: 5px;
-    background: url(images/13/q2.jpg);
-    background-size: 100% 100%;" onclick="clickQuestion('d1')"></div>
-
-    <!-- q2 -->
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 60px;
-    top: 340px;
-    left: 400px;
-    line-height: 60px;
-    text-align: center;
-    " onclick="clickQuestion('u2')">12项不同的系统/设定</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 60px;
-    top: 540px;
-    left: 400px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d2')">5种驾驶模式</div>
-
-    <!-- q3 -->
-    <div class="cursor" style="
-    position: absolute;
-    width: 300px;
-    height: 150px;
-    top: 320px;
-    left: 720px;
-    margin-right: 5px;
-    background: url(images/50/q3.png);
-    background-size: 100% 100%;" onclick="clickQuestion('u3')"></div>
-
-    <div class="cursor" style="
-    position: absolute;
-    width: 250px;
-    height: 150px;
-    top: 520px;
-    left: 750px;
-    margin-right: 5px;
-    background: url(images/50/q4.jpg);
-    background-size: 100% 100%;" onclick="clickQuestion('d3')"></div>
-
-    <!-- button2 -->
-    <div style="    position: absolute;
-    font-size: 12px;
-    border-radius: 30px;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 30px;
-    top: 140px;
-    right: 40px;
-    line-height: 30px;
-    text-align: center; cursor:pointer" onclick="confirm()">确定</div>
-    <div style="    position: absolute;
-    font-size: 12px;
-    border-radius: 30px;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 30px;
-    top: 190px;
-    right: 40px;
-    line-height: 30px;
-    text-align: center;cursor:pointer" onclick="reset()">重做</div>
-
-    <!-- lines -->
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 290px;
-    left: 260;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-u1-u2"></div>
-
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 290px;
-    left: 660px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 80px;" id="line-u2-u3"></div>
-
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 490px;
-    left: 260px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-d1-d2"></div>
-
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 490px;
-    left: 660px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 80px;" id="line-d2-d3"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 380px;
-    left: 260px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 135px;" id="line-u1-d2"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 370px;
-    left: 658px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 90px;" id="line-u2-d3"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 380px;
-    left: 260px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 135px;" id="line-d1-u2"></div>
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 370px;
-    left: 658px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 90px;" id="line-d2-u3"></div>
-
-  </div>
-  <!-- end question layer-->
-
-  <div id="right_div" class="mydiv" style="display:none;">
-    <span>恭喜你答对了!</span>
-    <span><button  onclick="gotoBack(51)" id="right_text">确认进入下一页</button></span>
-  </div>
-
-  <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回重新学习!</span>
-    <span><button  onclick="gotoBack(49)" id="error_text">确认并返回第49页</button></span>
-  </div>
 
 
   <div class="p-n-r">
@@ -215,7 +39,7 @@
         <div class="out fr">退出</div>
       </a>
       <div class="page fr">50/59</div>
-      <div class="next fr disabled" disabled data="False"></div>
+      <div class="next fr " disabled data="51.html"></div>
       <a href="49.html">
         <div class="prev fr"></div>
       </a>
