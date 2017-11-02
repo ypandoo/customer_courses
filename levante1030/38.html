@@ -15,283 +15,116 @@
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <style>
     html {
+
+
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      min-width: 1200px;
+      min-height: 800px;
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
       background-image: url(images/bg.jpg);
       background-size: cover;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      min-width: 1200px;
+      min-height: 800px;
     }
 
-    .cursor {
-      cursor: pointer;
+    .question_layer {
+      background-image: url(images/27/02.png);
+      background-size: 100% 100%;
+      position: absolute;
+      width: 1200px;
+      height: 600px;
+      top: 100px;
+      left: 50%;
+      margin-left: -500px;
     }
 
-    .hidden{
-      display: none;
+    .item {
+      float: left;
+      width: 50%;
+      text-align: left;
+      color: #808080;
+      font-size: 16px;
+      margin-top: 0px;
+      margin-left: -10px;
     }
   </style>
 </head>
 
 <body onload="reload()">
-  <div class="animated fadeInUp" style="position: absolute; width:1200px; height:760px; top: 0; left: 50%; margin-left:-600px;">
-    <img src="images/13/02.png" width="100%" height="100%" alt="" />
-  </div>
 
-
-  <!-- question layer -->
-  <div style="position:relative; width:1000px; height:530px; margin: 0 auto; z-index:998">
-
-    <!-- q1 -->
-    <div class="cursor" style="position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 340px;
-    left: -40px;
-    line-height: 60px;
-    text-align: center;
-    " onclick="clickQuestion('u1')">Stelvio</div>
-
-    <div class="cursor" style="position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 540px;
-    left: -40px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d1')">Q5</div>
-
-    <!-- q2 -->
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 340px;
-    left: 260px;
-    line-height: 60px;
-    text-align: center;
-    " onclick="clickQuestion('u2')">车长： 4629mm</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 540px;
-    left: 260px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d2')">车长： 4686mm</div>
-
-    <!-- q3 -->
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 340px;
-    left: 550px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('u3')">轴距： 2818mm</div>
-
-    <div class="cursor" style="
-    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 540px;
-    left: 550px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d3')">轴距： 2807mm</div>
-
-    <!-- q4 -->
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 340px;
-    left: 840px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('u4')">马力： 280匹</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 200px;
-    height: 60px;
-    top: 540px;
-    left: 840px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d4')">马力： 280匹</div>
-
-    <!-- button2 -->
+  <!---  Question -->
+  <div class="animated fadeInDown question_layer" style=" z-index:999">
     <div style="    position: absolute;
-    font-size: 12px;
-    border-radius: 30px;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 30px;
-    top: 140px;
-    right: 40px;
-    line-height: 30px;
-    text-align: center; cursor:pointer" onclick="confirm()">确定</div>
-    <div style="    position: absolute;
-    font-size: 12px;
-    border-radius: 30px;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 30px;
-    top: 190px;
-    right: 40px;
-    line-height: 30px;
-    text-align: center;cursor:pointer" onclick="reset()">重做</div>
+    top: 310px;
+    left: 450px;">
+      <div style="    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    margin: 0px 0 20px 0;">
+         Levante目前可提供哪两个功率的发动机（ ）。 
 
-    <!-- lines -->
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 290px;
-    left: 170;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 80px;" id="line-u1-u2"></div>
+      </div>
+      <div style=" margin:0 auto;">
+        <div class="item" onclick="check(1)">
+          <img src="images/radio.png" id="item1" class="radio-img">
+          <p class="radio-text">330匹马力 </p>
+        </div>
 
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 290px;
-    left: 470px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 70px;" id="line-u2-u3"></div>
+        <div class="item" onclick="check(2)">
+          <img src="images/radio.png" id="item2" class="radio-img">
+          <p class="radio-text">350匹马力  </p>
+        </div>
 
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 290px;
-    left: 760px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 70px;" id="line-u3-u4"></div>
+        <div class="item" onclick="check(3)">
+          <img src="images/radio.png" id="item3" class="radio-img">
+          <p class="radio-text">410匹马力</p>
+        </div>
 
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 490px;
-    left: 170px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 80px;" id="line-d1-d2"></div>
+        <div class="item" onclick="check(4)">
+          <img src="images/radio.png" id="item4" class="radio-img">
+          <p class="radio-text">430匹马力</p>
+        </div>
 
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 490px;
-    left: 470px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 70px;" id="line-d2-d3"></div>
+        <div style="    position: absolute;
+    top: 155px;
+    left: 90px;
+    height: 45px;
+    width: 130px;" onclick="page_check()">
 
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 490px;
-    left: 760px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 70px;" id="line-d3-d4"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 380px;
-    left: 170px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 85px;" id="line-u1-d2"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 370px;
-    left: 468px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 80px;" id="line-u2-d3"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 370px;
-    left: 755px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 80px;" id="line-u3-d4"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 380px;
-    left: 175px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 75px;" id="line-d1-u2"></div>
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 370px;
-    left: 465px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 80px;" id="line-d2-u3"></div>
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 370px;
-    left: 755px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 190px;
-    width: 80px;" id="line-d3-u4"></div>
-
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- end question layer-->
 
   <div id="right_div" class="mydiv" style="display:none;">
     <span>恭喜你答对了!</span>
-    <span><button  onclick="gotoBack(39)" id="right_text">确认进入下一页</button></span>
+    <span>
+      <button onclick="gotoBack(39)" id="right_text">确认进入下一页</button>
+    </span>
   </div>
 
   <div id="error_div" class="mydiv" style="display:none;">
     <span>错了，请返回重新学习!</span>
-    <span><button  onclick="gotoBack(37)" id="error_text">确认并返回第37页</button></span>
+    <span>
+      <button onclick="gotoBack(36)" id="error_text">确认并返回第22页</button>
+    </span>
   </div>
 
-
+  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/11/05.png" width="100%" alt=""/></div> -->
   <div class="p-n-r">
     <div class="p-r">
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">38/59</div>
+      <div class="page fr">38/53</div>
       <div class="next fr disabled" disabled data="False"></div>
       <a href="37.html">
         <div class="prev fr"></div>
@@ -306,123 +139,58 @@
       }, 1000);
     })
 
-    Array.prototype.in_array = function (e) {
-      for (i = 0; i < this.length; i++) {
-        if (this[i] == e)
-          return true;
-      }
-      return false;
-    }
 
-    var lines = { 'u1-u2': 0, 'u2-u3': 0, 'u3-u4':0, 'd1-d2': 0, 'd2-d3': 0, 'd3-d4': 0,'u1-d2': 0, 'u2-d3': 0, 'u3-d4': 0,'d1-u2': 0, 'd2-u3': 0 , 'd3-u4': 0,};
+//signle select version
+    // var answer = 0;
+    // function check(num) {
+    //   answer = 0;
+    //   $('#item1').attr('src', 'images/radio.png');
+    //   $('#item2').attr('src', 'images/radio.png');
+    //   $('#item3').attr('src', 'images/radio.png');
+    //   $('#item4').attr('src', 'images/radio.png');
 
-    var relation = {
-      'u1-u2': ['u1-d2'],
-      'u2-u3': ['u2-d3'],
-      'u3-u4': ['u3-d4'],
-      'd1-d2': ['d1-u2'],
-      'd2-d3': ['d2-u3'],
-      'd3-d4': ['d3-u4'],
-      'u1-d2': ['u1-u2'],
-      'u2-d3': ['u2-u3'],
-      'u3-d4': ['u3-u4'],
-      'd1-u2': ['d1-d2'],
-      'd2-u3': ['d2-d3'],
-      'd3-u4': ['d3-d4'],
-    }
-    var answer = [];
-    var correct_answer = ['u1-d2', 'd1-u2', 'u2-d3', 'd2-u3', 'd3-d4', 'u3-u4'];
+    //   $('#item' + num).attr('src', 'images/radio-select.png');
 
-    var currentQ = 'none';
+    //   if (num == 3) {
+    //     answer = 1;
+    //   }
+    // }
 
-    function clickQuestion(index) {
+    // function page_check() {
+    //   if (answer) {
+    //     event.stopPropagation();
+    //     $('#right_div').fadeIn();
+    //   } else {
+    //     event.stopPropagation();
+    //     $('#error_div').fadeIn();
+    //   }
+    // }
 
-      if (currentQ == 'none') {
-        currentQ = index;
-      } else {
-        var lineNum = '';
-        if (checkreverse(currentQ, index) == 2) {
-          currentQ = index;
-          return;
-        } else if (checkreverse(currentQ, index) == 1) {
-          lineNum = index + '-' + currentQ;
-        } else {
-          lineNum = currentQ + '-' + index;
-        }
+    //multi-select version
+        var answer = 0;
+          var checkArr = { 1: 0, 2: 0, 3: 0, 4: 0 };
+          function check(num) {
+            if (checkArr[num] == 0) {
+              $('#item' + num).attr('src', 'images/radio-select.png');
+              checkArr[num] = 1;
+            } else {
+              $('#item' + num).attr('src', 'images/radio.png');
+              checkArr[num] = 0;
+            }
+          }
 
-        if (checklines(lineNum)) {
-          answer.push(lineNum);
-
-          //set used 
-          setUsed(lineNum);
-
-          //show lines
-          $('#line-' + lineNum).fadeIn();
-          currentQ = 'none';
-        } else {
-          currentQ = index;
-        }
-      }
-    }
-
-    function setUsed(lineNum) {
-      lines[lineNum] = 1;
-
-      relatedArr = relation[lineNum];
-
-      for (var i = 0; i < relatedArr.length; i++) {
-        if (lines.hasOwnProperty(relatedArr[i])) {
-          lines[relatedArr[i]] = 1;
-        }
-      }
-    }
-
-    function checkreverse(index1, index2) {
-      var lineNum1 = index1 + '-' + index2;
-      var lineNum2 = index2 + '-' + index1;
-      if (lines.hasOwnProperty(lineNum1) || lines.hasOwnProperty(lineNum2)) {
-        if (lines.hasOwnProperty(lineNum1)) {
-          return 0;
-        } else {
-          return 1;
-        }
-      } else {
-        return 2; //not exist
-      }
-    }
-
-    function checklines(id) {
-      return (lines.hasOwnProperty(id) && (lines[id] == 0));
-    }
-
-    function confirm() {
-
-      var correct = 1;
-
-      for (var i = 0; i < answer.length; i++) {
-        if (correct_answer.in_array(answer[i])) {
-
-        }
-        else {
-          correct = 0;
-          break;
-        }
-      }
-
-      if (correct && answer.length == 6) {
-        $('#right_div').fadeIn();
-      } else {
-        $('#error_div').fadeIn();
-      }
-    }
-
-    function reset() {
-      $.each(lines, function (key, val) {
-        lines[key] = 0;//可以输出成绩
-        $('#line-' + key).hide();
-        answer = [];
-      });
-    }
+          function page_check() {
+            if (checkArr[1] == 0 && checkArr[2] == 1 && checkArr[3] == 0 && checkArr[4] == 1) {
+              answer = 1;
+            }
+            if (answer) {
+              event.stopPropagation();
+              $('#right_div').fadeIn();
+            } else {
+              event.stopPropagation();
+              $('#error_div').fadeIn();
+            }
+          }
   </script>
 </body>
 
