@@ -36,14 +36,13 @@
     }
 
     .question_layer {
-      background-image: url(images/27/02.png);
-      background-size: 100% 100%;
-      position: absolute;
-      width: 1200px;
-      height: 600px;
-      top: 100px;
-      left: 50%;
-      margin-left: -500px;
+      background-image: url(images/08/02.png);
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1440px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
     }
 
     .item {
@@ -51,22 +50,22 @@
       width: 50%;
       text-align: left;
       color: #808080;
-      font-size: 16px;
+      font-size: 18px;
       margin-top: 0px;
       margin-left: -10px;
     }
   </style>
-</head>
-
-<body onload="reload()">
-
-  <!---  Question -->
-  <div class="animated fadeInDown question_layer" style=" z-index:999">
+  </head>
+  
+  <body onload="reload()" id="scaleable-wrapper">
+  
+    <!---  Question -->
+    <div class="question_layer" style=" z-index:999" id="resize">
     <div style="    position: absolute;
-    top: 310px;
-    left: 450px;">
+    top: 400px;
+    left: 600px;">
       <div style="    color: #ffffff;
-    font-size: 18px;
+    font-size: 24px;
     text-align: left;
     margin: 0px 0 20px 0;">
          Levante的风阻系数为（ ）。
@@ -93,10 +92,10 @@
         </div>
 
         <div style="    position: absolute;
-    top: 155px;
-    left: 90px;
-    height: 45px;
-    width: 130px;" onclick="page_check()">
+    top: 180px;
+    left: 60px;
+    height: 50px;
+    width: 150px;" onclick="page_check()">
 
         </div>
       </div>
@@ -130,6 +129,9 @@
       </a>
     </div>
   </div>
+
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/resize.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

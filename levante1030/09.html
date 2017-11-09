@@ -28,22 +28,19 @@
       height: 100%;
       width: 100%;
       background-image: url(images/bg.jpg);
-      background-size: cover;
+      background-size: 100% 100%;
       overflow: hidden;
       background-repeat: no-repeat;
-      min-width: 1200px;
-      min-height: 800px;
     }
 
     .question_layer {
       background-image: url(images/08/02.png);
-      background-size: 100% 100%;
-      position: absolute;
-      width: 1200px;
-      height: 600px;
-      top: 100px;
-      left: 50%;
-      margin-left: -500px;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1440px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
     }
 
     .item {
@@ -51,7 +48,7 @@
       width: 100%;
       text-align: left;
       color: #808080;
-      font-size: 16px;
+      font-size: 18px;
       margin-top: 0px;
       margin-left: -10px;
     }
@@ -62,13 +59,13 @@
   </style>
 </head>
 
-<body onload="reload()">
+<body onload="reload()" id="scaleable-wrapper">
 
   <!---  Question -->
-  <div class="animated fadeInDown question_layer" style=" z-index:999">
+  <div class="question_layer" style=" z-index:999" id="resize">
     <div style="    position: absolute;
-    top: 270px;
-    left: 490px;">
+    top: 360px;
+    left: 590px;">
       <div style="    color: #ffffff;
     font-size: 24px;
     text-align: left;
@@ -97,10 +94,10 @@
         </div>
 
         <div style="    position: absolute;
-    top: 195px;
+    top: 225px;
     left: 50px;
     height: 45px;
-    width: 130px;" onclick="page_check()">
+    width: 140px;" onclick="page_check()">
 
         </div>
       </div>
@@ -134,6 +131,9 @@
       </a>
     </div>
   </div>
+
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/resize.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {
