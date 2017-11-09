@@ -346,13 +346,11 @@ body {
 }
 
 body {
-    background-color: black !important;
     margin: 0px !important;
     background-size: 100% 100% !important;
 }
 
 html {
     margin: -2px -3px !important;
-    background-color: black !important;
     background-size: 100% 100% !important;
 }
