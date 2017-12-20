@@ -26,16 +26,16 @@ html
     background-image: url(images/04/02.png);
     background-size: 100% 100%;
     left: 50%;
-    margin-left: -500px;
+    margin-left: -600px;
     top: 60px;
 }
 
 .pos2{
     position: absolute;
-    width: 1000px;
+    width: 1200px;
     left: 50%;
-    margin-left: -500px;
-    top: 580px;
+    margin-left: -600px;
+    top: 620px;
 }
 
 .circle{
@@ -91,31 +91,31 @@ html
   cursor: pointer;
   background-image: url(images/04/03-1.png);
   background-size: 100% 100%;
-  width: 130px;
+  width: 150px;
   height: 85px;
   position: absolute;
   top: 0px;
-  left:70px;
+  left:85px;
 }
 
 .answer2{
   background-image: url(images/04/03-2.png);
   background-size: 100% 100%;
-  width: 130px;
+  width: 150px;
   height: 85px;
   position: absolute;
   top: 0px;
-  left: 205px;
+  left: 250px;
 }
 
 .answer3{
   background-image: url(images/04/03-3.png);
   background-size: 100% 100%;
-  width: 130px;
+  width: 150px;
   height: 85px;
   position: absolute;
     top: 0px;
-    left: 340px;
+    left: 415px;
 }
 
 .answer11{
@@ -125,7 +125,7 @@ html
     height: 35px;
     position: absolute;
     top: 0px;
-    left: 540px;
+    left: 670px;
 }
 
 .answer22{
@@ -135,7 +135,7 @@ html
     height: 35px;
     position: absolute;
     top: 0px;
-    left: 740px;
+    left: 900px;
 }
 
 .answer33{
@@ -145,7 +145,7 @@ html
   height: 35px;
   position: absolute;
     top: 50px;
-    left: 540px;
+    left: 670px;
 }
 
 .answer44{
@@ -155,7 +155,7 @@ html
     height: 35px;
     position: absolute;
     top: 50px;
-    left: 740px;
+    left: 900px;
 }
 
 .hidden{
@@ -164,27 +164,30 @@ html
 
 </style>
 </head>
-<body onload="reload()">
-  <div class="pos1">  
-    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
-    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
-    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
-
-    <div class="circle circle-pos11 animated infinite pulse" onclick="show(3)">1</div>
-    <div class="circle circle-pos22 animated infinite pulse" onclick="show(4)">2</div>
-    <div class="circle circle-pos33 animated infinite pulse" onclick="show(5)">3</div>
-    <div class="circle circle-pos44 animated infinite pulse" onclick="show(6)">4</div>
+<body onload="reload()" id="scaleable-wrapper">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
+      <div class="pos1">  
+          <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
+          <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
+          <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
+      
+          <div class="circle circle-pos11 animated infinite pulse" onclick="show(3)">1</div>
+          <div class="circle circle-pos22 animated infinite pulse" onclick="show(4)">2</div>
+          <div class="circle circle-pos33 animated infinite pulse" onclick="show(5)">3</div>
+          <div class="circle circle-pos44 animated infinite pulse" onclick="show(6)">4</div>
+        </div>
+      
+        <div class="pos2">
+          <div class="answer1 hidden" id="0"></div>
+          <div class="answer2 hidden" id="1"></div>
+          <div class="answer3 hidden" id="2"></div>
+          <div class="answer11 hidden" id="3"></div>
+          <div class="answer22 hidden" id="4"></div>
+          <div class="answer33 hidden" id="5"></div>
+          <div class="answer44 hidden" id="6"></div>
+        </div>
   </div>
 
-  <div class="pos2">
-    <div class="answer1 hidden" id="0"></div>
-    <div class="answer2 hidden" id="1"></div>
-    <div class="answer3 hidden" id="2"></div>
-    <div class="answer11 hidden" id="3"></div>
-    <div class="answer22 hidden" id="4"></div>
-    <div class="answer33 hidden" id="5"></div>
-    <div class="answer44 hidden" id="6"></div>
-  </div>
 
 
 <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
@@ -203,6 +206,8 @@ html
     </a> 
   </div>
 </div>
+
+<script type="text/javascript" src="js/resize.js"></script>
 <script type="text/javascript">
   $(function(){
     setTimeout(function(){

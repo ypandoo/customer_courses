@@ -19,107 +19,336 @@
       background-size: cover;
     }
 
-    .pos1 {
-      position: absolute;
-      width: 1000px;
-      height: 650px;
-      background-image: url(images/16/02.png);
-      background-size: 100% 100%;
-      left: 50%;
-      margin-left: -500px;
-      top: 40px;
-    }
-
-    .pos2 {
-      position: absolute;
-      width: 1000px;
-      left: 50%;
-      margin-left: -500px;
-      top: 580px;
-    }
-
-    .circle {
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 20px;
-      border: 1px solid white;
-      color: white;
-      text-align: center;
-      font-size: 12px;
-      line-height: 20px;
-      position: absolute;
+    .cursor {
       cursor: pointer;
-      z-index: 999;
     }
 
-    .circle-pos1 {top: 310px;left: 73px;}
-    .circle-pos2 {top: 310px;left: 243px;}
-    .circle-pos3 {top: 310px;left: 410px;}
-    .circle-pos4 {top: 310px;left: 563px;}
-    .circle-pos5 {top: 310px;left: 723px;}
-    .circle-pos6 {top: 310px;left: 888px;}
-
-    .answer {
-      position: absolute;
-      font-size: 16px;
-      color: #bdbaba;
-    }
-
-    .answer0 {top: 160px;left: 39px;}
-    .answer1 {top: 350px;left: 39px;}
-    .answer2 {top: 380px;left: 39px;}
-    .answer3 {top: 410px;left: 39px;}
-    .answer4 {top: 440px;left: 39px;}
-    .answer5 {top: 470px;left: 39px;}
-    .answer6 {top: 500px;left: 39px;}
-    .answer7 {top: 530px;left: 39px;}
-    .answer8 {top: 575px;left: 39px;}
-
-    .hidden {
-      display: none;
-    }
-
-    .text-title {
-      color: red
-    }
+    /* .hidden{
+      display: block;
+    } */
   </style>
 </head>
 
 <body onload="reload()">
-  <div class="pos1">
-    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
-    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
-    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
-    <div class="circle circle-pos4 animated infinite pulse" onclick="show(3)">4</div>
-    <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">5</div>
-    <div class="circle circle-pos6 animated infinite pulse" onclick="show(5)">6</div>
-
-    <!-- <div class="answer answer0 " id="">提到高科技，感觉往往并不是奔驰擅长的技能，但在近几年奔驰的产品中，还确实出现不少先进的且夺人眼球的高科技装备，GLC也是如此。</div> -->
-    <div class="answer answer1 hidden" id="0"><span class="text-title">1. 柏林之声音响系统</span>，Burmester来自于德国High-End音响工业，GLC拥有13个扬声器，总功率达到590瓦。</div>
-    <div class="answer answer2 hidden" id="1"><span class="text-title">2. 氛围灯</span>，采用LED光源，提供3种颜色可选择和5种亮度级别，带来舒适的车内氛围效果。</div>
-    <div class="answer answer3 hidden" id="2"><span class="text-title">3. 香氛系统</span>，该组件提供4种车内香氛，可根据心情任意选择，另外还配备负离子发生器。</div>
-    <div class="answer answer4 hidden" id="3"><span class="text-title">4. 越野模式套件</span>，为驾驶者提供四种越野模式选择，分别是：越野、上坡、冰雪、挂车，另外还提供陡坡缓降系统功能。</div>
-    <div class="answer answer5 hidden" id="4"><span class="text-title">5. 越野状态显示功能</span>，这是非常专业的一项功能，可显示当前越野模式、倾斜角度、方向等和越野驾驶时相关的重要信息。</div>
-    <div class="answer answer6 hidden" id="5"><span class="text-title">6. 限距控制系统增强版</span>，帮助驾驶员保持与前车的安全距离，并减轻驾驶员长途行车时的压力。</div>
-
-    <!-- <div class="answer answer7 hidden" id="7" style="font-size:16px; color:red; border:1px solid red; line-height:25px; height:25px; width:250px; border-radius:25px; text-align:center">技术虽全面，但并无优势</div>
-    <div class="answer answer8 hidden" id="8">多功能触摸板、车道保持辅助和盲点辅助系统早已在奔驰车型上使用，并不是最新的科技装配。GLC SUV装配的碰撞预防辅助系统增强版</div> -->
-
+  <div class="animated fadeInUp" style="position: absolute; width:1200px; height:760px; top: 0; left: 50%; margin-left:-600px;">
+    <img src="images/13/02.png" width="100%" height="100%" alt="" />
   </div>
 
 
-  <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
-  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
-  <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/04.png" width="100%" alt=""/></div-->
-  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div> -->
+  <!-- question layer -->
+  <div style="position:relative; width:1000px; height:530px; margin: 0 auto; z-index:998">
+
+    <!-- q1 -->
+    <div class="cursor" style="    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 250px;
+    left: 0;
+    background: url(images/15/q1.png);
+    background-size: 100% 100%;" onclick="clickQuestion('u1')"></div>
+
+    <div class="cursor" style="    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 400px;
+    left: 0;
+    margin-right: 5px;
+    background: url(images/15/q2.png);
+    background-size: 100% 100%;" onclick="clickQuestion('m1')"></div>
+
+    <div class="cursor" style="    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 550px;
+    left: 0;
+    margin-right: 5px;
+    background: url(images/15/q3.png);
+    background-size: 100% 100%;" onclick="clickQuestion('d1')"></div>
+
+    <!-- q2 -->
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 290px;
+    left: 360px;
+    line-height: 60px;
+    text-align: center;
+    " onclick="clickQuestion('u2')">越野状态显示功能</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 440px;
+    left: 360px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('m2')">限距控制系统增强版</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 60px;
+    top: 590px;
+    left: 360px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('d2')">越野模式套件</div>
+
+    <!-- q3 -->
+    <div class="cursor" style="    position: absolute;
+    font-size: 16px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 290px;
+    left: 770px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('u3')">越野模式、倾斜角度、方向</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 14px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 440px;
+    left: 770px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('m3')">上坡、冰雪、挂车</div>
+
+    <div class="cursor" style="    position: absolute;
+    font-size: 14px;
+    border-radius: 40px;
+    color: white;
+    border: 1px solid white;
+    width: 280px;
+    height: 60px;
+    top: 590px;
+    left: 770px;
+    line-height: 60px;
+    text-align: center;" onclick="clickQuestion('d3')">保持与前车的安全距离</div>
+
+    <!-- button2 -->
+    <div style="    position: absolute;
+    font-size: 12px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    top: 140px;
+    right: 40px;
+    line-height: 30px;
+    text-align: center; cursor:pointer" onclick="confirm()">确定</div>
+    <div style="    position: absolute;
+    font-size: 12px;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    height: 30px;
+    top: 190px;
+    right: 40px;
+    line-height: 30px;
+    text-align: center;cursor:pointer" onclick="reset()">重做</div>
+
+    <!-- lines -->
+    <!-- 横 -->
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 240px;
+    left: 215px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-u1-u2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 240px;
+    left: 625px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-u2-u3"></div>
+
+    <div class="hidden" style="    position: absolute;
+    height: 30px;
+    top: 390px;
+    left: 215px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-m1-m2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 390px;
+    left: 625px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-m2-m3"></div>
+
+    <div class="hidden" style="position: absolute;
+    top: 540px;
+    left: 215px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-d1-d2"></div>
+
+    <div class="hidden" style="position: absolute;
+    height: 30px;
+    top: 540px;
+    left: 625px;
+    background: url(images/line0.png);
+    background-size: 100% 100%;
+    height: 160px;
+    width: 130px;" id="line-d2-d3"></div>
+
+
+    <!-- 斜 u1-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-u1-m2"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-u1-d2"></div>
+
+
+
+
+    <!-- 斜 m1-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m1-u2"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 470px;
+    left: 215px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m1-d2"></div>
+
+
+
+    <!-- 斜 d1-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 215px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-d1-u2"></div>
+    <div class="hidden" style="   position: absolute;
+    top: 470px;
+    left: 215px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-d1-m2"></div>
+
+
+    <!-- 斜 u2-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-u2-m3"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-u2-d3"></div>
+
+
+
+
+    <!-- 斜 m2-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m2-u3"></div>
+    <div class="hidden" style="    position: absolute;
+    top: 470px;
+    left: 625px;
+    background: url(images/line-45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-m2-d3"></div>
+
+
+
+    <!-- 斜 d2-->
+    <div class="hidden" style="    position: absolute;
+    top: 320px;
+    left: 625px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 300px;
+    width: 135px;" id="line-d2-u3"></div>
+        <div class="hidden" style="   position: absolute;
+    top: 470px;
+    left: 625px;
+    background: url(images/line45.png);
+    background-size: 100% 100%;
+    height: 150px;
+    width: 135px;" id="line-d2-m3"></div>
+
+
+  </div>
+  <!-- end question layer-->
+
+  <div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(16)" id="right_text">确认进入下一页</button></span>
+  </div>
+
+  <div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(12)" id="error_text">确认并返回第12页</button></span>
+  </div>
+
+
   <div class="p-n-r">
     <div class="p-r">
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">16/59</div>
-      <div class="next fr disabled hidden" disabled data="17.html" id='next'></div>
+      <div class="page fr">16/50</div>
+      <div class="next fr disabled" disabled data="False"></div>
       <a href="15.html">
         <div class="prev fr"></div>
       </a>
@@ -133,29 +362,132 @@
       }, 1000);
     })
 
-    var showArr = [0, 0, 0, 0, 0, 0, 0];
-    function show(id) {
-      $('#' + id).fadeIn();
-      showArr[parseInt(id)] = 1;
-
-      if (check() == 1) {
-        $('#7').fadeIn();
-        $('#8').fadeIn();
-        //alert('finish!');
-        $('#next').fadeIn();
+    Array.prototype.in_array = function (e) {
+      for (i = 0; i < this.length; i++) {
+        if (this[i] == e)
+          return true;
       }
-
+      return false;
     }
 
-    function check() {
-      var bFinish = 0;
+    var lines = { 'u1-u2': 0, 'u2-u3': 0, 'm1-m2': 0, 'm2-m3': 0, 'd1-d2': 0, 'd2-d3': 0,
+                  'u1-m2': 0, 'u1-d2': 0, 'm1-u2': 0, 'm1-d2': 0, 'd1-u2': 0, 'd1-m2': 0, 
+                  'u2-m3': 0, 'u2-d3': 0, 'm2-u3': 0, 'm2-d3': 0, 'd2-u3': 0, 'd2-m3': 0};
 
-      if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1
-        && showArr[4] == 1 && showArr[5] == 1) {
-        bFinish = 1;
+    var relation = {
+      'u1-u2': ['u1-d2', 'u1-m2'],
+      'u2-u3': ['u2-d3', 'u2-m3'],
+      'm1-m2': ['m1-d2', 'm1-u2'],
+      'm2-m3': ['m2-d3', 'm2-u3'],
+      'd1-d2': ['d1-m2', 'd1-u2'],
+      'd2-d3': ['d2-m3', 'd2-u3'],
+
+      'u1-m2': ['u1-d2', 'u1-u2'],
+      'u1-d2': ['u1-u2', 'u1-m2'],
+      'm1-u2': ['m1-d2', 'm1-m2'],
+      'm1-d2': ['m1-u2', 'm1-m2'],
+      'd1-u2': ['d1-d2', 'd1-m2'],
+      'd1-m2': ['d1-u2', 'd1-d2'],
+
+      'u2-m3': ['u2-d2', 'u2-u2'],
+      'u2-d3': ['u2-u2', 'u2-m2'],
+      'm2-u3': ['m2-d2', 'u2-m2'],
+      'm2-d3': ['m2-u2', 'u2-m2'],
+      'd2-u3': ['d2-d2', 'd2-m2'],
+      'd2-m3': ['d2-u2', 'd2-d2']
+    }
+    var answer = [];
+    var correct_answer = ['u1-d2', 'm1-u2', 'd1-m2', 'u2-u3', 'd2-m3', 'm2-d3'];
+
+    var currentQ = 'none';
+
+    function clickQuestion(index) {
+
+      if (currentQ == 'none') {
+        currentQ = index;
+      } else {
+        var lineNum = '';
+        if (checkreverse(currentQ, index) == 2) {
+          currentQ = index;
+          return;
+        } else if (checkreverse(currentQ, index) == 1) {
+          lineNum = index + '-' + currentQ;
+        } else {
+          lineNum = currentQ + '-' + index;
+        }
+
+        if (checklines(lineNum)) {
+          answer.push(lineNum);
+
+          //set used 
+          setUsed(lineNum);
+
+          //show lines
+          $('#line-' + lineNum).fadeIn();
+          currentQ = 'none';
+        } else {
+          currentQ = index;
+        }
+      }
+    }
+
+    function setUsed(lineNum) {
+      lines[lineNum] = 1;
+
+      relatedArr = relation[lineNum];
+
+      for (var i = 0; i < relatedArr.length; i++) {
+        if (lines.hasOwnProperty(relatedArr[i])) {
+          lines[relatedArr[i]] = 1;
+        }
+      }
+    }
+
+    function checkreverse(index1, index2) {
+      var lineNum1 = index1 + '-' + index2;
+      var lineNum2 = index2 + '-' + index1;
+      if (lines.hasOwnProperty(lineNum1) || lines.hasOwnProperty(lineNum2)) {
+        if (lines.hasOwnProperty(lineNum1)) {
+          return 0;
+        } else {
+          return 1;
+        }
+      } else {
+        return 2; //not exist
+      }
+    }
+
+    function checklines(id) {
+      return (lines.hasOwnProperty(id) && (lines[id] == 0));
+    }
+
+    function confirm() {
+
+      var correct = 1;
+
+      for (var i = 0; i < answer.length; i++) {
+        if (correct_answer.in_array(answer[i])) {
+
+        }
+        else {
+          correct = 0;
+          break;
+        }
       }
 
-      return bFinish;
+      if (correct && answer.length == 6) {
+        $('#right_div').fadeIn();
+      } else {
+        $('#error_div').fadeIn();
+      }
+    }
+
+    function reset() {
+      $.each(lines, function (key, val) {
+        lines[key] = 0;//可以输出成绩
+        $('#line-' + key).hide();
+        answer = [];
+      });
     }
   </script>
 </body>
