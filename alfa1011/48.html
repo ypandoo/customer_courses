@@ -140,7 +140,8 @@ top: 395px;
   </style>
 </head>
 
-<body onload="reload()">
+<body onload="reload()" id="scaleable-wrapper">
+    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
   <div class="pos1">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
@@ -157,6 +158,7 @@ top: 395px;
     <div class="answer3 hidden" id="2"></div>
     <div class="answer4 hidden" id="3"></div>
 
+  </div>
   </div>
 
 
@@ -176,6 +178,8 @@ top: 395px;
       </a>
     </div>
   </div>
+
+  <script type="text/javascript" src="js/resize.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

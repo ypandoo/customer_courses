@@ -199,7 +199,8 @@ width: 200px;
   </style>
 </head>
 
-<body onload="reload()">
+<body onload="reload()" id="scaleable-wrapper">
+    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
   <div class="pos1">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
@@ -223,7 +224,7 @@ width: 200px;
     <div class="answer7 hidden" id="6">黑色保险杠（越野风格）</div>
     <div class="answer8 hidden" id="7">L型尾灯（家族设计）</div>
   </div>
-
+</div>
 
   <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
   <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
@@ -241,6 +242,8 @@ width: 200px;
       </a>
     </div>
   </div>
+
+  <script type="text/javascript" src="js/resize.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

@@ -144,7 +144,8 @@
   </style>
 </head>
 
-<body onload="reload()">
+<body onload="reload()" id="scaleable-wrapper">
+    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
   <div class="pos1">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
@@ -166,6 +167,7 @@
     <div class="answer answer8 hidden" id="8">多功能触摸板、车道保持辅助和盲点辅助系统早已在奔驰车型上使用，并不是最新的科技装配。GLC SUV装配的碰撞预防辅助系统增强版</div> -->
 
   </div>
+  </div>
 
 
   <!-- <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/01.jpg" width="100%" alt=""/></div> -->
@@ -184,6 +186,8 @@
       </a>
     </div>
   </div>
+
+  <script type="text/javascript" src="js/resize.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

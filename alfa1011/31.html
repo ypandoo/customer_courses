@@ -1,496 +1,151 @@
 <!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title></title>
-  <link href="css/base.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/jquery.fullPage.css">
-  <link href="css/style-animate.css" rel="stylesheet">
-  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script>
-  <script type="text/javascript" src="js/layer/layer.js"></script>
-  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
-  <style>
-    html {
-      background-image: url(images/bg.jpg);
-      background-size: cover;
-    }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link href="css/style-animate.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+<style>
+html
+{
+  background-image:url(images/32/01.jpg);
+  background-size:cover;
+}
 
-    .cursor {
-      cursor: pointer;
-    }
-    /* .hidden{
-      display: block;
-    } */
-  </style>
+#submit_btn
+{
+    width: 32%;
+    margin: auto;
+    height: 25%;
+    position: absolute;
+    top: 65%;
+    left: 35%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    background-color: transparent;
+    border-style: hidden;
+}
+
+.btn-class
+{
+   display:inline-block;
+   width: 45%;
+   height: 20%;
+   border-style: hidden;
+   background-color: transparent;
+}
+
+</style>
 </head>
+<body onload="reload(0.37,0.27,0.25,0.1)">
+<div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; height:100%; left: 0"><img src="images/32/01.jpg" height="100%" width="100%" alt=""/></div>
+<!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/logo.png" width="100%" alt=""/></div> -->
 
-<body onload="reload()">
-  <div class="animated fadeInUp" style="position: absolute; width:1200px; height:760px; top: 0; left: 50%; margin-left:-600px;">
-    <img src="images/13/02.png" width="100%" height="100%" alt="" />
+<!-- <div  style="position: absolute; width:100%; top: 0%; left: 0;"><img src="images/09/05.png" width="100%" alt="" style="display:none" id="ans_img"/></div> -->
+<!-- <div class="question1" id ="question">
+    <button id = "btnA" onclick="select_ans(1,32)" class="btn-class"></button>
+    <button id = "btnB" onclick="select_ans(2,32)" class="btn-class" ></button>
+    <button id = "btnC" onclick="select_ans(3,32)" class="btn-class"></button>
+    <button id = "btnD" onclick="select_ans(4,32)" class="btn-class"></button>
+    <button id = "submit_btn" onclick="submit_ans(2)"></button>
+</div> -->
+<!---  Question -->
+<!-- <div class="animated fadeInDown" style="width:100%; z-index:2">
+  <img id="audioID" src="images/question.png" width="100%" alt="" />
+</div>
+<div style="width:50%; margin: 0 auto; text-align:center; overflow:hidden; z-index:999">
+  <div style="color:#002f73; font-size:24px; text-align:left; margin:40px auto">
+     18款Ghibli有（ ）版本车型推向市场。
   </div>
+  <div style=" margin:0 auto;">
+    <div class="item" onclick="check(1)">
+      <img src="images/radio.png" id="item1" class="radio-img">
+      <p class="radio-text">1</p>
+    </div>
 
+    <div class="item" onclick="check(2)">
+      <img src="images/radio.png" id="item2" class="radio-img">
+      <p class="radio-text">2</p>
+    </div>
 
-  <!-- question layer -->
-  <div style="position:relative; width:1000px; height:530px; margin: 0 auto; z-index:998">
+    <div class="item" onclick="check(3)">
+      <img src="images/radio.png" id="item3" class="radio-img">
+      <p class="radio-text">3</p>
+    </div>
 
-    <!-- q1 -->
-    <div class="cursor" style="    position: absolute;
-    width: 200px;
-    height: 130px;
-    top: 250px;
-    left: 0;
-    background: url(images/31/q1.jpg);
-    background-size: 100% 100%;" onclick="clickQuestion('u1')"></div>
-
-    <div class="cursor" style="    position: absolute;
-    width: 200px;
-    height: 130px;
-    top: 400px;
-    left: 0;
-    margin-right: 5px;
-    background: url(images/31/q2.jpg);
-    background-size: 100% 100%;" onclick="clickQuestion('m1')"></div>
-
-    <div class="cursor" style="    position: absolute;
-    width: 200px;
-    height: 130px;
-    top: 550px;
-    left: 0;
-    margin-right: 5px;
-    background: url(images/31/q3.jpg);
-    background-size: 100% 100%;" onclick="clickQuestion('d1')"></div>
-
-    <!-- q2 -->
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 60px;
-    top: 290px;
-    left: 360px;
-    line-height: 60px;
-    text-align: center;
-    " onclick="clickQuestion('u2')">标准真皮座椅</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 60px;
-    top: 440px;
-    left: 360px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('m2')">后排空调出风口usb接口</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 60px;
-    top: 590px;
-    left: 360px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d2')">Sensatec合成皮</div>
-
-    <!-- q3 -->
-    <div class="cursor" style="    position: absolute;
-    font-size: 16px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 280px;
-    height: 60px;
-    top: 290px;
-    left: 770px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('u3')">合成革、低端车的做法</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 14px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 280px;
-    height: 60px;
-    top: 440px;
-    left: 770px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('m3')">更高级的材料、来自意大利</div>
-
-    <div class="cursor" style="    position: absolute;
-    font-size: 14px;
-    border-radius: 40px;
-    color: white;
-    border: 1px solid white;
-    width: 280px;
-    height: 60px;
-    top: 590px;
-    left: 770px;
-    line-height: 60px;
-    text-align: center;" onclick="clickQuestion('d3')">更高级、更舒适、更方便</div>
-
-    <!-- button2 -->
-    <div style="    position: absolute;
-    font-size: 12px;
-    border-radius: 30px;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 30px;
-    top: 140px;
-    right: 40px;
-    line-height: 30px;
-    text-align: center; cursor:pointer" onclick="confirm()">确定</div>
-    <div style="    position: absolute;
-    font-size: 12px;
-    border-radius: 30px;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 30px;
-    top: 190px;
-    right: 40px;
-    line-height: 30px;
-    text-align: center;cursor:pointer" onclick="reset()">重做</div>
-
-    <!-- lines -->
-    <!-- 横 -->
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 240px;
-    left: 215px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-u1-u2"></div>
-
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 240px;
-    left: 625px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-u2-u3"></div>
-
-    <div class="hidden" style="    position: absolute;
-    height: 30px;
-    top: 390px;
-    left: 215px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-m1-m2"></div>
-
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 390px;
-    left: 625px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-m2-m3"></div>
-
-    <div class="hidden" style="position: absolute;
-    top: 540px;
-    left: 215px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-d1-d2"></div>
-
-    <div class="hidden" style="position: absolute;
-    height: 30px;
-    top: 540px;
-    left: 625px;
-    background: url(images/line0.png);
-    background-size: 100% 100%;
-    height: 160px;
-    width: 130px;" id="line-d2-d3"></div>
-
-
-    <!-- 斜 u1-->
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 215px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-u1-m2"></div>
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 215px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 300px;
-    width: 135px;" id="line-u1-d2"></div>
-
-
-
-
-    <!-- 斜 m1-->
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 215px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-m1-u2"></div>
-    <div class="hidden" style="    position: absolute;
-    top: 470px;
-    left: 215px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-m1-d2"></div>
-
-
-
-    <!-- 斜 d1-->
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 215px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 300px;
-    width: 135px;" id="line-d1-u2"></div>
-    <div class="hidden" style="   position: absolute;
-    top: 470px;
-    left: 215px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-d1-m2"></div>
-
-
-    <!-- 斜 u2-->
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 625px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-u2-m3"></div>
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 625px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 300px;
-    width: 135px;" id="line-u2-d3"></div>
-
-
-
-
-    <!-- 斜 m2-->
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 625px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-m2-u3"></div>
-    <div class="hidden" style="    position: absolute;
-    top: 470px;
-    left: 625px;
-    background: url(images/line-45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-m2-d3"></div>
-
-
-
-    <!-- 斜 d2-->
-    <div class="hidden" style="    position: absolute;
-    top: 320px;
-    left: 625px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 300px;
-    width: 135px;" id="line-d2-u3"></div>
-    <div class="hidden" style="   position: absolute;
-    top: 470px;
-    left: 625px;
-    background: url(images/line45.png);
-    background-size: 100% 100%;
-    height: 150px;
-    width: 135px;" id="line-d2-m3"></div>
-
-
-  </div>
-  <!-- end question layer-->
-
-  <div id="right_div" class="mydiv" style="display:none;">
-    <span>恭喜你答对了!</span>
-    <span><button  onclick="gotoBack(32)" id="right_text">确认进入下一页</button></span>
-  </div>
-
-  <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回重新学习!</span>
-    <span><button  onclick="gotoBack(29)" id="error_text">确认并返回第29页</button></span>
-  </div>
-
-
-  <div class="p-n-r">
-    <div class="p-r">
-      <a href="#">
-        <div class="out fr">退出</div>
-      </a>
-      <div class="page fr">31/59</div>
-      <div class="next fr disabled" disabled data="False"></div>
-      <a href="30.html">
-        <div class="prev fr"></div>
-      </a>
+    <div class="item" onclick="check(4)">
+      <img src="images/radio.png" id="item4" class="radio-img">
+      <p class="radio-text">4</p>
     </div>
   </div>
-  <script type="text/javascript">
-    $(function () {
-      setTimeout(function () {
-        $(".title1").addClass("bounceInleft");
-        $(".title1").removeClass("hide");
-      }, 1000);
-    })
+</div>
+<div class="confirm" onclick="page_check()">确定</div>
+<div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span><button  onclick="gotoBack(33)" id="right_text">确认进入下一页</button></span>
+</div>
 
-    Array.prototype.in_array = function (e) {
-      for (i = 0; i < this.length; i++) {
-        if (this[i] == e)
-          return true;
-      }
-      return false;
-    }
+<div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span><button  onclick="gotoBack(20)" id="error_text">确认并返回第20页</button></span>
+</div> -->
 
-    var lines = {
-      'u1-u2': 0, 'u2-u3': 0, 'm1-m2': 0, 'm2-m3': 0, 'd1-d2': 0, 'd2-d3': 0,
-      'u1-m2': 0, 'u1-d2': 0, 'm1-u2': 0, 'm1-d2': 0, 'd1-u2': 0, 'd1-m2': 0,
-      'u2-m3': 0, 'u2-d3': 0, 'm2-u3': 0, 'm2-d3': 0, 'd2-u3': 0, 'd2-m3': 0
-    };
 
-    var relation = {
-      'u1-u2': ['u1-d2', 'u1-m2'],
-      'u2-u3': ['u2-d3', 'u2-m3'],
-      'm1-m2': ['m1-d2', 'm1-u2'],
-      'm2-m3': ['m2-d3', 'm2-u3'],
-      'd1-d2': ['d1-m2', 'd1-u2'],
-      'd2-d3': ['d2-m3', 'd2-u3'],
+<div class="p-n-r">
+  <div class="p-r">
+    <a href="#">
+      <div class="out fr">退出</div>
+    </a>
+    <div class="page fr">31/59</div> 
+    <div class="next fr disabled"  disabled data="32.html"></div>
+    <a href="30.html">
+      <div class="prev fr"></div>
+    </a> 
+  </div>
+</div>
 
-      'u1-m2': ['u1-d2', 'u1-u2'],
-      'u1-d2': ['u1-u2', 'u1-m2'],
-      'm1-u2': ['m1-d2', 'm1-m2'],
-      'm1-d2': ['m1-u2', 'm1-m2'],
-      'd1-u2': ['d1-d2', 'd1-m2'],
-      'd1-m2': ['d1-u2', 'd1-d2'],
 
-      'u2-m3': ['u2-d2', 'u2-u2'],
-      'u2-d3': ['u2-u2', 'u2-m2'],
-      'm2-u3': ['m2-d2', 'u2-m2'],
-      'm2-d3': ['m2-u2', 'u2-m2'],
-      'd2-u3': ['d2-d2', 'd2-m2'],
-      'd2-m3': ['d2-u2', 'd2-d2']
-    }
-    var answer = [];
-    var correct_answer = ['u1-d2', 'm1-u2', 'd1-m2', 'u2-m3', 'm2-d3', 'd2-u3'];
+<script type="text/javascript">
+  $(function(){
+    setTimeout(function(){
+      $(".title1").addClass("bounceInleft");
+      $(".title1").removeClass("hide");
+    },1000); 
+  })
 
-    var currentQ = 'none';
+  // var answer = 0;
+  //   function check(num) {
+  //     answer = 0;
+  //     $('#item1').attr('src', 'images/radio.png');
+  //     $('#item2').attr('src', 'images/radio.png');
+  //     $('#item3').attr('src', 'images/radio.png');
+  //     $('#item4').attr('src', 'images/radio.png');
 
-    function clickQuestion(index) {
+  //     $('#item' + num).attr('src', 'images/radio-select.png');
 
-      if (currentQ == 'none') {
-        currentQ = index;
-      } else {
-        var lineNum = '';
-        if (checkreverse(currentQ, index) == 2) {
-          currentQ = index;
-          return;
-        } else if (checkreverse(currentQ, index) == 1) {
-          lineNum = index + '-' + currentQ;
-        } else {
-          lineNum = currentQ + '-' + index;
-        }
+  //     if (num == 3) {
+  //       answer = 1;
+  //     }
+  //   }
 
-        if (checklines(lineNum)) {
-          answer.push(lineNum);
+  //   function page_check() {
+  //     if (answer) {
+  //       event.stopPropagation();
+  //       $('#right_div').fadeIn();
+  //     } else {
+  //       event.stopPropagation();
+  //       $('#error_div').fadeIn();
+  //     }
+  //   }
 
-          //set used 
-          setUsed(lineNum);
-
-          //show lines
-          $('#line-' + lineNum).fadeIn();
-          currentQ = 'none';
-        } else {
-          currentQ = index;
-        }
-      }
-    }
-
-    function setUsed(lineNum) {
-      lines[lineNum] = 1;
-
-      relatedArr = relation[lineNum];
-
-      for (var i = 0; i < relatedArr.length; i++) {
-        if (lines.hasOwnProperty(relatedArr[i])) {
-          lines[relatedArr[i]] = 1;
-        }
-      }
-    }
-
-    function checkreverse(index1, index2) {
-      var lineNum1 = index1 + '-' + index2;
-      var lineNum2 = index2 + '-' + index1;
-      if (lines.hasOwnProperty(lineNum1) || lines.hasOwnProperty(lineNum2)) {
-        if (lines.hasOwnProperty(lineNum1)) {
-          return 0;
-        } else {
-          return 1;
-        }
-      } else {
-        return 2; //not exist
-      }
-    }
-
-    function checklines(id) {
-      return (lines.hasOwnProperty(id) && (lines[id] == 0));
-    }
-
-    function confirm() {
-
-      var correct = 1;
-
-      for (var i = 0; i < answer.length; i++) {
-        if (correct_answer.in_array(answer[i])) {
-
-        }
-        else {
-          correct = 0;
-          break;
-        }
-      }
-
-      if (correct && answer.length == 6) {
-        $('#right_div').fadeIn();
-      } else {
-        $('#error_div').fadeIn();
-      }
-    }
-
-    function reset() {
-      $.each(lines, function (key, val) {
-        lines[key] = 0;//可以输出成绩
-        $('#line-' + key).hide();
-        answer = [];
-      });
-    }
-  </script>
+</script>
 </body>
-
 </html>
