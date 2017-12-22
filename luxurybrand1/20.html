@@ -11,207 +11,139 @@
   <link href="css/style-animate.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/site_base.js"></script>
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <style>
     html {
       background-image: url(images/bg.jpg);
-      background-size: cover;
     }
 
-    .pos1 {
+    .menu {
       position: absolute;
-      width: 1000px;
-      height: 630px;
-      background-image: url(images/20/02.png);
-      background-size: 100% 100%;
-      left: 50%;
-      margin-left: -500px;
-      top: 60px;
+      height: 500px;
+      width: 200px;
+      top: 180px;
+      left: 160px;
     }
 
-    .pos2 {
+    .item1 {
       position: absolute;
-      width: 1000px;
-      left: 50%;
-      margin-left: -500px;
-      top: 580px;
+      height: 40px;
+      width: 200px;
+      top: 43px;
+      left: 0px;
     }
 
-    .circle {
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 20px;
-      border: 1px solid white;
-      color: white;
-      text-align: center;
-      font-size: 12px;
-      line-height: 20px;
+    .item2 {
       position: absolute;
-      cursor: pointer;
-      z-index: 999;
+      height: 50px;
+      width: 200px;
+      top: 90px;
+      left: 0px;
     }
 
-    .circle-pos1 {top: 375px;left: 295px;}
-    .circle-pos2 {top: 370px;left: 370px;}
-    .circle-pos3 {top: 440px;left: 305px;}
-    .circle-pos4 {top: 380px;left: 210px;}
-    .circle-pos5 {top: 445px;right: 282px;}
-    .circle-pos6 {top: 393px;right: 252px;}
-    .circle-pos7 {top: 365px;right: 100px;}
-
-    .answer1 {
-cursor: pointer;
-    background-image: url(images/20/a1.jpg);
-    background-size: 100% 100%;
-    width: 110px;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 40px;
+    .item3 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 200px;
+      left: 0px;
     }
 
-    .answer2 {
-    background-image: url(images/20/a2.jpg);
-    background-size: 100% 100%;
-    width: 110px;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 155px;
+    .item4 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 235px;
+      left: 0px;
     }
 
-    .answer3 {
-    background-image: url(images/20/a3.jpg);
-    background-size: 100% 100%;
-    width: 110px;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 270px;
+    .item5 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 275px;
+      left: 0px;
     }
 
-    .answer4 {
-background-image: url(images/20/a4.jpg);
-    background-size: 100% 100%;
-    width: 110px;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 385px;
+    .item6 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 315px;
+      left: 0px;
     }
 
-    .answer5 {
-background-image: url(images/20/a6.jpg);
-    background-size: 100% 100%;
-    width: 215px;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 540px;
+    .item7 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 410px;
+      left: 0px;
     }
 
-    .answer6 {
-    background-image: url(images/20/a5.jpg);
-    background-size: 100% 100%;
-    width: 215px;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 760px;
-    }
-
-    .answer7 {
-    width: 250px;
-    height: 30px;
-    position: absolute;
-    top: -160px;
-    right: -125px;
-    border: 1px solid white;
-    border-radius: 40px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-    }
-
-    .hidden {
-      display: none;
+    .item8 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 450px;
+      left: 0px;
     }
   </style>
 </head>
 
-<body onload="reload()">
-  <!-- <div class="pos1">
-    <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
-    <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
-    <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
+<body onload="reload()" id="scaleable-wrapper">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 788px;">
 
-    <div class="circle circle-pos4 animated infinite pulse" onclick="show(3)">4</div>
-    <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">1</div>
-    <div class="circle circle-pos6 animated infinite pulse" onclick="show(5)">2</div>
-    <div class="circle circle-pos7 animated infinite pulse" onclick="show(6)">3</div>
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/20/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
+    <div class="menu">
+      <a onclick="check(8)">
+        <div class="item1"></div>
+      </a>
+      <a onclick="check(4)">
+        <div class="item2"></div>
+      </a>
+      <a onclick="check(5)">
+        <div class="item3"></div>
+      </a>
+      <a onclick="check(6)">
+        <div class="item4"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item5"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item6"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item7"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item8"></div>
+      </a>
+    </div>
+
   </div>
 
-  <div class="pos2">
-    <div class="answer1 hidden" id="0"></div>
-    <div class="answer2 hidden" id="1"></div>
-    <div class="answer3 hidden" id="2"></div>
-    <div class="answer4 hidden" id="3"></div>
-    <div class="answer5 hidden" id="4"></div>
-    <div class="answer6 hidden" id="5"></div>
-    <div class="answer7 hidden" id="6">Hofmeister弯角（家族设计）</div>
-  </div> -->
-
-
-  <div class="animated fadeInUp" style="position: absolute; width:100%; height:100%; top: 0%; left: 0"><img src="images/20/01.jpg" width="100%" height="100%" alt=""/></div>
-  <!-- <div class="animated fadeInDown" style="position: absolute; width:100%; top: 0%; left: 0"><img  id="audioID" src="images/04/02.png" width="100%" alt=""/></div> -->
-  <!--div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/04/04.png" width="100%" alt=""/></div-->
-  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/logo.png" width="100%" alt=""/></div> -->
   <div class="p-n-r">
     <div class="p-r">
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">20/66</div>
-      <div class="next fr " disabled data="21.html" id='next'></div>
+      <div class="page fr">20/20</div>
+      <div class="next fr disabled hidden" disabled data="20.html"></div>
       <a href="19.html">
         <div class="prev fr"></div>
       </a>
     </div>
   </div>
+
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-    $(function () {
-      setTimeout(function () {
-        $(".title1").addClass("bounceInleft");
-        $(".title1").removeClass("hide");
-      }, 1000);
-    })
-
-    var showArr = [0, 0, 0, 0, 0, 0, 0];
-    function show(id) {
-      $('#' + id).fadeIn();
-      showArr[parseInt(id)] = 1;
-
-      if (check() == 1) {
-        //alert('finish!');
-        $('#next').fadeIn();
-      }
-
-    }
-
-    function check() {
-      var bFinish = 0;
-
-      if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1 && showArr[3] == 1
-        && showArr[4] == 1 && showArr[5] == 1 && showArr[6] == 1) {
-        bFinish = 1;
-      }
-
-      return bFinish;
-    }
 
   </script>
 </body>

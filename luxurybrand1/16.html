@@ -11,160 +11,140 @@
   <link href="css/style-animate.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/site_base.js"></script>
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <style>
     html {
-
-
-      background-repeat: no-repeat;
-      height: 100%;
-      width: 100%;
-      min-width: 1200px;
-      min-height: 800px;
-    }
-
-    body {
-      height: 100%;
-      width: 100%;
       background-image: url(images/bg.jpg);
-      background-size: cover;
-      overflow: hidden;
-      background-repeat: no-repeat;
-      min-width: 1200px;
-      min-height: 800px;
     }
 
-    .question_layer {
-      background-image: url(images/08/02.png);
-    background-size: 100% 100%;
-    position: absolute;
-    width: 1440px;
-    height: 750px;
-    top: 50%;
-    left: 50%;
+    .menu {
+      position: absolute;
+      height: 500px;
+      width: 200px;
+      top: 180px;
+      left: 160px;
     }
 
-    .item {
-      float: left;
-      width: 50%;
-      text-align: left;
-      color: #808080;
-      font-size: 18px;
-      margin-top: 0px;
-      margin-left: -10px;
+    .item1 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 43px;
+      left: 0px;
+    }
+
+    .item2 {
+      position: absolute;
+      height: 50px;
+      width: 200px;
+      top: 90px;
+      left: 0px;
+    }
+
+    .item3 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 200px;
+      left: 0px;
+    }
+
+    .item4 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 235px;
+      left: 0px;
+    }
+
+    .item5 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 275px;
+      left: 0px;
+    }
+
+    .item6 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 315px;
+      left: 0px;
+    }
+
+    .item7 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 410px;
+      left: 0px;
+    }
+
+    .item8 {
+      position: absolute;
+      height: 40px;
+      width: 200px;
+      top: 450px;
+      left: 0px;
     }
   </style>
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 788px;">
 
-  <!---  Question -->
-  <div class="question_layer" style=" z-index:999" id="resize">
-    <div style="    position: absolute;
-    top: 400px;
-    left: 490px;">
-      <div style="    color: #ffffff;
-    font-size: 22px;
-    text-align: left;
-    margin: 0px 0 20px 0;">
-          （ ）市场，毫无悬念的成为全球最大SUV单一市场.
-      </div>
-      <div style=" margin:0 auto;">
-        <div class="item" onclick="check(1)">
-          <img src="images/radio.png" id="item1" class="radio-img">
-          <p class="radio-text">意大利 </p>
-        </div>
-
-        <div class="item" onclick="check(2)">
-          <img src="images/radio.png" id="item2" class="radio-img">
-          <p class="radio-text">欧洲</p>
-        </div>
-
-        <div class="item" onclick="check(3)">
-          <img src="images/radio.png" id="item3" class="radio-img">
-          <p class="radio-text">美国 </p>
-        </div>
-
-        <div class="item" onclick="check(4)">
-          <img src="images/radio.png" id="item4" class="radio-img">
-          <p class="radio-text">中国</p>
-        </div>
-
-        <div style="    position: absolute;
-    top: 185px;
-    left: 110px;
-    height: 45px;
-    width: 180px;" onclick="page_check()">
-
-        </div>
-      </div>
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/16/01.jpg" width="100%" height="100%" alt="" />
     </div>
+
+    <div class="menu">
+      <a onclick="check(8)">
+        <div class="item1"></div>
+      </a>
+      <a onclick="check(4)">
+        <div class="item2"></div>
+      </a>
+      <a onclick="check(5)">
+        <div class="item3"></div>
+      </a>
+      <a onclick="check(6)">
+        <div class="item4"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item5"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item6"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item7"></div>
+      </a>
+      <a onclick="check(7)">
+        <div class="item8"></div>
+      </a>
+    </div>
+
   </div>
 
-  <div id="right_div" class="mydiv" style="display:none;">
-    <span>恭喜你答对了!</span>
-    <span>
-      <button onclick="gotoBack(17)" id="right_text">确认进入下一页</button>
-    </span>
-  </div>
-
-  <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回重新学习!</span>
-    <span>
-      <button onclick="gotoBack(13)" id="error_text">确认并返回第13页</button>
-    </span>
-  </div>
-
-  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/11/05.png" width="100%" alt=""/></div> -->
   <div class="p-n-r">
     <div class="p-r">
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">16/66</div>
-      <div class="next fr disabled" disabled data="False"></div>
+      <div class="page fr">16/59</div>
+      <div class="next fr disabled" disabled data="17.html"></div>
       <a href="15.html">
         <div class="prev fr"></div>
       </a>
     </div>
   </div>
 
-      <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-      <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-    $(function () {
-      setTimeout(function () {
-        $(".title1").addClass("bounceInleft");
-        $(".title1").removeClass("hide");
-      }, 1000);
-    })
 
-
-    var answer = 0;
-    function check(num) {
-      answer = 0;
-      $('#item1').attr('src', 'images/radio.png');
-      $('#item2').attr('src', 'images/radio.png');
-      $('#item3').attr('src', 'images/radio.png');
-      $('#item4').attr('src', 'images/radio.png');
-
-      $('#item' + num).attr('src', 'images/radio-select.png');
-
-      if (num == 4) {
-        answer = 1;
-      }
-    }
-
-    function page_check() {
-      if (answer) {
-        event.stopPropagation();
-        $('#right_div').fadeIn();
-      } else {
-        event.stopPropagation();
-        $('#error_div').fadeIn();
-      }
-    }
   </script>
 </body>
 

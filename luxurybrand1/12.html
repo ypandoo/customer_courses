@@ -90,14 +90,52 @@
       top: 450px;
       left: 0px;
     }
+
+    .balloon{
+    position: absolute;
+    top: 240px;
+    left: 500px;
+    width: 800px;
+    height: 400px;
+    }
+
+    .bal{
+      width: 130px;
+      height: 150px;
+      background: url(images/12/bal.png);
+      background-size: 100% 100%;
+      position: absolute;
+      font-size: 20px;
+      color:darkblue;
+      text-align: center;
+line-height: 100px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    }
+
+    .bal1{top:0px;left:0px;}
+    .bal2{top:120px;left:0px;}
+    .bal3{top:60px;left:120px;}
+    .bal4{top:180px;left:120px;}
+    .bal5{top:0px;left:240px;}
+    .bal6{top:120px;left:240px;}
+    .bal7{top:60px;left:360px;}
+    .bal8{top:180px;left:360px;}
+    .bal9{top:0px;left:480px;}
+    .bal10{top:120px;left:480px;}
+    .bal11{top:80px;left:600px;}
+
+    
   </style>
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
-  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 788px;">
 
-    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
-      <img src="images/12/01.jpg" width="100%" height="100%" alt="" />
+    <div class="animated fadeInUp" 
+        style="background:url(images/12/01.jpg);
+        position: absolute; width:100%; top: 0%; left: 0;
+        height:100%; background-size:100% 100%">
     </div>
 
     <div class="menu">
@@ -128,18 +166,20 @@
     </div>
 
 
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
-    <div class="bal bal1"></div>
+    <div class="balloon">
+      <div onclick="bal(this, 0)" class="bal bal1">尊贵性</div>
+      <div onclick="bal(this, 1)" class="bal bal2">融入性</div>
+      <div onclick="bal(this, 1)" class="bal bal3">观赏性</div>
+      <div onclick="bal(this, 1)" class="bal bal4">差异性</div>
+      <div onclick="bal(this, 1)" class="bal bal5">灵活性</div>
+      <div onclick="bal(this, 1)" class="bal bal6">刺激性</div>
+      <div onclick="bal(this, 1)" class="bal bal7">神秘性</div>
+      <div onclick="bal(this, 1)" class="bal bal8">趣味性</div>
+      <div onclick="bal(this, 1)" class="bal bal9">享受性</div>
+      <div onclick="bal(this, 0)" class="bal bal10">情感性</div>
+      <div onclick="bal(this, 0)" class="bal bal11">专属性</div>
+    </div>
+
 
 
   </div>
@@ -159,7 +199,13 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
+      function bal(obj, show){
+        if(show == 0){
 
+        }else{
+          $(obj).addClass('animated fadeOutUp');
+        }
+      }
   </script>
 </body>
 
