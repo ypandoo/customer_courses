@@ -1,0 +1,198 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link href="css/style-animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/layer/layer.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <style>
+    html {
+
+
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      min-width: 1200px;
+      min-height: 800px;
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      min-width: 1200px;
+      min-height: 800px;
+    }
+
+    .question_layer {
+      background-image: url(images/08/02.png);
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1440px;
+    height: 750px;
+    top: 50%;
+    left: 50%;
+    }
+
+    .item {
+      float: left;
+      width: 50%;
+      text-align: left;
+      color: #808080;
+      font-size: 18px;
+      margin-top: 0px;
+      margin-left: -10px;
+    }
+  </style>
+  </head>
+  
+  <body onload="reload()" id="scaleable-wrapper">
+  
+    <!---  Question -->
+    <div class="question_layer" style=" z-index:999" id="resize">
+    <div style="    position: absolute;
+    top: 410px;
+    left: 560px;">
+      <div style="    color: #ffffff;
+    font-size: 24px;
+    text-align: left;
+    margin: 0px 0 20px 0;">
+         Levante发动机的缸体材质采用（ ） 
+      </div>
+      <div style=" margin:0 auto;">
+        <div class="item" onclick="check(1)">
+          <img src="images/radio.png" id="item1" class="radio-img">
+          <p class="radio-text">铝合金 </p>
+        </div>
+
+        <div class="item" onclick="check(2)">
+          <img src="images/radio.png" id="item2" class="radio-img">
+          <p class="radio-text"> 镁铝合金  </p>
+        </div>
+
+        <div class="item" onclick="check(3)">
+          <img src="images/radio.png" id="item3" class="radio-img">
+          <p class="radio-text">硅铝合金 </p>
+        </div>
+
+        <div class="item" onclick="check(4)">
+          <img src="images/radio.png" id="item4" class="radio-img">
+          <p class="radio-text">铸铁</p>
+        </div>
+
+        <div style="    position: absolute;
+    top: 175px;
+    left: 90px;
+    height: 45px;
+    width: 140px;" onclick="page_check()">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="right_div" class="mydiv" style="display:none;">
+    <span>恭喜你答对了!</span>
+    <span>
+      <button onclick="gotoBack(40)" id="right_text">确认进入下一页</button>
+    </span>
+  </div>
+
+  <div id="error_div" class="mydiv" style="display:none;">
+    <span>错了，请返回重新学习!</span>
+    <span>
+      <button onclick="gotoBack(35)" id="error_text">确认并返回第35页</button>
+    </span>
+  </div>
+
+  <!-- <div class="animated bounceInLeft" style="position: absolute; width:100%; top: 0%; left: 0"><img src="images/11/05.png" width="100%" alt=""/></div> -->
+  <div class="p-n-r">
+    <div class="p-r">
+      <a href="#">
+        <div class="out fr">退出</div>
+      </a>
+      <div class="page fr">39/66</div>
+      <div class="next fr disabled" disabled data="False"></div>
+      <a href="38.html">
+        <div class="prev fr"></div>
+      </a>
+    </div>
+  </div>
+
+              <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+              <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      setTimeout(function () {
+        $(".title1").addClass("bounceInleft");
+        $(".title1").removeClass("hide");
+      }, 1000);
+    })
+
+
+    //signle select version
+    var answer = 0;
+    function check(num) {
+      answer = 0;
+      $('#item1').attr('src', 'images/radio.png');
+      $('#item2').attr('src', 'images/radio.png');
+      $('#item3').attr('src', 'images/radio.png');
+      $('#item4').attr('src', 'images/radio.png');
+
+      $('#item' + num).attr('src', 'images/radio-select.png');
+
+      if (num == 3) {
+        answer = 1;
+      }
+    }
+
+    function page_check() {
+      if (answer) {
+        event.stopPropagation();
+        $('#right_div').fadeIn();
+      } else {
+        event.stopPropagation();
+        $('#error_div').fadeIn();
+      }
+    }
+
+    //multi-select version
+    // var answer = 0;
+    // var checkArr = { 1: 0, 2: 0, 3: 0, 4: 0 };
+    // function check(num) {
+    //   if (checkArr[num] == 0) {
+    //     $('#item' + num).attr('src', 'images/radio-select.png');
+    //     checkArr[num] = 1;
+    //   } else {
+    //     $('#item' + num).attr('src', 'images/radio.png');
+    //     checkArr[num] = 0;
+    //   }
+    // }
+
+    // function page_check() {
+    //   if (checkArr[1] == 0 && checkArr[2] == 1 && checkArr[3] == 0 && checkArr[4] == 1) {
+    //     answer = 1;
+    //   }
+    //   if (answer) {
+    //     event.stopPropagation();
+    //     $('#right_div').fadeIn();
+    //   } else {
+    //     event.stopPropagation();
+    //     $('#error_div').fadeIn();
+    //   }
+    // }
+  </script>
+</body>
+
+</html>
