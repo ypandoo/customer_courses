@@ -14,118 +14,13 @@
   <script type="text/javascript" src="js/site_base.js"></script>
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
+  <link rel="stylesheet" href="css/menu.css">
   <style>
     html {
       background-image: url(images/bg.jpg);
     }
 
-    .menu {
-      position: absolute;
-      height: 500px;
-      width: 200px;
-      top: 180px;
-      left: 160px;
-    }
-
-    .item1 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 43px;
-      left: 0px;
-    }
-
-    .item2 {
-      position: absolute;
-      height: 50px;
-      width: 200px;
-      top: 90px;
-      left: 0px;
-    }
-
-    .item3 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 200px;
-      left: 0px;
-    }
-
-    .item4 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 235px;
-      left: 0px;
-    }
-
-    .item5 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 275px;
-      left: 0px;
-    }
-
-    .item6 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 315px;
-      left: 0px;
-    }
-
-    .item7 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 410px;
-      left: 0px;
-    }
-
-    .item8 {
-      position: absolute;
-      height: 40px;
-      width: 200px;
-      top: 450px;
-      left: 0px;
-    }
-
-    .answer{
-      position: absolute;
-    top: 290px;
-    width: 640px;
-    left: 480px;
-    height: 285px;
-    }
-
-    .answer0{
-      position: absolute;
-    }
-
-    .answer1{top:0;left:0;     width: 103px; height: 51px;}
-    .answer2{top:0;left:114px;     width: 103px; height: 51px;}
-    .answer3{top:0;left:228px;     width: 103px; height: 51px;}
-    .answer4{top:0;left:342px;     width: 103px; height: 51px;}
-    .answer5{top:0;left:457px;     width: 101px; height: 51px;}
-
-    .answer6{top: 151px;left: 0;width: 175px;height: 51px;}
-    .answer7{top: 151px;left: 234px;width: 173px;height: 51px;}
-    .answer8{top: 151px;left: 465px;width: 175px;height: 51px;}
-    .answer9{top: 232px;left: 0;width: 175px;height: 51px;}
-    .answer10{top: 232px;left: 234px;width: 173px;height: 51px;}
-    .answer11{top: 232px;left: 465px;width: 175px;height: 51px;}
-
-    .answer0.selected{    border: 2px solid #0f2e62;
-    box-shadow: 2px 2px;}
-
-    .submit{
-      position: absolute;
-    height: 50px;
-    width: 100px;
-    bottom: -82px;
-    left: 270px;
-    }
+ 
   </style>
 </head>
 
@@ -137,47 +32,15 @@
     </div>
     
     <div class="menu">
-      <a onclick="checkPage(8)">
-        <div class="item1"></div>
-      </a>
-      <a onclick="checkPage(11)">
-        <div class="item2"></div>
-      </a>
-      <a onclick="checkPage(14)">
-        <div class="item3"></div>
-      </a>
-      <a onclick="checkPage(15)">
-        <div class="item4"></div>
-      </a>
-      <a onclick="checkPage(16)">
-        <div class="item5"></div>
-      </a>
-      <a onclick="checkPage(17)">
-        <div class="item6"></div>
-      </a>
-      <a onclick="checkPage(18)">
-        <div class="item7"></div>
-      </a>
-      <a onclick="checkPage(19)">
-        <div class="item8"></div>
-      </a>
-    </div>
-
-    <div class="answer">
-      <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1"></div>
-      <div id="ans2" onclick="toggleAns(2)" class="answer0 answer2"></div>
-      <div id="ans3" onclick="toggleAns(3)" class="answer0 answer3"></div>
-      <div id="ans4" onclick="toggleAns(4)" class="answer0 answer4"></div>
-      <div id="ans5" onclick="toggleAns(5)" class="answer0 answer5"></div>
-      <div id="ans6" onclick="toggleAns2(1)" class="answer0 answer6"></div>
-      <div id="ans7" onclick="toggleAns2(2)" class="answer0 answer7"></div>
-      <div id="ans8" onclick="toggleAns2(3)" class="answer0 answer8"></div>
-      <div id="ans9" onclick="toggleAns2(4)" class="answer0 answer9"></div>
-      <div id="ans10" onclick="toggleAns2(5)" class="answer0 answer10"></div>
-      <div id="ans11" onclick="toggleAns2(6)" class="answer0 answer11"></div>
-
-      <div class="submit" onclick="check_answer()" 
-           style=""></div>
+      <a onclick="checkPage(3)"><div class="item1"></div></a>
+      <a onclick="checkPage(6)"><div class="item2"></div></a>
+      <a onclick="checkPage(7)"><div class="item3"></div></a>
+      <a onclick="checkPage(11)"><div class="item4"></div></a>
+      <a onclick="checkPage(18)"><div class="item5"></div></a>
+      <a onclick="checkPage(21)"><div class="item6"></div></a>
+      <a onclick="checkPage(22)"><div class="item7"></div></a>
+      <a onclick="checkPage(23)"><div class="item8"></div></a>
+      <a onclick="checkPage(24)"><div class="item9"></div></a>
     </div>
 
   </div>

@@ -1,4 +1,6 @@
-window.learnedPage = parseInt(getCookie('luxury1'));
+var pageCookie = 'luxury2';
+
+window.learnedPage = parseInt(getCookie(pageCookie));
 if (!window.learnedPage) {
   window.learnedPage = 3;
 }
@@ -6,7 +8,7 @@ if (!window.learnedPage) {
 window.currentPage = parseInt(pageName(), 10);
 if (window.currentPage >= window.learnedPage) {
   window.learnedPage = window.currentPage;
-  setCookie('luxury1', window.currentPage);
+  setCookie(pageCookie, window.currentPage);
 }
 
 function checkPage(index) {
@@ -20,4 +22,8 @@ function checkPage(index) {
   } else {
     window.location.href = index + '.html';
   }
+}
+
+function closeTip(){
+  $('#tips_div').hide();
 }
