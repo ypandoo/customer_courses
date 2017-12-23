@@ -30,8 +30,7 @@
     <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
       <img src="images/16/01.jpg" width="100%" height="100%" alt="" />
     </div>
-
-    <div class="menu">
+    
     <div class="menu">
       <a onclick="checkPage(3)"><div class="item1"></div></a>
       <a onclick="checkPage(6)"><div class="item2"></div></a>
@@ -50,13 +49,20 @@
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">16/20</div>
+      <div class="page fr">16/25</div>
       <div class="next fr disabled" disabled data="17.html"></div>
       <a href="15.html">
         <div class="prev fr"></div>
       </a>
     </div>
   </div>
+
+      <div id="tips_div" class="mydiv" style="display:none;">
+        <span>您只能跳转到已经学习过的页面</span>
+        <span>
+          <button onclick="closeTip()" id="right_text">确认</button>
+        </span>
+      </div>
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
