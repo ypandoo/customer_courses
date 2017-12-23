@@ -9,9 +9,9 @@ if (window.currentPage >= window.learnedPage) {
   setCookie('luxury1', window.currentPage);
 }
 
-function check(index) {
+function checkPage(index) {
   if (index > window.learnedPage) {
-    alert('您只能跳转到学习过的页面！');
+    $('#tips_div').show();
     return;
   }
 
@@ -20,5 +20,4 @@ function check(index) {
   } else {
     window.location.href = index + '.html';
   }
-
 }

@@ -256,14 +256,14 @@ top: 315px;
       $('#' + id).fadeIn();
       showArr[parseInt(id)] = 1;
 
-      if (check() == 1) {
+      if (check_answer() == 1) {
         //alert('finish!');
         $('#next').fadeIn();
       }
 
     }
 
-    function check() {
+    function check_answer() {
       var bFinish = 0;
 
       if (showArr[0] == 1 && showArr[1] == 1 && showArr[2] == 1) {
