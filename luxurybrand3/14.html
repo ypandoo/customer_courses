@@ -19,6 +19,59 @@
     html {
       background-image: url(images/bg.jpg);
     }
+
+    .answer{
+      position: absolute;
+    top: 268px;
+    width: 630px;
+    left: 478px;
+    height: 200px;
+    }
+
+    .answer0{
+      position: absolute;
+    }
+
+    .answer1{top:0;left: 0px; width: 113px; height: 53px;}
+    .answer2{top:0;left:126px;width: 113px; height: 53px;}
+    .answer3{top:0;left:250px;width: 113px; height: 53px;}
+    .answer4{top:0;left:378px;width: 113px; height: 53px;}
+    .answer5{top:0;left:505px;width: 113px; height: 53px;}
+
+
+    .answer6{top: 146px;left:   0px; width: 113px;height: 53px;}
+    .answer7{top: 146px;left: 125px; width: 113px;height: 51px;}
+    .answer8{top: 146px;left: 252px; width: 113px;height: 51px;}
+    .answer9{top: 146px;left: 377px; width: 113px;height: 51px;}
+    .answer10{top:146px;left: 505px; width: 123px;height: 51px;}
+
+
+    .answer11{top: 237px;left: 227px;width: 133px;height: 51px;}
+    .answer12{top: 237px;left: 397px;width: 133px;height: 51px;}
+
+
+    .answer13{top: 354px;left: 0px;width: 115px;height: 51px;}
+    .answer14{top: 354px;left: 126px;width: 115px;height: 51px;}
+    .answer15{top: 354px;left: 253px;width: 115px;height: 51px;}
+    .answer16{top: 354px;left: 379px;width: 115px;height: 51px;}
+    .answer17{top: 354px;left: 504px;width: 115px;height: 51px;}
+
+    .answer0.selected{border: 2px solid #0f2e62;box-shadow: 2px 2px;}
+
+    .submit{position: absolute;height: 50px;
+    width: 100px;
+    bottom: -75px;
+    left: 262px;
+    cursor: pointer;
+    }
+
+    .submit-btn{
+          line-height: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    background: rgba(102, 127, 176, 0.81);
+    color: white;
+    }
   </style>
 </head>
 
@@ -31,15 +84,30 @@
 
     <div class="menu">
       <a onclick="checkPage(3)"><div class="item1"></div></a>
-      <a onclick="checkPage(6)"><div class="item2"></div></a>
-      <a onclick="checkPage(7)"><div class="item3"></div></a>
-      <a onclick="checkPage(11)"><div class="item4"></div></a>
-      <a onclick="checkPage(18)"><div class="item5"></div></a>
-      <a onclick="checkPage(21)"><div class="item6"></div></a>
-      <a onclick="checkPage(22)"><div class="item7"></div></a>
-      <a onclick="checkPage(23)"><div class="item8"></div></a>
-      <a onclick="checkPage(24)"><div class="item9"></div></a>
+      <a onclick="checkPage(5)"><div class="item2"></div></a>
+      <a onclick="checkPage(6)"><div class="item3"></div></a>
+      <a onclick="checkPage(7)"><div class="item4"></div></a>
+      <a onclick="checkPage(8)"><div class="item5"></div></a>
+      <a onclick="checkPage(10)"><div class="item6"></div></a>
+      <a onclick="checkPage(13)"><div class="item7"></div></a>
+      <a onclick="checkPage(14)"><div class="item8"></div></a>
     </div>
+
+            <div class="answer">
+              <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1"></div>
+              <div id="ans2" onclick="toggleAns(2)" class="answer0 answer2"></div>
+              <div id="ans3" onclick="toggleAns(3)" class="answer0 answer3"></div>
+              <div id="ans4" onclick="toggleAns(4)" class="answer0 answer4"></div>
+              <div id="ans5" onclick="toggleAns(5)" class="answer0 answer5"></div>
+
+              <div id="ans6" onclick="toggleAns2(1)" class="answer0 answer6"></div>
+              <div id="ans7" onclick="toggleAns2(2)" class="answer0 answer7"></div>
+              <div id="ans8" onclick="toggleAns2(3)" class="answer0 answer8"></div>
+              <div id="ans9" onclick="toggleAns2(4)" class="answer0 answer9"></div>
+              <div id="ans10" onclick="toggleAns2(5)" class="answer0 answer10"></div>
+            
+              <div class="submit-btn submit" onclick="checkAnswer()">提交</div>
+            </div>
 
   </div>
 
@@ -49,7 +117,7 @@
         <div class="out fr">退出</div>
       </a>
       <div class="page fr">14/17</div>
-      <div class="next fr disabled" disabled data="15.html"></div>
+      <div class="next fr disabled hidden" disabled data="15.html"></div>
       <a href="13.html">
         <div class="prev fr"></div>
       </a>
@@ -63,9 +131,66 @@
         </span>
       </div>
 
+              <div id="right_div" class="mydiv" style="display:none;">
+                <span>恭喜你答对了!</span>
+                <span>
+                  <button onclick="gotoBack(15)" id="right_text">确认进入下一页</button>
+                </span>
+              </div>
+              
+              <div id="error_div" class="mydiv" style="display:none;">
+                <span>错了，请在左侧目录选择相应章节重新学习!</span>
+                <span>
+                  <button onclick="gotoBack(3)" id="error_text">确认并返回第3页</button>
+                </span>
+              </div>
+
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
+    var ansArray1 = [0, 0, 0, 0, 0, 0, 0];
+    function toggleAns(index) {
+      if (ansArray1[index] == 1) {
+        ansArray1[index] = 0;
+        $('#ans' + index).removeClass('selected');
+      } else {
+        ansArray1[index] = 1;
+        $('#ans' + index).addClass('selected');
+      }
+    }
 
+    var ansArray2 = [0, 0, 0, 0, 0, 0, 0];
+    function toggleAns2(index) {
+      if (ansArray2[index] == 1) {
+        ansArray2[index] = 0;
+        $('#ans' + (index + 5)).removeClass('selected');
+      } else {
+        ansArray2[index] = 1;
+        $('#ans' + (index + 5)).addClass('selected');
+      }
+    }
+
+    function checkAnswer() {
+      if (ansArray1[1] == 0
+        && ansArray1[2] == 1
+        && ansArray1[3] == 0
+        && ansArray1[4] == 1
+        && ansArray1[5] == 1) {
+      } else {
+        $('#error_div').show();
+        return;
+      }
+
+      if (ansArray2[1] == 1
+        && ansArray2[2] == 0
+        && ansArray2[3] == 0
+        && ansArray2[4] == 0
+        && ansArray2[5] == 1) {
+          $('#right_div').show();
+      } else {
+        $('#error_div').show();
+      }
+
+    }
   </script>
 </body>
 
