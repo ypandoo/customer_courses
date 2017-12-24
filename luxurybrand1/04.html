@@ -32,6 +32,20 @@
     .item3{position: absolute;height: 45px;width: 200px;top: 265px;left: 0px;}
     .item4{position: absolute;height: 45px;width: 200px;top: 365px;left: 0px;}
     .item5{position: absolute;height: 45px;width: 200px;top: 405px;left: 0px;}
+
+    .animate1{
+      background: url(images/bg.jpg) no-repeat -480px -250px;
+      left: 480px; top: 250px; 
+      width: 850px; height: 300px;
+      position: absolute;z-index: 9;
+    }
+
+    .animate2{
+      background: url(images/bg.jpg) no-repeat -480px -550px;
+      left: 480px; top: 550px;
+      width: 850px; height: 300px;
+      position: absolute;z-index: 9;
+    }
   </style>
 </head>
 
@@ -59,6 +73,9 @@
         <div class="item5"></div>
       </a>
     </div>
+
+        <div id="ani1" class="animate1"></div>
+        <div id="ani2" class="animate2"></div>
 
   </div>
 
@@ -98,7 +115,8 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-
+      setAnimate('ani1', 1000, 'fadeOutRight', 'duration2s');
+      setAnimate('ani2', 3000, 'fadeOutRight', 'duration5s');
   </script>
 </body>
 

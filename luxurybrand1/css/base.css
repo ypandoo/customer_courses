@@ -350,6 +350,26 @@ html {
     background: #c8d6e1;
 }
 
-a{
+a {
     cursor: pointer !important;
+}
+
+.duration2s {
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+
+.duration3s {
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+}
+
+.duration4s {
+    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+}
+
+.duration5s {
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
 }
