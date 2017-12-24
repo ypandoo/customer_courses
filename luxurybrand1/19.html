@@ -137,28 +137,28 @@
     </div>
     
     <div class="menu">
-      <a onclick="check(8)">
+      <a onclick="checkPage(8)">
         <div class="item1"></div>
       </a>
-      <a onclick="check(11)">
+      <a onclick="checkPage(11)">
         <div class="item2"></div>
       </a>
-      <a onclick="check(14)">
+      <a onclick="checkPage(14)">
         <div class="item3"></div>
       </a>
-      <a onclick="check(15)">
+      <a onclick="checkPage(15)">
         <div class="item4"></div>
       </a>
-      <a onclick="check(16)">
+      <a onclick="checkPage(16)">
         <div class="item5"></div>
       </a>
-      <a onclick="check(17)">
+      <a onclick="checkPage(17)">
         <div class="item6"></div>
       </a>
-      <a onclick="check(18)">
+      <a onclick="checkPage(18)">
         <div class="item7"></div>
       </a>
-      <a onclick="check(19)">
+      <a onclick="checkPage(19)">
         <div class="item8"></div>
       </a>
     </div>
@@ -176,7 +176,7 @@
       <div id="ans10" onclick="toggleAns2(5)" class="answer0 answer10"></div>
       <div id="ans11" onclick="toggleAns2(6)" class="answer0 answer11"></div>
 
-      <div class="submit" onclick="check()" 
+      <div class="submit" onclick="check_Answer()" 
            style=""></div>
     </div>
 
@@ -190,9 +190,9 @@
   </div>
 
   <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回15-18页重新学习!</span>
+    <span>错了，请返回章节重新学习! 也可使用左侧目录快速切换哦！</span>
     <span>
-      <button onclick="gotoBack(15)" id="error_text">确认并返回第15页</button>
+      <button onclick="gotoBack(15)" id="error_text">确认并返回</button>
     </span>
   </div> 
 
@@ -203,7 +203,7 @@
         <div class="out fr">退出</div>
       </a>
       <div class="page fr">19/20</div>
-      <div class="next fr disabled" disabled data="20.html"></div>
+      <div class="next fr disabled hidden" disabled data="20.html"></div>
       <a href="18.html">
         <div class="prev fr"></div>
       </a>
@@ -235,7 +235,7 @@
         }
       }
 
-    function check(){
+    function check_Answer(){
       if(ansArray1[1] == 1
          && ansArray1[2] == 0
          && ansArray1[3] == 1

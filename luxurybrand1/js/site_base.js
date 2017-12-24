@@ -1,4 +1,6 @@
-window.learnedPage = parseInt(getCookie('luxury1'));
+var pageCookie = 'luxury1';
+
+window.learnedPage = parseInt(getCookie(pageCookie));
 if (!window.learnedPage) {
   window.learnedPage = 3;
 }
@@ -6,12 +8,12 @@ if (!window.learnedPage) {
 window.currentPage = parseInt(pageName(), 10);
 if (window.currentPage >= window.learnedPage) {
   window.learnedPage = window.currentPage;
-  setCookie('luxury1', window.currentPage);
+  setCookie(pageCookie, window.currentPage);
 }
 
-function check(index) {
+function checkPage(index) {
   if (index > window.learnedPage) {
-    alert('您只能跳转到学习过的页面！');
+    $('#tips_div').show();
     return;
   }
 
@@ -20,5 +22,8 @@ function check(index) {
   } else {
     window.location.href = index + '.html';
   }
+}
 
+function closeTip() {
+  $('#tips_div').hide();
 }
