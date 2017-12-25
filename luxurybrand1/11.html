@@ -90,6 +90,49 @@
       top: 450px;
       left: 0px;
     }
+
+    .animate1{
+      background: url(images/bg.jpg) no-repeat -470px -200px;
+      left: 470px; top: 200px; 
+      width: 880px; height: 60px;
+      position: absolute;z-index: 9;
+    }
+
+    .animate2{
+      background: url(images/bg.jpg) no-repeat -470px -260px;
+      left: 470px; top: 260px;
+      width: 880px; height: 65px;
+      position: absolute;z-index: 9;
+    }
+
+    .animate3{
+      background: url(images/bg.jpg) no-repeat -470px -325px;
+      left: 470px; top: 325px; 
+      width: 880px; height: 65px;
+      position: absolute;z-index: 9;
+    }
+
+    .animate4{
+      background: url(images/bg.jpg) no-repeat -470px -390px;
+      left: 470px; top: 390px;
+      width: 880px; height: 65px;
+      position: absolute;z-index: 9;
+    }
+
+      .animate5{
+      background: url(images/bg.jpg) no-repeat -470px -455px;
+      left: 470px; top: 455px; 
+      width: 880px; height: 65px;
+      position: absolute;z-index: 9;
+    }
+
+    .animate6{
+      background: url(images/bg.jpg) no-repeat -470px -520px;
+      left: 470px; top: 520px;
+      width: 880px; height: 250px;
+      position: absolute;z-index: 9;
+    }
+
   </style>
 </head>
 
@@ -126,6 +169,13 @@
         <div class="item8"></div>
       </a>
     </div>
+
+                    <div id="ani1" class="animate1"></div>
+                    <div id="ani2" class="animate2"></div>
+                    <div id="ani3" class="animate3"></div>
+                    <div id="ani4" class="animate4"></div>
+                    <div id="ani5" class="animate5"></div>
+                    <div id="ani6" class="animate6"></div>
 
   </div>
 
@@ -165,7 +215,12 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-
+  setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
+  setAnimate('ani2', 3000, 'slideOutDown', 'duration5s');
+  setAnimate('ani3', 5000, 'slideOutDown', 'duration5s');
+  setAnimate('ani4', 7000, 'slideOutDown', 'duration5s');
+  setAnimate('ani5', 9000, 'slideOutDown', 'duration5s');
+  setAnimate('ani6', 12000, 'slideOutDown', 'duration5s');
   </script>
 </body>
 
