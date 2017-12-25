@@ -27,3 +27,11 @@ function checkPage(index) {
 function closeTip(){
   $('#tips_div').hide();
 }
+
+function setAnimate(element, timeout, animation, duration) {
+  animation = 'animated ' + animation + ' ' + duration;
+  setTimeout(function () {
+    $('#' + element).addClass(animation);
+    // $('#' + element).hide();
+  }, timeout);
+}
