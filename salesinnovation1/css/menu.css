@@ -1,0 +1,17 @@
+.menu{
+  position: absolute;
+    height: 460px;
+    width: 200px;
+    top: 235px;
+    left: 150px;
+}
+
+.menu .item1{position: absolute;height: 45px;width: 200px;top: 0px;left: 0px;}
+.menu .item2{position: absolute;height: 42px;width: 200px;top: 45px;left: 0px;}
+.menu .item3{position: absolute;height: 42px;width: 200px;top: 86px;left: 0px;}
+.menu .item4{position: absolute;height: 45px;width: 200px;top: 130px;left: 0px;}
+.menu .item5{position: absolute;height: 45px;width: 200px;top: 228px;left: 0px;}
+.menu .item6{position: absolute;height: 45px;width: 200px;top: 270px;left: 0px;}
+.menu .item7{position: absolute;height: 45px;width: 200px;top: 370px;left: 0px;}
+.menu .item8{position: absolute;height: 45px;width: 200px;top: 415px;left: 0px;}
+/* .menu .item9{position: absolute;height: 45px;width: 200px;top: 535px;left: 0px;} */
