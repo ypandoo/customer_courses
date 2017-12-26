@@ -1,17 +1,29 @@
-.menu{
+.menu0{
   position: absolute;
     height: 460px;
     width: 200px;
     top: 235px;
-    left: 150px;
+    left: 130px;
 }
 
-.menu .item1{position: absolute;height: 45px;width: 200px;top: 0px;left: 0px;}
-.menu .item2{position: absolute;height: 42px;width: 200px;top: 45px;left: 0px;}
-.menu .item3{position: absolute;height: 42px;width: 200px;top: 86px;left: 0px;}
-.menu .item4{position: absolute;height: 45px;width: 200px;top: 130px;left: 0px;}
-.menu .item5{position: absolute;height: 45px;width: 200px;top: 228px;left: 0px;}
-.menu .item6{position: absolute;height: 45px;width: 200px;top: 270px;left: 0px;}
-.menu .item7{position: absolute;height: 45px;width: 200px;top: 370px;left: 0px;}
-.menu .item8{position: absolute;height: 45px;width: 200px;top: 415px;left: 0px;}
+.menu0 .item1{position: absolute;height: 45px;width: 200px;top: 0px;left: 0px;}
+.menu0 .item2{position: absolute;height: 45px;width: 200px;top: 105px;left: 0px;}
+.menu0 .item3{position: absolute;height: 45px;width: 200px;top: 150px;left: 0px;}
+
+.menu{
+position: absolute;
+    height: 460px;
+    width: 220px;
+    top: 310px;
+    left: 120px;
+}
+
+.menu .item1{position: absolute;height: 55px;width: 200px;top: 0px;left: 0px;}
+.menu .item2{position: absolute;height: 60px;width: 200px;top: 55px;left: 0px;}
+.menu .item3{position: absolute;height: 55px;width: 200px;top: 115px;left: 0px;}
+.menu .item4{position: absolute;height: 60px;width: 200px;top: 175px;left: 0px;}
+.menu .item5{position: absolute;height: 55px;width: 200px;top: 230px;left: 0px;}
+.menu .item6{position: absolute;height: 55px;width: 200px;top: 285px;left: 0px;}
+.menu .item7{position: absolute;height: 55px;width: 200px;top: 330px;left: 0px;}
+.menu .item8{position: absolute;height: 55px;width: 200px;top: 375px;left: 0px;}
 /* .menu .item9{position: absolute;height: 45px;width: 200px;top: 535px;left: 0px;} */

@@ -1,4 +1,4 @@
-var pageCookie = 'luxury2';
+var pageCookie = 'innovation1';
 
 window.learnedPage = parseInt(getCookie(pageCookie));
 if (!window.learnedPage) {
