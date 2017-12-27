@@ -53,86 +53,28 @@
       z-index: 999;
     }
 
-    .circle-pos1 {
-      top: 290px;
-      left: 93px;
-    }
+    .circle-pos1 {top: 270px;left: 73px;}
+    .circle-pos2 {top: 270px;left: 283px;}
+    .circle-pos3 {    top: 270px;
+    left: 510px;}
+    .circle-pos4 {    top: 270px;
+    left: 703px;}
+    .circle-pos5 {top: 270px;
+    left: 903px;}
+    .circle-pos6 {    top: 270px;
+    left: 1078px;}
 
-    .circle-pos2 {
-      top: 290px;
-      left: 283px;
-    }
 
-    .circle-pos3 {
-      top: 290px;
-      left: 470px;
-    }
-
-    .circle-pos4 {
-      top: 290px;
-      left: 643px;
-    }
-
-    .circle-pos5 {
-      top: 290px;
-      left: 823px;
-    }
-
-    .circle-pos6 {
-      top: 290px;
-      left: 988px;
-    }
-
-    .answer {
-      position: absolute;
-      font-size: 16px;
-      color: #bdbaba;
-    }
-
-    .answer0 {
-      top: 160px;
-      left: 39px;
-    }
-
-    .answer1 {
-      top: 350px;
-      left: 39px;
-    }
-
-    .answer2 {
-      top: 380px;
-      left: 39px;
-    }
-
-    .answer3 {
-      top: 410px;
-      left: 39px;
-    }
-
-    .answer4 {
-      top: 440px;
-      left: 39px;
-    }
-
-    .answer5 {
-      top: 470px;
-      left: 39px;
-    }
-
-    .answer6 {
-      top: 500px;
-      left: 39px;
-    }
-
-    .answer7 {
-      top: 530px;
-      left: 39px;
-    }
-
-    .answer8 {
-      top: 575px;
-      left: 39px;
-    }
+    .answer{position: absolute; font-size: 18px;color: #bdbaba;}
+    .answer0 {top: 160px;left: 39px;}
+    .answer1 {top: 310px;left: 39px;}
+    .answer2 {top: 345px;left: 39px;}
+    .answer3 {top: 380px;left: 39px;}
+    .answer4 {top: 415px;left: 39px;}
+    .answer5 {top: 450px;left: 39px;}
+    .answer6 {top: 485px;left: 39px;}
+    .answer7 {top: 535px;left: 39px;}
+    .answer8 {top: 595px;left: 39px;}
 
     .hidden {
       display: none;
@@ -145,8 +87,16 @@
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
-    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
-  <div class="pos1">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/28/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
+    <div style="     position: absolute;
+    top: 105px;
+    left: 90px;
+    width: 1200px;">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
     <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
@@ -162,6 +112,7 @@
     <div class="answer answer5 hidden" id="4"><span class="text-title">5. 第四代iDrive触控系统</span>, 搭载了ConnectedDrive娱乐互联系统，同时还配备汉字手写功能。低配车型功能略有差别。</div>
     <div class="answer answer6 hidden" id="5"><span class="text-title">6. 行李箱盖自动操控（低配选装，其余标配）</span>，在后保险杠下方快速、定向移动脚部即可通过传感器开启尾门。</div>
 
+    </div>
     <!-- <div class="answer answer7 hidden" id="7" style="font-size:16px; color:red; border:1px solid red; line-height:25px; height:25px; width:250px; border-radius:25px; text-align:center">技术虽全面，但并无优势</div>
     <div class="answer answer8 hidden" id="8">多功能触摸板、车道保持辅助和盲点辅助系统早已在奔驰车型上使用，并不是最新的科技装配。GLC SUV装配的碰撞预防辅助系统增强版</div> -->
 
@@ -185,7 +136,7 @@
       </a>
     </div>
   </div>
-  <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

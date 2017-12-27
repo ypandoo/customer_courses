@@ -23,18 +23,18 @@
     position: absolute;
     width: 1200px;
     height: 680px;
-    background-image: url(images/54/02.png);
+    /* background-image: url(images/54/02.png);
     background-size: 100% 100%;
     left: 50%;
-    margin-left: -600px;
+    margin-left: -600px; */
     top: 0px;
     }
 
     .pos2 {
       position: absolute;
       width: 1000px;
-      left: 50%;
-      margin-left: -500px;
+      /* left: 50%;
+      margin-left: -500px; */
       top: 580px;
     }
 
@@ -53,86 +53,25 @@
       z-index: 999;
     }
 
-    .circle-pos1 {
-      top: 360px;
-      left: 93px;
-    }
 
-    .circle-pos2 {
-      top: 360px;
-      left: 273px;
-    }
+    .circle-pos1 {top: 270px;left: 73px;}
+    .circle-pos2 {top: 270px;left: 263px;}
+    .circle-pos3 {top: 270px;left: 450px;}
+    .circle-pos4 {top: 270px;left: 643px;}
+    .circle-pos5 {top: 270px;left: 843px;}
+    .circle-pos6 {top: 270px;left: 1028px;}
 
-    .circle-pos3 {
-      top: 360px;
-      left: 450px;
-    }
 
-    .circle-pos4 {
-      top: 360px;
-      left: 613px;
-    }
-
-    .circle-pos5 {
-      top: 360px;
-      left: 783px;
-    }
-
-    .circle-pos6 {
-      top: 360px;
-      left: 938px;
-    }
-
-    .answer {
-      position: absolute;
-      font-size: 16px;
-      color: #bdbaba;
-    }
-
-    .answer0 {
-      top: 160px;
-      left: 79px;
-    }
-
-    .answer1 {
-      top: 400px;
-      left: 79px;
-    }
-
-    .answer2 {
-      top: 450px;
-      left: 79px;
-    }
-
-    .answer3 {
-      top: 480px;
-      left: 79px;
-    }
-
-    .answer4 {
-      top: 510px;
-      left: 79px;
-    }
-
-    .answer5 {
-      top: 540px;
-      left: 79px;
-    }
-
-    .answer6 {
-      top: 570px;
-      left: 79px;
-    }
-
-    .answer7 {
-      top: 610px;
-      left: 79px;
-    }
-
-    .answer8 {
-      top: 575px;
-      left: 79px;
-    }
+    .answer{position: absolute; font-size: 18px;color: #bdbaba;}
+    .answer0 {top: 160px;left: 39px;}
+    .answer1 {top: 310px;left: 39px;}
+    .answer2 {top: 365px;left: 39px;}
+    .answer3 {top: 400px;left: 39px;}
+    .answer4 {top: 435px;left: 39px;}
+    .answer5 {top: 470px;left: 39px;}
+    .answer6 {top: 505px;left: 39px;}
+    .answer7 {top: 555px;left: 39px;}
+    .answer8 {top: 615px;left: 39px;}
 
     .hidden {
       display: none;
@@ -145,8 +84,16 @@
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
-    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
-  <div class="pos1">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/54/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
+    <div style="    position: absolute;
+    top: 150px;
+    left: 70px;
+    width: 1200px;">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
     <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
@@ -187,7 +134,7 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {
