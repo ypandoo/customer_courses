@@ -20,6 +20,32 @@
     html {
       background-image: url(images/bg.jpg);
     }
+
+    .animate1{
+      background: url(images/bg.jpg) no-repeat -470px -200px;
+    left: 470px;
+    top: 200px;
+    width: 430px;
+    height: 440px;
+    position: absolute;
+    }
+
+    .animate2{
+    background: url(images/bg.jpg) no-repeat -900px -190px;
+    left: 900px;
+    top: 190px;
+    width: 480px;
+    height: 500px;
+    position: absolute;
+    z-index: 99;
+    }  
+    
+    .animate3{
+      background: url(images/bg.jpg) no-repeat -470px -410px;
+      left: 470px; top: 410px;
+      width: 880px; height: 250px;
+      position: absolute;z-index: 9;
+    }
   </style>
 </head>
 
@@ -32,9 +58,15 @@
 
     <div class="menu0">
       <a onclick="checkPage(3)"><div class="item1"></div></a>
-      <a onclick="checkPage(4)"><div class="item2"></div></a>
-      <a onclick="checkPage(5)"><div class="item3"></div></a>
+      <a onclick="checkPage(7)"><div class="item2"></div></a>
+      <a onclick="checkPage(9)"><div class="item3"></div></a>
+      <a onclick="checkPage(10)"><div class="item4"></div></a>
+      <a onclick="checkPage(12)"><div class="item5"></div></a>
     </div>
+
+        <div id="ani1" class="animate1"></div>
+        <div id="ani2" class="animate2"></div>
+        <!-- <div id="ani3" class="animate3"></div> -->
 
   </div>
 
@@ -49,6 +81,13 @@
         <div class="prev fr"></div>
       </a>
     </div>
+  </div>
+
+  <div id="audio_tip_div" class="mydiv">
+    <span>本页有语音播放<br>请您注意音量和使用耳机</span>
+    <span>
+      <button onclick="audioPlay()" >确认</button>
+    </span>
   </div>
 
   <div id="right_div" class="mydiv" style="display:none;">
@@ -75,6 +114,69 @@
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
 
+        //    插入音乐
+        var url = "images/04/audio.mp3";
+        window.audio = document.createElement("audio");
+        var source = document.createElement("source");
+        audio.id = "audio";
+        source.type = "audio/mpeg";
+        source.src = url;
+        source.autoplay = "autoplay";
+        audio.addEventListener("ended", function () {
+          //audio.play();
+          setAnimate('ani2', 100, 'slideOutDown', 'duration2s');
+        }, false);
+        audio.appendChild(source);
+        
+
+    function audioPlay(){
+
+      $('#audio_tip_div').hide();
+      audio.play();
+
+      setAnimate('ani1', 2000, 'slideOutDown', 'duration20s');
+      
+      // setAnimate('ani3', 6000, 'slideOutDown', 'duration5s');
+    }
+
+
+
+
+      // //    关闭音乐
+      // var musicBtn = $("#musicDiv");
+      // var musicStop = $("#musicDiv .musicStop");
+      // var musicOn = $("#musicDiv .musicOn");
+      // musicBtn.on("click", function () {
+      //   if (audio.paused) {
+      //     //musicOn.show();
+      //     //musicStop.hide();
+      //     audio.play();
+      //     musicBtn.removeClass('spin').addClass('spin');
+      //   } else {
+      //     //musicOn.hide();
+      //     //musicStop.show();
+      //     audio.pause();
+      //     musicBtn.removeClass('spin');
+      //   }
+      // });
+
+      // function playvedio() {
+      //   $('#myvedio').css("display", "block");
+      //   //$(this).parent().find("video")[0].play();
+      //   var elem = document.getElementById("myvedio");
+      //   /*if (elem.requestFullscreen) {
+      //     //elem.requestFullscreen();
+      //     elem.play();
+      //   } else if (elem.mozRequestFullScreen) {
+      //     //elem.mozRequestFullScreen(); 
+      //     elem.play();
+      //   } else if (elem.webkitRequestFullscreen) {
+      //     //elem.webkitRequestFullscreen(); */
+
+      //   elem.play();
+      //   audio.pause();
+      //   musicBtn.removeClass('spin');
+      // }
   </script>
 </body>
 

@@ -372,3 +372,21 @@ td
     -webkit-animation-duration: 2s !important;
     /* Safari 和 Chrome */
 }
+
+.duration10s {
+    animation-duration: 10s !important;
+    -webkit-animation-duration: 10s !important;
+    /* Safari 和 Chrome */
+}
+
+.duration9s {
+    animation-duration: 9s !important;
+    -webkit-animation-duration: 9s !important;
+    /* Safari 和 Chrome */
+}
+
+.duration20s {
+    animation-duration: 20s !important;
+    -webkit-animation-duration: 20s !important;
+    /* Safari 和 Chrome */
+}
