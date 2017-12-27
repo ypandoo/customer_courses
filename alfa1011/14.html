@@ -54,23 +54,23 @@
     }
 
     .circle-pos1 {top: 270px;left: 73px;}
-    .circle-pos2 {top: 270px;left: 243px;}
-    .circle-pos3 {top: 270px;left: 410px;}
-    .circle-pos4 {top: 270px;left: 563px;}
-    .circle-pos5 {top: 270px;left: 723px;}
-    .circle-pos6 {top: 270px;left: 888px;}
+    .circle-pos2 {top: 270px;left: 263px;}
+    .circle-pos3 {top: 270px;left: 450px;}
+    .circle-pos4 {top: 270px;left: 643px;}
+    .circle-pos5 {top: 270px;left: 843px;}
+    .circle-pos6 {top: 270px;left: 1028px;}
 
 
-    .answer{position: absolute; font-size: 14px;color: #bdbaba;}
+    .answer{position: absolute; font-size: 18px;color: #bdbaba;}
     .answer0 {top: 160px;left: 39px;}
     .answer1 {top: 310px;left: 39px;}
-    .answer2 {top: 335px;left: 39px;}
-    .answer3 {top: 360px;left: 39px;}
-    .answer4 {top: 385px;left: 39px;}
-    .answer5 {top: 410px;left: 39px;}
-    .answer6 {top: 435px;left: 39px;}
-    .answer7 {top: 475px;left: 39px;}
-    .answer8 {top: 515px;left: 39px;}
+    .answer2 {top: 345px;left: 39px;}
+    .answer3 {top: 380px;left: 39px;}
+    .answer4 {top: 415px;left: 39px;}
+    .answer5 {top: 450px;left: 39px;}
+    .answer6 {top: 485px;left: 39px;}
+    .answer7 {top: 535px;left: 39px;}
+    .answer8 {top: 595px;left: 39px;}
 
 
     .hidden {
@@ -83,8 +83,16 @@
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
-    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
-  <div class="pos1">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/14/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
+    <div style="    position: absolute;
+    top: 85px;
+    left: 70px;
+    width: 1200px;">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
     <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
@@ -92,7 +100,7 @@
     <div class="circle circle-pos5 animated infinite pulse" onclick="show(4)">5</div>
     <div class="circle circle-pos6 animated infinite pulse" onclick="show(5)">6</div>
 
-    <div class="answer answer0 " id="">提到高科技，感觉往往并不是奔驰擅长的技能，但在近几年奔驰的产品中，还确实出现不少先进的且夺人眼球的高科技装备，GLC也是如此。</div>
+    <!-- <div class="answer answer0 " id="">提到高科技，感觉往往并不是奔驰擅长的技能，但在近几年奔驰的产品中，还确实出现不少先进的且夺人眼球的高科技装备，GLC也是如此。</div> -->
     <div class="answer answer1 hidden" id="0"><span class="text-title">1. 全LED智能照明系统</span>，高配车型采用LED光源，实现了智能照明的功能，可感知不同道路情况，适应调整大灯的照明效果。</div>
     <div class="answer answer2 hidden" id="1"><span class="text-title">2. 安全辅助系统</span>，GLC SUV的安全辅助系统包括：主动式制动辅助系统、自动泊车系统、盲点辅助系统和车道保持辅助系统等。</div>
     <div class="answer answer3 hidden" id="2"><span class="text-title">3. 多功能触摸板</span>，该触摸板集成于中央控制面板的扶手中，可对多媒体系统进行控制和操作，支持手写输入及多点触控。</div>
@@ -102,8 +110,9 @@
 
     <div class="answer answer7 hidden" id="7" style="font-size:16px; color:red; border:1px solid red; line-height:25px; height:25px; width:250px; border-radius:25px; text-align:center">技术虽全面，但并无优势</div>
     <div class="answer answer8 hidden" id="8">多功能触摸板、车道保持辅助和盲点辅助系统早已在奔驰车型上使用，并不是最新的科技装配。GLC SUV装配的碰撞预防辅助系统增强版</div>
+    </div>
 
-  </div>
+
   </div>
 
 
@@ -124,7 +133,7 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

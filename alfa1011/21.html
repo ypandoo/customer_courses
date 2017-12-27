@@ -20,22 +20,20 @@
     }
 
     .pos1 {
-      position: absolute;
-      width: 1100px;
-      height: 630px;
-      background-image: url(images/21/02.png);
-      background-size: 100% 100%;
-      left: 50%;
-      margin-left: -550px;
-      top: 60px;
+position: absolute;
+    width: 1100px;
+    height: 630px;
+    /* background-image: url(images/21/02.png); */
+    /* background-size: 100% 100%; */
+    top: 90px;
+    left: 60px;
     }
 
     .pos2 {
-      position: absolute;
-      width: 1000px;
-      left: 50%;
-      margin-left: -500px;
-      top: 580px;
+    position: absolute;
+    width: 1000px;
+    top: 610px;
+    left: 110;
     }
 
     .circle {
@@ -54,23 +52,23 @@
     }
 
     .circle-pos1 {
-    top: 325px;
-    right: 255px;
+    top: 315px;
+    right: 205px;
     }
 
     .circle-pos2 {
 top: 420px;
-    right: 280px;
+    right: 225px;
     }
 
     .circle-pos3 {
     top: 450px;
-    right: 310px;
+    right: 255px;
     }
 
     .circle-pos4 {
 top: 460px;
-    right: 230px;
+    right: 175px;
     }
 
     .circle-pos5 {
@@ -96,41 +94,41 @@ left: 245px;
     cursor: pointer;
     background-image: url(images/21/a1.jpg);
     background-size: 100% 100%;
-    width: 120px;
-    height: 110px;
+    width: 135px;
+    height: 120px;
     position: absolute;
     top: -30px;
-    left: 490px;
+    left: 520px;
     }
 
     .answer2 {
     background-image: url(images/21/a2.jpg);
     background-size: 100% 100%;
-    width: 120px;
-    height: 110px;
+    width: 135px;
+    height: 120px;
     position: absolute;
     top: -30px;
-    left: 620px;
+    left: 665px;
     }
 
     .answer3 {
-background-image: url(images/21/a3.jpg);
+    background-image: url(images/21/a3.jpg);
     background-size: 100% 100%;
-    width: 120px;
-    height: 110px;
+    width: 135px;
+    height: 120px;
     position: absolute;
     top: -30px;
-    right: 130px;
+    right: 55px;
     }
 
     .answer4 {
     background-image: url(images/21/a4.jpg);
     background-size: 100% 100%;
-    width: 120px;
-    height: 110px;
+    width: 135px;
+    height: 120px;
     position: absolute;
     top: -30px;
-    right: 0px;
+    right: -90px;
     }
 
     .answer5 {
@@ -199,8 +197,12 @@ width: 200px;
   </style>
 </head>
 
-<body onload="reload()" id="scaleable-wrapper">
-    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+  
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/21/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
   <div class="pos1">
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
@@ -243,7 +245,7 @@ width: 200px;
     </div>
   </div>
 
-  <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {
