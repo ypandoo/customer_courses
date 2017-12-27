@@ -15,26 +15,26 @@
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <style>
     html {
-      background-image: url(images/bg.jpg);
-      background-size: cover;
+      /* background-image: url(images/bg.jpg); */
+      background-size: 100% 100%;
     }
 
     .pos1 {
       position: absolute;
-      width: 1000px;
-      height: 570px;
-      background-image: url(images/05/02.png);
+      width: 1400px;
+      height: 795px;
+      /* background-image: url(images/05/02.png); */
       background-size: 100% 100%;
       left: 50%;
-      margin-left: -500px;
+      margin-left: -700px;
       top: 90px;
     }
 
     .pos2 {
       position: absolute;
-      width: 1000px;
+      width: 1400px;
       left: 50%;
-      margin-left: -500px;
+      margin-left: -700px;
       top: 580px;
     }
 
@@ -54,33 +54,33 @@
     }
 
     .circle-pos1 {
-top: 443px;
-    left: 503px;
+    top: 600px;
+    left: 688px;
     }
 
     .circle-pos2 {
-top: 442px;
-    left: 137px;
+    top: 600px;
+    left: 253px;
     }
 
     .circle-pos3 {
-    top: 440px;
-    left: 829px;
+    top: 600px;
+    left: 1100px;
     }
 
     .circle-pos4 {
-    top: 224px;
-    left: 570px;
+    top: 330px;
+    left: 787px;
     }
 
     .circle-pos5 {
-top: 424px;
-    left: 366px;
+    top: 564px;
+    left: 573px;
     }
 
     .circle-pos55 {
-    top: 333px;
-    left: 389px;
+    top: 473px;
+    left: 596px;
     }
 
 
@@ -88,21 +88,21 @@ top: 424px;
     cursor: pointer;
     background-image: url(images/05/03-1.png);
     background-size: 100% 100%;
-    width: 532px;
-    height: 100px;
+    width: 660px;
+    height: 120px;
     position: absolute;
-    top: 433px;
-    left: 233px;
+    top: 585px;
+    left: 350px;
     }
 
     .answer2 {
     background-image: url(images/05/03-2.png);
     background-size: 100% 100%;
-    width: 130px;
+    width: 140px;
     height: 100px;
     position: absolute;
-    top: 434px;
-    left: 103px;
+    top: 590px;
+    left: 215px;
     }
 
     .answer3 {
@@ -111,28 +111,28 @@ top: 424px;
     width: 130px;
     height: 100px;
     position: absolute;
-    top: 433px;
-    left: 765px;
+    top: 590px;
+    left: 1015px;
     }
 
     .answer4 {
     background-image: url(images/05/03-4.png);
     background-size: 100% 100%;
-    width: 140px;
+    width: 150px;
     height: 30px;
     position: absolute;
-    top: 220px;
-    left: 565px;
+    top: 326px;
+    left: 780px;
     }
 
     .answer5 {
 background-image: url(images/05/03-5.png);
     background-size: 100% 100%;
-    width: 280px;
+    width: 320px;
     height: 130px;
     position: absolute;
-    top: 325px;
-    left: 240px;
+    top: 465px;
+    left: 426px;
     }
 
 
@@ -144,8 +144,12 @@ background-image: url(images/05/03-5.png);
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
-    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
-  <div class="pos1">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/05/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
     <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
@@ -159,7 +163,6 @@ background-image: url(images/05/03-5.png);
     <div class="answer4 hidden" id="3"></div>
     <div class="answer5 hidden" id="4"></div>
 
-  </div>
   </div>
 
 
@@ -180,7 +183,7 @@ background-image: url(images/05/03-5.png);
     </div>
   </div>
 
-  <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

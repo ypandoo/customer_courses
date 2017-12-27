@@ -54,22 +54,22 @@
     }
 
     .circle-pos1 {
-    top: 341px;
+    top: 421px;
     left: 885px;
     }
 
     .circle-pos2 {
-    top: 647px;
+    top: 727px;
     left: 684px;
     }
 
     .circle-pos3 {
-top: 350px;
+top: 430px;
     left: 1190px;
     }
 
     .circle-pos4 {
-    top: 621px;
+    top: 701px;
     left: 930px;
     }
 
@@ -91,7 +91,7 @@ top: 350px;
     width: 200px;
     height: 110px;
     position: absolute;
-    top: 258px;
+    top: 338px;
     left: 713px;
     }
 
@@ -101,7 +101,7 @@ top: 350px;
     width: 200px;
     height: 110px;
     position: absolute;
-    top: 564px;
+    top: 644px;
     left: 513px;
     }
 
@@ -111,7 +111,7 @@ top: 350px;
     width: 200px;
     height: 40px;
     position: absolute;
-    top: 343px;
+    top: 423px;
     left: 1025px;
     }
 
@@ -121,7 +121,7 @@ background-image: url(images/06/03-4.png);
     width: 200px;
     height: 120px;
     position: absolute;
-    top: 530px;
+    top: 610px;
     left: 765px;
     }
 
@@ -144,8 +144,12 @@ background-image: url(images/06/03-4.png);
 </head>
 
 <body onload="reload()" id="scaleable-wrapper">
-    <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
-  <div class="pos1">
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/06/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
     <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
     <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
     <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
@@ -182,7 +186,7 @@ background-image: url(images/06/03-4.png);
     </div>
   </div>
 
-  <script type="text/javascript" src="js/resize.js"></script>
+  <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {

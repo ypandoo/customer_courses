@@ -21,20 +21,19 @@ html
 
 .pos1{
     position: absolute;
-    width: 1200px;
-    height: 550px;
+    width: 1440px;
+    height: 750px;
     background-image: url(images/04/02.png);
     background-size: 100% 100%;
     left: 50%;
-    margin-left: -600px;
-    top: 60px;
+    margin-left: -720px;
 }
 
 .pos2{
     position: absolute;
-    width: 1200px;
+    width: 1440px;
     left: 50%;
-    margin-left: -600px;
+    margin-left: -720px;
     top: 620px;
 }
 
@@ -53,69 +52,77 @@ html
 }
 
 .circle-pos1{
-    top: 425px;
-    left: 385px;
+    top: 485px;
+    left: 465px;
 }
 
 .circle-pos2{
-    top: 420px;
-    left: 330px;
+top: 480px;
+    left: 390px;
 }
 
 .circle-pos3{
-    top: 480px;
-    left: 385px;
+    top: 545px;
+    left: 455px;
 }
 
 .circle-pos11{
-    top: 405px;
-    right: 240px;
+    top: 460px;
+    right: 340px;
 }
 
 .circle-pos22{
-    top: 435px;
-    right:192px;
+    top: 490px;
+    right:292px;
 }
 
 .circle-pos33{
-  top: 393px;
-    right: 192px;
+  top: 448px;
+    right: 292px;
 }
 
 .circle-pos44{
-  top: 495px;
-    right: 193px;
+  top: 550px;
+    right: 293px;
+}
+
+.answer{
+position: absolute;
+    top: 620px;
+    left: 150px;
+    height: 200px;
+    width: 1075px;
 }
 
 .answer1{
   cursor: pointer;
   background-image: url(images/04/03-1.png);
   background-size: 100% 100%;
-  width: 150px;
-  height: 85px;
+  width: 160px;
+  height: 90px;
   position: absolute;
   top: 0px;
-  left:85px;
+  left:0px;
 }
 
 .answer2{
   background-image: url(images/04/03-2.png);
   background-size: 100% 100%;
-  width: 150px;
-  height: 85px;
+  width: 160px;
+  height: 90px;
   position: absolute;
   top: 0px;
-  left: 250px;
+  left: 170px;
 }
 
 .answer3{
   background-image: url(images/04/03-3.png);
   background-size: 100% 100%;
-  width: 150px;
-  height: 85px;
+  width: 160px;
+  height: 90px;
   position: absolute;
     top: 0px;
-    left: 415px;
+    left: 340px;
 }
 
 .answer11{
@@ -124,18 +131,18 @@ html
     width: 130px;
     height: 35px;
     position: absolute;
-    top: 0px;
-    left: 670px;
+    top: 5px;
+    left: 650px;
 }
 
 .answer22{
   background-image: url(images/04/04-2.png);
   background-size: 100% 100%;
     width: 130px;
-    height: 35px;
+    height: 38px;
     position: absolute;
-    top: 0px;
-    left: 900px;
+    top: 5px;
+    left: 880px;
 }
 
 .answer33{
@@ -144,8 +151,8 @@ html
   width: 130px;
   height: 35px;
   position: absolute;
-    top: 50px;
-    left: 670px;
+    top: 55px;
+    left: 650px;
 }
 
 .answer44{
@@ -154,19 +161,24 @@ html
     width: 130px;
     height: 35px;
     position: absolute;
-    top: 50px;
-    left: 900px;
+    top: 55px;
+    left: 880px;
 }
 
 .hidden{
   display: none;
+  /* display: block; */
 }
 
 </style>
 </head>
 <body onload="reload()" id="scaleable-wrapper">
-  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1440px;height: 750px;">
-      <div class="pos1">  
+  <div id="resize" style="top: 50%; left: 50%;position: absolute;width: 1400px;height: 787px;">
+
+    <div class="animated fadeInUp" style="position: absolute; width:100%; top: 0%; left: 0;height:100%">
+      <img src="images/04/01.jpg" width="100%" height="100%" alt="" />
+    </div>
+
           <div class="circle circle-pos1 animated infinite pulse" onclick="show(0)">1</div>
           <div class="circle circle-pos2 animated infinite pulse" onclick="show(1)">2</div>
           <div class="circle circle-pos3 animated infinite pulse" onclick="show(2)">3</div>
@@ -175,17 +187,17 @@ html
           <div class="circle circle-pos22 animated infinite pulse" onclick="show(4)">2</div>
           <div class="circle circle-pos33 animated infinite pulse" onclick="show(5)">3</div>
           <div class="circle circle-pos44 animated infinite pulse" onclick="show(6)">4</div>
-        </div>
-      
-        <div class="pos2">
-          <div class="answer1 hidden" id="0"></div>
-          <div class="answer2 hidden" id="1"></div>
-          <div class="answer3 hidden" id="2"></div>
-          <div class="answer11 hidden" id="3"></div>
-          <div class="answer22 hidden" id="4"></div>
-          <div class="answer33 hidden" id="5"></div>
-          <div class="answer44 hidden" id="6"></div>
-        </div>
+
+          <div class="answer">
+          <div class=" answer1 hidden" id="0"></div>
+          <div class=" answer2 hidden" id="1"></div>
+          <div class=" answer3 hidden" id="2"></div>
+          <div class=" answer11 hidden" id="3"></div>
+          <div class=" answer22 hidden" id="4"></div>
+          <div class=" answer33 hidden" id="5"></div>
+          <div class=" answer44 hidden" id="6"></div>
+          </div>
+
   </div>
 
 
@@ -207,7 +219,7 @@ html
   </div>
 </div>
 
-<script type="text/javascript" src="js/resize.js"></script>
+<script type="text/javascript" src="js/resize2.js"></script>
 <script type="text/javascript">
   $(function(){
     setTimeout(function(){
