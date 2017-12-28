@@ -21,10 +21,10 @@
     }
 
         .answer{
-    position: absolute;
-    top: 300px;
-    width: 680px;
-    left: 480px;
+position: absolute;
+    top: 308px;
+    width: 502px;
+    left: 598px;
     height: 320px;
     }
 
@@ -32,10 +32,10 @@
       position: absolute;
     }
 
-    .answer1{top:0;left: 0px;       width: 170px; height: 170px;}
-    .answer2{top:0;left:175px;      width: 170px; height: 170px;}
-    .answer3{top:0;left:350px;      width: 160px; height: 170px;}
-    .answer4{top:0px;left:515px;    width: 160px; height: 170px;}
+    .answer1{top:0;left: 0px;       width: 200px; height: 150px;}
+    .answer2{top:0;left:280px;      width: 220px; height: 150px;}
+    .answer3{top:160px;left:0px;      width: 200px; height: 150px;}
+    .answer4{top:160px;left:280px;    width: 220px; height: 150px;}
 
     .answer5{top:175px;left:0px;   width: 170px; height: 150px;}
     .answer6{top:175px;left:175px;   width: 175px;height: 150px;}
@@ -48,7 +48,7 @@
     .submit{position: absolute;height: 50px;
     width: 100px;
     bottom: -75px;
-    left: 262px;
+    left: 192px;
     cursor: pointer;
     }
 
@@ -83,11 +83,11 @@
           <div id="ans2" onclick="toggleAns(2)" class="answer0 answer2"></div>
           <div id="ans3" onclick="toggleAns(3)" class="answer0 answer3"></div>
           <div id="ans4" onclick="toggleAns(4)" class="answer0 answer4"></div>
-          <div id="ans5" onclick="toggleAns(5)" class="answer0 answer5"></div>
+          <!-- <div id="ans5" onclick="toggleAns(5)" class="answer0 answer5"></div>
           <div id="ans6" onclick="toggleAns(6)" class="answer0 answer6"></div>
           
           <div id="ans7" onclick="toggleAns(7)" class="answer0 answer7"></div>
-          <div id="ans8" onclick="toggleAns(8)" class="answer0 answer8"></div>
+          <div id="ans8" onclick="toggleAns(8)" class="answer0 answer8"></div> -->
           <div class="submit-btn submit" onclick="checkAnswer()">确定</div>
             </div>
 
@@ -100,7 +100,7 @@
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">15/18</div>
+      <div class="page fr">15/25</div>
       <div class="next fr disabled hidden" disabled data="16.html"></div>
       <a href="14.html">
         <div class="prev fr"></div>
@@ -144,13 +144,9 @@
 
       function checkAnswer() {
           if (ansArray1[1] == 1
-            && ansArray1[2] == 0
-            && ansArray1[3] == 0
-            && ansArray1[4] == 0
-            && ansArray1[5] == 0
-            && ansArray1[6] == 1
-            && ansArray1[7] == 1
-            && ansArray1[8] == 0) {
+            && ansArray1[2] == 1
+            && ansArray1[3] == 1
+            && ansArray1[4] == 1) {
               $('#right_div').show();
           } else {
             $('#error_div').show();

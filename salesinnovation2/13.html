@@ -20,7 +20,7 @@
       background-image: url(images/bg.jpg);
     }
 
-                    .animate1{
+    .animate1{
       background: url(images/bg.jpg) no-repeat -470px -200px;
       left: 470px; top: 200px; 
       width: 880px; height: 250px;
@@ -32,6 +32,48 @@
       left: 470px; top: 450px;
       width: 880px; height: 210px;
       position: absolute;z-index: 9;
+    }
+
+    .answer{position: absolute;top: 320px;width: 370px;left: 820px;height: 300px;}
+    .answer0{position: absolute;cursor: pointer;}
+    .answer1{top:0;left: 0px;       width: 100%; height: 50px;}
+    .answer2{top:80px;left:0px;      width: 100%; height: 50px;}
+    .answer3{top:160px;left:0px;      width: 100%; height: 50px;}
+    .answer4{top:250px;left:0px;    width: 100%; height: 50px;}
+    .answer0.selected{border: 2px solid #0f2e62;box-shadow: 2px 2px;}
+
+    .line{position: absolute;top: 320px;width: 100px;left: 720px;height: 300px;}
+    .line-item1{position: absolute; top: 90px;width: 140px;left: -30px; height: 3px; background: #013074;
+                transform:rotate(-60deg);-ms-transform:rotate(-60deg); -moz-transform:rotate(-60deg); 
+                -webkit-transform:rotate(-60deg); -o-transform:rotate(-60deg);}
+    .line-item2{position: absolute; top: 120px;width: 100px;left: 0; height: 3px; background: #013074;
+                transform:rotate(-30deg);-ms-transform:rotate(-30deg); -moz-transform:rotate(-30deg); 
+                -webkit-transform:rotate(-30deg); -o-transform:rotate(-30deg);}
+    .line-item3{position: absolute; top: 170px;width: 100px;left: 0; height: 3px; background: #013074;
+                transform:rotate(30deg);-ms-transform:rotate(30deg); -moz-transform:rotate(30deg); 
+                -webkit-transform:rotate(30deg); -o-transform:rotate(30deg);}
+    .line-item4{position: absolute; top: 200px;width: 150px;left: -30px; height: 3px; background: #013074;
+                transform:rotate(60deg);-ms-transform:rotate(60deg); -moz-transform:rotate(60deg); 
+                -webkit-transform:rotate(60deg); -o-transform:rotate(60deg);}
+
+
+
+
+
+    .submit{position: absolute;
+    height: 50px;
+    width: 100px;
+    bottom: -85px;
+    left: -80px;
+    cursor: pointer;
+    }
+
+    .submit-btn{
+          line-height: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    background: rgba(102, 127, 176, 0.81);
+    color: white;
     }
   </style>
 </head>
@@ -50,6 +92,22 @@
       <a onclick="checkPage(10)"><div class="item4"></div></a>
       <a onclick="checkPage(12)"><div class="item5"></div></a>
     </div>
+
+
+    <div class="answer">
+      <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1"></div>
+      <div id="ans2" onclick="toggleAns(2)" class="answer0 answer2"></div>
+      <div id="ans3" onclick="toggleAns(3)" class="answer0 answer3"></div>
+      <div id="ans4" onclick="toggleAns(4)" class="answer0 answer4"></div>
+      <div class="submit-btn submit" onclick="checkAnswer()">确定</div>
+    </div>
+
+    <div class="line">
+      <div id="line1" class="line-item1 hidden"></div>
+      <div id="line2" class="line-item2 hidden"></div>
+      <div id="line3" class="line-item3 hidden"></div>
+      <div id="line4" class="line-item4 hidden"></div>
+    </div>
 <!-- 
         <div id="ani1" class="animate1"></div>
         <div id="ani2" class="animate2"></div> -->
@@ -60,7 +118,7 @@
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">13/18</div>
+      <div class="page fr">13/25</div>
       <div class="next fr disabled" disabled data="14.html"></div>
       <a href="12.html">
         <div class="prev fr"></div>
@@ -71,7 +129,7 @@
   <div id="right_div" class="mydiv" style="display:none;">
     <span>恭喜你答对了!</span>
     <span>
-      <button onclick="gotoBack(20)" id="right_text">确认进入下一页</button>
+      <button onclick="gotoBack(14)" id="right_text">确认进入下一页</button>
     </span>
   </div>
   
@@ -91,8 +149,30 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-                setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
-                setAnimate('ani2', 3000, 'slideOutDown', 'duration5s');
+      setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
+      setAnimate('ani2', 3000, 'slideOutDown', 'duration5s');
+
+       var ansArray1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+       var current = -1;
+        function toggleAns(index) {
+          current = index;
+
+          $('#line1').hide();
+          $('#line2').hide();
+          $('#line3').hide();
+          $('#line4').hide();
+
+          $('#line'+index).fadeIn();
+        }
+
+        function checkAnswer() {
+          if (current == 4) {
+            $('#right_div').show();
+          } else {
+            $('#error_div').show();
+            return;
+          }
+        }
   </script>
 </body>
 
