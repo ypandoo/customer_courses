@@ -1,0 +1,16 @@
+    .menu {
+        position: absolute;
+        height: 480px;
+        width: 200px;
+        top: 230px;
+        left: 160px;
+    }
+
+    .item1 {position: absolute;height: 50px;width: 100%;top: 0px;left: 0px;}
+    .item2 {position: absolute;height: 50px;width: 100%;top: 50px;left: 0px}
+    .item3 {position: absolute;height: 50px;width: 100%;top: 160px;left: 0px;}
+    .item4 {position: absolute;height: 40px;width: 100%;top: 210px;left: 0px;}
+    .item5 {position: absolute;height: 40px;width: 100%;top: 250px;left: 0px}
+    .item6 {position: absolute;height: 45px;width: 100%;top: 290px;left: 0px;}
+    .item7 {position: absolute;height: 45px;width: 100%;top: 390px;left: 0px;}
+    .item8 {position: absolute;height: 45px;width: 100%;top: 432px;left: 0px;}
