@@ -116,7 +116,7 @@
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">14/25</div>
+      <div class="page fr">14/17</div>
       <div class="next fr disabled hidden" disabled data="15.html"></div>
       <a href="13.html">
         <div class="prev fr"></div>
@@ -172,17 +172,17 @@
     function checkAnswer() {
       if (ansArray1[1] == 0
         && ansArray1[2] == 1
-        && ansArray1[3] == 0
-        && ansArray1[4] == 1
+        && ansArray1[3] == 1
+        && ansArray1[4] == 0
         && ansArray1[5] == 1) {
       } else {
         $('#error_div').show();
         return;
       }
 
-      if (ansArray2[1] == 1
+      if (ansArray2[1] == 0
         && ansArray2[2] == 0
-        && ansArray2[3] == 0
+        && ansArray2[3] == 1
         && ansArray2[4] == 0
         && ansArray2[5] == 1) {
           $('#right_div').show();
