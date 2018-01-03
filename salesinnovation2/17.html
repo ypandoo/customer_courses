@@ -69,6 +69,16 @@
       display: block;
     }
 
+              .animate1{
+    background: #01014c;
+    left: 483px;
+    top: 515px;
+    width: 810px;
+    height: 168px;
+    position: absolute;
+    z-index: 9;
+    }
+
 
   </style>
 </head>
@@ -87,6 +97,8 @@
       <a onclick="checkPage(13)"><div class="item4"></div></a>
       <a onclick="checkPage(14)"><div class="item5"></div></a>
     </div>
+
+    <div id="ani1" class="animate1"></div>
 
     <!-- <div class="answer">
       <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1">
@@ -164,6 +176,7 @@
             return;
           }
         }
+        setAnimate('ani1', 1000, 'fadeOut', 'duration5s');
   </script>
 </body>
 

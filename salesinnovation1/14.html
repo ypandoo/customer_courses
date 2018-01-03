@@ -72,6 +72,43 @@
     background: rgba(102, 127, 176, 0.81);
     color: white;
     }
+
+      .animate1{
+    background: url(images/bg.jpg) no-repeat -470px -200px;
+    left: 470px;
+    top: 200px;
+    width: 880px;
+    height: 90px;
+    position: absolute;
+    z-index: 9;
+    }
+
+    .animate2{
+      background: url(images/bg.jpg) no-repeat -470px -290px;
+      left: 470px; top: 290px;
+      width: 880px; height: 50px;
+      position: absolute;z-index: 9;
+    }  
+    
+    .animate3{
+    background: url(images/bg.jpg) no-repeat -470px -355px;
+    left: 470px;
+    top: 355px;
+    width: 880px;
+    height: 50px;
+    position: absolute;
+    z-index: 9;
+    }
+
+    .animate4{
+    background: url(images/bg.jpg) no-repeat -470px -395px;
+    left: 470px;
+    top: 395px;
+    width: 880px;
+    height: 50px;
+    position: absolute;
+    z-index: 9;
+    }
   </style>
 </head>
 
@@ -89,6 +126,11 @@
       <a onclick="checkPage(13)"><div class="item4"></div></a>
       <a onclick="checkPage(14)"><div class="item5"></div></a>
     </div>
+
+        <div id="ani1" class="animate1"></div>
+        <div id="ani2" class="animate2"></div>
+        <div id="ani3" class="animate3"></div>
+        <div id="ani4" class="animate4"></div>
 
   </div>
 
@@ -128,50 +170,55 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-    var ansArray1 = [0, 0, 0, 0, 0, 0, 0];
-    function toggleAns(index) {
-      if (ansArray1[index] == 1) {
-        ansArray1[index] = 0;
-        $('#ans' + index).removeClass('selected');
-      } else {
-        ansArray1[index] = 1;
-        $('#ans' + index).addClass('selected');
-      }
-    }
+    // var ansArray1 = [0, 0, 0, 0, 0, 0, 0];
+    // function toggleAns(index) {
+    //   if (ansArray1[index] == 1) {
+    //     ansArray1[index] = 0;
+    //     $('#ans' + index).removeClass('selected');
+    //   } else {
+    //     ansArray1[index] = 1;
+    //     $('#ans' + index).addClass('selected');
+    //   }
+    // }
 
-    var ansArray2 = [0, 0, 0, 0, 0, 0, 0];
-    function toggleAns2(index) {
-      if (ansArray2[index] == 1) {
-        ansArray2[index] = 0;
-        $('#ans' + (index + 5)).removeClass('selected');
-      } else {
-        ansArray2[index] = 1;
-        $('#ans' + (index + 5)).addClass('selected');
-      }
-    }
+    // var ansArray2 = [0, 0, 0, 0, 0, 0, 0];
+    // function toggleAns2(index) {
+    //   if (ansArray2[index] == 1) {
+    //     ansArray2[index] = 0;
+    //     $('#ans' + (index + 5)).removeClass('selected');
+    //   } else {
+    //     ansArray2[index] = 1;
+    //     $('#ans' + (index + 5)).addClass('selected');
+    //   }
+    // }
 
-    function checkAnswer() {
-      if (ansArray1[1] == 0
-        && ansArray1[2] == 1
-        && ansArray1[3] == 0
-        && ansArray1[4] == 1
-        && ansArray1[5] == 1) {
-      } else {
-        $('#error_div').show();
-        return;
-      }
+    // function checkAnswer() {
+    //   if (ansArray1[1] == 0
+    //     && ansArray1[2] == 1
+    //     && ansArray1[3] == 0
+    //     && ansArray1[4] == 1
+    //     && ansArray1[5] == 1) {
+    //   } else {
+    //     $('#error_div').show();
+    //     return;
+    //   }
 
-      if (ansArray2[1] == 1
-        && ansArray2[2] == 0
-        && ansArray2[3] == 0
-        && ansArray2[4] == 0
-        && ansArray2[5] == 1) {
-          $('#right_div').show();
-      } else {
-        $('#error_div').show();
-      }
+    //   if (ansArray2[1] == 1
+    //     && ansArray2[2] == 0
+    //     && ansArray2[3] == 0
+    //     && ansArray2[4] == 0
+    //     && ansArray2[5] == 1) {
+    //       $('#right_div').show();
+    //   } else {
+    //     $('#error_div').show();
+    //   }
 
-    }
+    // }
+
+    setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
+    setAnimate('ani2', 3000, 'slideOutDown', 'duration5s');
+    setAnimate('ani3', 6000, 'slideOutDown', 'duration5s');
+    setAnimate('ani4', 9000, 'slideOutDown', 'duration5s');
   </script>
 </body>
 
