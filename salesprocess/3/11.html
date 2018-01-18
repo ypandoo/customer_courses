@@ -15,6 +15,10 @@
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <link rel="stylesheet" href="css/menu.css">
+
+          <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
+          <!-- If you'd like to support IE8 -->
+          <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   <style>
     html {
       background-image: url(images/bg.jpg);
@@ -41,6 +45,12 @@
       <a onclick="checkPage(25)"><div class="item8"></div></a>
       <a onclick="checkPage(26)"><div class="item9"></div></a>
     </div>
+
+        <div style="position:absolute;left: 1000px;top: 450px;">
+          <video id="my-video" class="video-js" controls="" preload="auto" width="330" height="240" data-setup="{}">
+            <source src="../vedioc/3-11.mp4" type="video/mp4">
+          </video>
+        </div>
 
   </div>
 
