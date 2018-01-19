@@ -28,15 +28,15 @@
     }
 
     .animate2{
-      background: url(images/bg.jpg) no-repeat -470px -360px;
-      left: 470px; top: 360px;
-      width: 880px; height: 50px;
+      background: url(images/bg.jpg) no-repeat -470px -260px;
+      left: 470px; top: 260px;
+      width: 880px; height: 300px;
       position: absolute;z-index: 9;
     }  
     
     .animate3{
-      background: url(images/bg.jpg) no-repeat -470px -410px;
-      left: 470px; top: 410px;
+      background: url(images/bg.jpg) no-repeat -470px -560px;
+      left: 470px; top: 560px;
       width: 880px; height: 250px;
       position: absolute;z-index: 9;
     }
@@ -51,14 +51,14 @@
     </div>
 
     <div class="menu0">
-      <a onclick="checkPage(4)"><div class="item1"></div></a>
-      <a onclick="checkPage(5)"><div class="item2"></div></a>
-      <a onclick="checkPage(8)"><div class="item3"></div></a>
-      <a onclick="checkPage(9)"><div class="item4"></div></a>
-      <a onclick="checkPage(10)"><div class="item5"></div></a>
+      <a onclick="checkPage(3)"><div class="item1"></div></a>
+      <a onclick="checkPage(99)"><div class="item2"></div></a>
+      <a onclick="checkPage(99)"><div class="item3"></div></a>
+      <a onclick="checkPage(99)"><div class="item4"></div></a>
+      <!-- <a onclick="checkPage(10)"><div class="item5"></div></a> -->
     </div>
 
-    <div id="ani1" class="animate1"></div>
+    <!-- <div id="ani1" class="animate1"></div> -->
     <div id="ani2" class="animate2"></div>
     <div id="ani3" class="animate3"></div>
 
@@ -100,7 +100,7 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-                setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
+                // setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
                 setAnimate('ani2', 3000, 'slideOutDown', 'duration5s');
                 setAnimate('ani3', 6000, 'slideOutDown', 'duration5s');
   </script>

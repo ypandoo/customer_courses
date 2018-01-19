@@ -22,6 +22,16 @@
       background-image: url(images/bg.jpg);
     }
 
+    
+        .number{
+    top: 450px;
+    left: 500px;
+    font-size: 60px;
+    color: #cacaca;
+    position: absolute;
+    letter-spacing: 1px;
+    }
+
   </style>
 </head>
 
@@ -39,6 +49,8 @@
       <a onclick="checkPage(23)"><div class="item4"></div></a>
       <!-- <a onclick="checkPage(10)"><div class="item5"></div></a> -->
     </div>
+
+    <!-- <div id="number" class="number">10s</div> -->
 
 
 
@@ -72,7 +84,7 @@
         <div class="out fr">退出</div>
       </a>
       <div class="page fr">03/26</div>
-      <div class="next fr" data="04.html"></div>
+      <div class="next fr hidden" data="04.html"></div>
       <a href="02.html">
         <div class="prev fr"></div>
       </a>
@@ -81,7 +93,22 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
+        // var time = 10;
+        // var t;
+        // function timedCount() {
+        //   // $('#advice_div').hide();
+        //   $('#number').html(time + 's');
+        //   time--;
+        //   if (time <= 0) {
+        //     $('#number').hide();
+        //     // audio.play();
+        //     $('.next').removeClass('hidden');
+        //   } else {
+        //     t = setTimeout("timedCount()", 1000);
+        //   }
+        // }
 
+        // timedCount();
 
   </script>
 </body>
