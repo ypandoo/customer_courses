@@ -19,6 +19,44 @@
     html {
       background-image: url(images/bg.jpg);
     }
+
+                .answer{
+    position: absolute;
+    top: 334px;
+    width: 670px;
+    left: 491px;
+    height: 155px;
+    cursor: pointer;
+    }
+
+    .answer0{
+      position: absolute;
+    }
+
+    .answer1{top:0;left:0px;      width: 170px; height: 46px;}
+    .answer2{top:0;left:265px;     width: 170px; height: 46px;}
+    .answer3{top:0;left:530px;     width: 170px; height: 46px;}
+    .answer4{top:110px;left:0px;   width: 170px; height: 46px;}
+    .answer5{top:110px;left:265px;  width: 170px; height: 46px;}
+    .answer6{top:110px;left:530px;     width: 170px; height: 46px;}
+    .answer7{top:110px;left:140px; width: 110px; height: 46px;}
+    .answer8{top:110px;left:280px;width: 110px; height: 46px;}
+    .answer9{top:110px;left:420px;width: 110px; height: 46px;}
+   .answer10{top:110px;left:560px;width: 110px; height: 46px;}
+
+    .answer0.selected{    background-image: url(images/check.png);
+    background-size: 18px 15px;
+    background-repeat: no-repeat;
+    background-position: 139px 15px;
+}
+
+
+    .submit{    position: absolute;
+    height: 50px;
+    width: 100px;
+    bottom: -85px;
+    left: 282px;
+    }
   </style>
 </head>
 
@@ -41,6 +79,22 @@
       <a onclick="checkPage(26)"><div class="item9"></div></a>
     </div>
 
+        <div class="answer">
+          <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1"></div>
+          <div id="ans2" onclick="toggleAns(2)" class="answer0 answer2"></div>
+          <div id="ans3" onclick="toggleAns(3)" class="answer0 answer3"></div>
+          <div id="ans4" onclick="toggleAns(4)" class="answer0 answer4"></div>
+          <div id="ans5" onclick="toggleAns(5)" class="answer0 answer5"></div>
+          <div id="ans6" onclick="toggleAns(6)" class="answer0 answer6"></div>
+        
+          <!-- <div id="ans7" onclick="toggleAns(7)" class="answer0 answer7"></div>
+          <div id="ans8" onclick="toggleAns(8)" class="answer0 answer8"></div>
+          <div id="ans9" onclick="toggleAns(9)" class="answer0 answer9"></div>
+          <div id="ans10" onclick="toggleAns(10)" class="answer0 answer10"></div> -->
+        
+          <div class="submit" onclick="checkAnswer()"></div>
+        </div>
+
   </div>
 
   <div class="p-n-r">
@@ -59,7 +113,7 @@
   <div id="right_div" class="mydiv" style="display:none;">
     <span>恭喜你答对了!</span>
     <span>
-      <button onclick="gotoBack(20)" id="right_text">确认进入下一页</button>
+      <button onclick="gotoBack(24)" id="right_text">确认进入下一页</button>
     </span>
   </div>
   
@@ -79,7 +133,30 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
+      var ansArray1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      function toggleAns(index) {
+        if (ansArray1[index] == 1) {
+          ansArray1[index] = 0;
+          $('#ans' + index).removeClass('selected');
+        } else {
+          ansArray1[index] = 1;
+          $('#ans' + index).addClass('selected');
+        }
+      }
 
+      function checkAnswer() {
+        if (ansArray1[1] == 1
+          && ansArray1[2] == 0
+          && ansArray1[3] == 1
+          && ansArray1[4] == 0
+          && ansArray1[5] == 1
+          && ansArray1[6] == 0) {
+          $('#right_div').show();
+        } else {
+          $('#error_div').show();
+        }
+
+      }
   </script>
 </body>
 
