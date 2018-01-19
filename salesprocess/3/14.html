@@ -15,6 +15,10 @@
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <link rel="stylesheet" href="css/menu.css">
+
+                <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
+                <!-- If you'd like to support IE8 -->
+                <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   <style>
     html {
       background-image: url(images/bg.jpg);
@@ -135,10 +139,20 @@
     </div>
 
         <!-- <div id="ani1" class="animate1"></div> -->
-        <div id="ani2" class="animate2"></div>
-        <div id="ani3" class="animate3"></div>
+        <!-- <div id="ani2" class="animate2"></div>
+        <div id="ani3" class="animate3"></div> -->
         <!-- <div id="ani4" class="animate4"></div> -->
+<div style="position:absolute;left: 810px;top: 570px;">
+  <video id="my-video" class="video-js" controls="" preload="auto" width="215" height="160" data-setup="{}">
+    <source src="../vedioc/3-14-1.mp4" type="video/mp4">
+  </video>
+</div>
 
+<div style="position:absolute;left: 1035px;top: 460px;">
+  <video id="my-video" class="video-js" controls="" preload="auto" width="280" height="200" data-setup="{}">
+    <source src="../vedioc/3-14-2.mp4" type="video/mp4">
+  </video>
+</div>
   </div>
 
   <div class="p-n-r">
@@ -223,8 +237,8 @@
     // }
 
     // setAnimate('ani1', 1000, 'slideOutDown', 'duration2s');
-    setAnimate('ani2', 3000, 'slideOutDown', 'duration5s');
-    setAnimate('ani3', 6000, 'slideOutDown', 'duration5s');
+    // setAnimate('ani2', 1000, 'slideOutDown', 'duration5s');
+    // setAnimate('ani3', 4000, 'slideOutDown', 'duration5s');
     // setAnimate('ani4', 9000, 'slideOutDown', 'duration5s');
   </script>
 </body>
