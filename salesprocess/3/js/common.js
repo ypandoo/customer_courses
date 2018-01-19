@@ -1,5 +1,5 @@
 var select_index = 0;
-var total_page = 28;
+var total_page = 26;
 function fullscreen(){  
     elem=window.parent.document.body;  
     if(elem.webkitRequestFullScreen){  
