@@ -19,6 +19,33 @@
     html {
       background-image: url(images/bg.jpg);
     }
+
+              .animate1{
+    background: url(images/bg.jpg) no-repeat -470px -200px;
+    left: 470px;
+    top: 200px;
+    width: 880px;
+    height:500px;
+    position: absolute;
+    z-index: 9;
+    }
+
+    .animate2{
+      background: url(images/bg.jpg) no-repeat -670px -200px;
+      left: 670px; top: 200px;
+      width: 880px; height: 500px;
+      position: absolute;z-index: 9;
+    }  
+    
+    .animate3{
+    background: url(images/bg.jpg) no-repeat -970px -200px;
+    left: 970px;
+    top: 200px;
+    width: 880px;
+    height: 500px;
+    position: absolute;
+    z-index: 9;
+    }
   </style>
 </head>
 
@@ -40,6 +67,10 @@
       <a onclick="checkPage(25)"><div class="item8"></div></a>
       <a onclick="checkPage(26)"><div class="item9"></div></a>
     </div>
+
+            <div id="ani1" class="animate1"></div>
+            <div id="ani2" class="animate2"></div>
+            <div id="ani3" class="animate3"></div>
 
   </div>
 
@@ -79,7 +110,9 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-
+      setAnimate('ani1', 1000, 'slideOutRight', 'duration2s');
+      setAnimate('ani2', 3000, 'slideOutRight', 'duration5s');
+      setAnimate('ani3', 6000, 'slideOutRight', 'duration5s');
   </script>
 </body>
 

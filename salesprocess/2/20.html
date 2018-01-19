@@ -20,6 +20,32 @@
       background-image: url(images/bg.jpg);
     }
 
+      .animate1{
+    background: url(images/bg.jpg) no-repeat -470px -200px;
+    left: 470px;
+    top: 200px;
+    width: 880px;
+    height: 90px;
+    position: absolute;
+    z-index: 9;
+    }
+
+    .animate2{
+      background: url(images/bg.jpg) no-repeat -470px -290px;
+      left: 470px; top: 290px;
+      width: 880px; height: 50px;
+      position: absolute;z-index: 9;
+    }  
+    
+    .animate3{
+    background: url(images/bg.jpg) no-repeat -470px -355px;
+    left: 470px;
+    top: 355px;
+    width: 880px;
+    height: 50px;
+    position: absolute;
+    z-index: 9;
+    }
     
   </style>
 </head>
@@ -38,6 +64,11 @@
       <a onclick="checkPage(99)"><div class="item4"></div></a>
       <!-- <a onclick="checkPage(10)"><div class="item5"></div></a> -->
     </div>
+
+    <!-- <div id="ani1" class="animate1"></div>
+    <div id="ani2" class="animate2"></div>
+    <div id="ani3" class="animate3"></div> -->
+    <!-- <div id="ani4" class="animate4"></div> -->
 
   </div>
 
@@ -77,7 +108,10 @@
 
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
-
+    // setAnimate('ani1', 1000, 'slideOutRight', 'duration2s');
+    // setAnimate('ani2', 3000, 'slideOutRight', 'duration5s');
+    // setAnimate('ani3', 6000, 'slideOutRight', 'duration5s');
+    // setAnimate('ani4', 9000, 'slideOutDown', 'duration5s');
   </script>
 </body>
 
