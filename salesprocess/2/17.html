@@ -15,6 +15,10 @@
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <link rel="stylesheet" href="css/menu.css">
+
+                  <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
+                  <!-- If you'd like to support IE8 -->
+                  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   <style>
     html {
       background-image: url(images/bg.jpg);
@@ -92,6 +96,12 @@
       <a onclick="checkPage(26)"><div class="item9"></div></a>
     </div>
 
+<div style="position:absolute;left: 1040px;top: 390px;">
+  <video id="my-video" class="video-js" controls="" preload="auto" width="230" height="170" data-setup="{}">
+    <source src="../vedioc/2-17.mp4" type="video/mp4">
+  </video>
+</div>
+
     <!-- <div class="answer">
       <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1">
         <div id="mark1" class="circle"></div>
@@ -115,7 +125,7 @@
       <a href="#">
         <div class="out fr">退出</div>
       </a>
-      <div class="page fr">17/28</div>
+      <div class="page fr">17/29</div>
       <div class="next fr "  data="18.html"></div>
       <a href="16.html">
         <div class="prev fr"></div>
