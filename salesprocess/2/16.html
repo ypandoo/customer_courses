@@ -15,6 +15,10 @@
   <script type="text/javascript" src="js/layer/layer.js"></script>
   <link rel="stylesheet" type="text/css" href="js/layer/skin/default/layer.css">
   <link rel="stylesheet" href="css/menu.css">
+
+                    <link href="http://vjs.zencdn.net/6.4.0/video-js.css" rel="stylesheet">
+                    <!-- If you'd like to support IE8 -->
+                    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   <style>
     html {
       background-image: url(images/bg.jpg);
@@ -59,6 +63,8 @@ position: absolute;
     background: rgba(102, 127, 176, 0.81);
     color: white;
     }
+
+    
   </style>
 </head>
 
@@ -76,6 +82,12 @@ position: absolute;
       <a onclick="checkPage(99)"><div class="item4"></div></a>
       <!-- <a onclick="checkPage(10)"><div class="item5"></div></a> -->
     </div>
+
+<div style="position:absolute;left: 480px;top: 500px;">
+  <video id="my-video" class="video-js" controls="" preload="auto" width="290" height="210" data-setup="{}">
+    <source src="../vedioc/2-16.mp4" type="video/mp4">
+  </video>
+</div>
 
             <!-- <div class="answer">
               <div id="ans1" onclick="toggleAns(1)" class="answer0 answer1"></div>
