@@ -15,6 +15,99 @@
 
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <style>
+    .item {
+    position: absolute;
+    height: 350px;
+    width: 800px;
+    top: 325px;
+    left: 200px;
+    margin: 0
+    }
+
+    .item-box{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+ cursor: pointer;
+    }
+
+    .item1 {
+    top: 80px;
+    left: 180px;
+    }
+
+    .item2 {
+    top: 110px;
+    left: 580px;
+    }
+
+    .item3 {
+    top: 250px;
+    left: 550px;
+    }
+
+    .item4 {
+    top: 200px;
+    left: 100px;
+    }
+
+    .item5 {
+    top: 290px;
+    left: 130px;
+    }
+
+    .item6 {
+    top: 270px;
+    left: 310px;
+    }
+
+    .item7 {
+    top: 210px;
+    left: 355px;
+    }
+
+    .item8 {
+      position: absolute;
+      height: 100%;
+      width: 100px;
+      top: 0px;
+      left: 0px;
+    }
+
+    .item-box .box{
+    height: 20px;
+    width: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #444444;
+    box-sizing: border-box;
+    }
+
+    .item .active {
+      border: 1px solid white;
+      border-radius: 50px
+    }
+
+    .confirm-box {
+      position: absolute;
+      height: 40px;
+      width: 150px;
+      top: 150px;
+      left: 50%;
+      margin-left: -75px;
+      text-align: center;
+      border: 1px solid white;
+      line-height: 40px;
+      font-size: 16px;
+      border-radius: 5px;
+      letter-spacing: 5px;
+    }
+
+    .hide{
+      display: none;
+    }
   </style>
 </head>
 
@@ -35,6 +128,16 @@
       <a onclick="checkPage(7)"><div class="item7"></div></a> -->
     </div>
 
+    <div class="item">
+      <div class="item-box item1 " onclick="clickQuestion(1)"><div class="box animated infinite pulse hide" id="box1"></div></div>
+      <div class="item-box item2 " onclick="clickQuestion(2)"><div class="box animated infinite pulse hide" id="box2"></div></div>
+      <div class="item-box item3 " onclick="clickQuestion(3)"><div class="box animated infinite pulse hide" id="box3"></div></div>
+      <div class="item-box item4 " onclick="clickQuestion(4)"><div class="box animated infinite pulse hide" id="box4"></div></div>
+      <div class="item-box item5 " onclick="clickQuestion(5)"><div class="box animated infinite pulse hide" id="box5"></div></div>
+      <div class="item-box item6 " onclick="clickQuestion(6)"><div class="box animated infinite pulse hide" id="box6"></div></div>
+      <div class="item-box item7 " onclick="clickQuestion(7)"><div class="box animated infinite pulse hide" id="box7"></div></div>
+    </div>
+
   </div>
 
   <div class="p-n-r">
@@ -49,14 +152,14 @@
   <div id="right_div" class="mydiv" style="display:none;">
     <span>恭喜你答对了!</span>
     <span>
-      <button onclick="gotoBack(1)" id="right_text">确认进入下一页</button>
+      <button onclick="gotoPage(1)" id="right_text">确认进入下一页</button>
     </span>
   </div>
 
   <div id="error_div" class="mydiv" style="display:none;">
     <span>错了，请返回章节重新学习! 也可使用目录快速切换哦！</span>
     <span>
-      <button onclick="gotoBack(0)" id="error_text">确认并返回</button>
+      <button onclick="gotoPage(0)" id="error_text">确认并返回</button>
     </span>
   </div>
 
@@ -70,9 +173,39 @@
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     window.disableNextPage = 1
-    window.rightPage = 0
-    window.wrongPage = 0
-    window.menuNum = 1
+    window.rightPage = 17
+    window.wrongPage = 10
+    window.menuNum = 0
+
+    var questionNumber = 4;
+    var answer = 0
+    var correctAnswer = 7
+
+    function clean() {
+      for (var i = 1; i <= questionNumber; ++i) {
+        $('.item' + i).removeClass('active')
+      }
+    }
+
+    function clickQuestion(i) {
+      if(answer >= correctAnswer)
+        return
+      
+      $('#box' + i).removeClass('hide')
+      answer++
+
+      if(answer == correctAnswer)
+          $('#right_div').fadeIn();
+    }
+
+    function confirm() {
+      event.stopPropagation();
+      if (answer == correctAnswer) {
+        $('#right_div').fadeIn();
+      } else {
+        $('#error_div').fadeIn();
+      }
+    }
   </script>
 </body>
 
