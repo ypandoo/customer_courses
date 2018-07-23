@@ -62,6 +62,7 @@ function loadMenu(){
 
 function gotoPage(right) {
     var page_num = 0
+    window.rightPage = window.currentPage+1
     right == 1 ? page_num = window.rightPage : page_num = window.wrongPage
 
     if (page_num < 10) {
