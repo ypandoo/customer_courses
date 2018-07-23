@@ -15,6 +15,98 @@
 
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <style>
+    .item {
+      position: absolute;
+      height: 100px;
+      width: 260px;
+      top: 325px;
+      left: 200px;
+      cursor: pointer;
+    }
+
+    .item1 {
+      position: absolute;
+      height: 50px;
+      width: 50%;
+      top: 0px;
+      left: 0px;
+    }
+
+    .item2 {
+      position: absolute;
+      height: 50px;
+      width: 50%;
+      top: 0px;
+      left: 50%;
+    }
+
+    .item3 {
+      position: absolute;
+      height: 50px;
+      width: 50%;
+      top: 50px;
+      left: 0px;
+    }
+
+    .item4 {
+      position: absolute;
+      height: 50px;
+      width: 50%;
+      top: 50px;
+      left: 50%;
+    }
+
+    .item5 {
+      position: absolute;
+      height: 100%;
+      width: 160px;
+      top: 0px;
+      left: 500px
+    }
+
+    .item6 {
+      position: absolute;
+      height: 100%;
+      width: 150px;
+      top: 0px;
+      left: 670px;
+    }
+
+    .item7 {
+      position: absolute;
+      height: 100%;
+      width: 150px;
+      top: 0px;
+      left: 820px;
+    }
+
+    .item8 {
+      position: absolute;
+      height: 100%;
+      width: 100px;
+      top: 0px;
+      left: 0px;
+    }
+
+    .item .active {
+      border: 1px solid white;
+      border-radius: 50px
+    }
+
+    .confirm-box {
+      position: absolute;
+      height: 40px;
+      width: 150px;
+      top: 150px;
+      left: 50%;
+      margin-left: -75px;
+      text-align: center;
+      border: 1px solid white;
+      line-height: 40px;
+      font-size: 16px;
+      border-radius: 5px;
+      letter-spacing: 5px;
+    }
   </style>
 </head>
 
@@ -35,6 +127,14 @@
       <a onclick="checkPage(7)"><div class="item7"></div></a> -->
     </div>
 
+    <div class="item">
+      <div class="item1" onclick="clickQuestion(1)"></div>
+      <div class="item2" onclick="clickQuestion(2)"></div>
+      <div class="item3" onclick="clickQuestion(3)"></div>
+      <div class="item4" onclick="clickQuestion(4)"></div>
+      <div class="confirm-box" onclick="confirm()">确定</div>
+    </div>
+
   </div>
 
   <div class="p-n-r">
@@ -49,14 +149,14 @@
   <div id="right_div" class="mydiv" style="display:none;">
     <span>恭喜你答对了!</span>
     <span>
-      <button onclick="gotoBack(1)" id="right_text">确认进入下一页</button>
+      <button onclick="gotoPage(1)" id="right_text">确认进入下一页</button>
     </span>
   </div>
 
   <div id="error_div" class="mydiv" style="display:none;">
-    <span>错了，请返回章节重新学习! 也可使用左侧目录快速切换哦！</span>
+    <span>错了，请返回章节重新学习! 也可使用目录快速切换哦！</span>
     <span>
-      <button onclick="gotoBack(0)" id="error_text">确认并返回</button>
+      <button onclick="gotoPage(0)" id="error_text">确认并返回</button>
     </span>
   </div>
 
@@ -70,9 +170,34 @@
   <script type="text/javascript" src="js/resize2.js"></script>
   <script type="text/javascript">
     window.disableNextPage = 1
-    window.rightPage = 0
-    window.wrongPage = 0
+    window.rightPage = 24
+    window.wrongPage = 19
     window.menuNum = 1
+
+    var questionNumber = 4;
+    var answer = 0
+    var correctAnswer = 1
+
+    function clean() {
+      for (var i = 1; i <= questionNumber; ++i) {
+        $('.item' + i).removeClass('active')
+      }
+    }
+
+    function clickQuestion(i) {
+      clean()
+      $('.item' + i).addClass('active')
+      answer = i
+    }
+
+    function confirm() {
+      event.stopPropagation();
+      if (answer == correctAnswer) {
+        $('#right_div').fadeIn();
+      } else {
+        $('#error_div').fadeIn();
+      }
+    }
   </script>
 </body>
 

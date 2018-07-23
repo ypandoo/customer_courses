@@ -49,14 +49,14 @@ function loadMenu(){
 
     if(window.menuNum == 0)
         return
-        
-    var menus = '<a onclick="checkPage(3)"><div class="item1"></div></a>\
-      <a onclick="checkPage(4)"><div class="item2"></div></a>\
-      <a onclick="checkPage(5)"><div class="item3"></div></a>\
-      <a onclick="checkPage(6)"><div class="item4"></div></a>\
-      <a onclick="checkPage(7)"><div class="item5"></div></a>\
-      <a onclick="checkPage(7)"><div class="item6"></div></a>\
-      <a onclick="checkPage(7)"><div class="item7"></div></a>'
+
+    var menus = '<a onclick="checkPage(1)"><div class="item1"></div></a>\
+      <a onclick="checkPage(3)"><div class="item2"></div></a>\
+      <a onclick="checkPage(10)"><div class="item3"></div></a>\
+      <a onclick="checkPage(19)"><div class="item4"></div></a>\
+      <a onclick="checkPage(24)"><div class="item5"></div></a>\
+      <a onclick="checkPage(28)"><div class="item6"></div></a>\
+      <a onclick="checkPage(33)"><div class="item7"></div></a>'
     $("#menu1").append(menus)
 }
 
