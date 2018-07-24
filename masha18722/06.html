@@ -16,10 +16,10 @@
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <style>
   .item { position: absolute; height: 200px; width: 420px; top: 300px; left: 200px; cursor: pointer;}
-  .item1 { position: absolute; height: 50px; width: 100%; top: 10px; left: 0px;}
- .item2 { position: absolute; height: 50px; width: 100%; top: 52px; left: 0px;}
- .item3 { position: absolute; height: 50px; width: 100%; top: 100px; left: 0px;}
- .item4 { position: absolute; height: 50px; width: 100%; top: 150px; left: 0px;}
+ .item1 { position: absolute; height: 40px; width: 100%; top: 10px; left: 0px;}
+ .item2 { position: absolute; height: 40px; width: 100%; top: 58px; left: 0px;}
+ .item3 { position: absolute; height: 40px; width: 100%; top: 105px; left: 0px;}
+ .item4 { position: absolute; height: 40px; width: 100%; top: 150px; left: 0px;}
   .item5{position: absolute;height: 100%;width: 160px;top: 0px;left: 500px} 
   .item6 {position: absolute;height: 100%;width: 150px;top:0px;left: 670px;} 
   .item7 {position: absolute;height: 100%;width: 150px;top: 0px;left: 820px;} 
@@ -51,10 +51,10 @@
     </div>
 
     <div class="item">
-      <div class="item1" onclick="clickQuestion(1)"></div>
-      <div class="item2" onclick="clickQuestion(2)"></div>
-      <div class="item3" onclick="clickQuestion(3)"></div>
-      <div class="item4" onclick="clickQuestion(4)"></div>
+      <div class="item1" onclick="clickQuestion(1)" id="item1"></div>
+      <div class="item2" onclick="clickQuestion(2)" id="item2"></div>
+      <div class="item3" onclick="clickQuestion(3)" id="item3"></div>
+      <div class="item4" onclick="clickQuestion(4)" id="item4"></div>
       <div class="confirm-box" onclick="confirm()">确定</div>
     </div>
 
@@ -94,7 +94,7 @@
   <script type="text/javascript">
     window.disableNextPage = 1
     window.rightPage = 7
-    window.wrongPage = 3
+    window.wrongPage = 4
     window.menuNum = 1
 
     var questionNumber = 4;
@@ -106,21 +106,50 @@
       }
     }
 
-    function clickQuestion(i){
-      clean()
-      $('.item'+i).addClass('active')
-      answer = i
-    }
+    /**
+     * Single Select
+     */
+    // function clickQuestion(i){
+    //   clean()
+    //   $('.item'+i).addClass('active')
+    //   answer = i
+    // }
 
-    function confirm(){
-      event.stopPropagation();
-      if (answer == correctAnswer) {
-        $('#right_div').fadeIn();
+    // function confirm(){
+    //   event.stopPropagation();
+    //   if (answer == correctAnswer) {
+    //     $('#right_div').fadeIn();
+    //   } else {
+    //     $('#error_div').fadeIn();
+    //   }
+    // }
+
+
+    /**
+     * Multi-selct
+     */
+    var ansArray1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    function clickQuestion(index) {
+      if (ansArray1[index] == 1) {
+        ansArray1[index] = 0;
+        $('#item' + index).removeClass('active');
       } else {
-        $('#error_div').fadeIn();
+        ansArray1[index] = 1;
+        $('#item' + index).addClass('active');
       }
     }
 
+    function confirm() {
+      if (ansArray1[1] == 1
+        && ansArray1[2] == 1
+        && ansArray1[3] == 1
+        && ansArray1[4] == 0) {
+        $('#right_div').show();
+      } else {
+        $('#error_div').show();
+        return;
+      }
+    }
   </script>
 </body>
 

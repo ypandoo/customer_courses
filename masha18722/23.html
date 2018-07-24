@@ -26,34 +26,34 @@
 
     .item1 {
       position: absolute;
-      height: 50px;
-      width: 50%;
+      height: 40px;
+      width: 48%;
       top: 0px;
       left: 0px;
     }
 
     .item2 {
       position: absolute;
-      height: 50px;
-      width: 50%;
+      height: 40px;
+      width: 48%;
       top: 0px;
-      left: 50%;
+      left: 52%;
     }
 
     .item3 {
       position: absolute;
-      height: 50px;
-      width: 50%;
+      height: 40px;
+      width: 48%;
       top: 50px;
       left: 0px;
     }
 
     .item4 {
       position: absolute;
-      height: 50px;
-      width: 50%;
+      height: 40px;
+      width: 48%;
       top: 50px;
-      left: 50%;
+      left: 52%;
     }
 
     .item5 {
@@ -128,10 +128,10 @@
     </div>
 
     <div class="item">
-      <div class="item1" onclick="clickQuestion(1)"></div>
-      <div class="item2" onclick="clickQuestion(2)"></div>
-      <div class="item3" onclick="clickQuestion(3)"></div>
-      <div class="item4" onclick="clickQuestion(4)"></div>
+      <div class="item1" onclick="clickQuestion(1)" id="item1"></div>
+      <div class="item2" onclick="clickQuestion(2)" id="item2"></div>
+      <div class="item3" onclick="clickQuestion(3)" id="item3"></div>
+      <div class="item4" onclick="clickQuestion(4)" id="item4"></div>
       <div class="confirm-box" onclick="confirm()">确定</div>
     </div>
 
@@ -184,18 +184,48 @@
       }
     }
 
-    function clickQuestion(i) {
-      clean()
-      $('.item' + i).addClass('active')
-      answer = i
+    /**
+     * Single Select
+     */
+    // function clickQuestion(i){
+    //   clean()
+    //   $('.item'+i).addClass('active')
+    //   answer = i
+    // }
+
+    // function confirm(){
+    //   event.stopPropagation();
+    //   if (answer == correctAnswer) {
+    //     $('#right_div').fadeIn();
+    //   } else {
+    //     $('#error_div').fadeIn();
+    //   }
+    // }
+
+
+    /**
+     * Multi-selct
+     */
+    var ansArray1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    function clickQuestion(index) {
+      if (ansArray1[index] == 1) {
+        ansArray1[index] = 0;
+        $('#item' + index).removeClass('active');
+      } else {
+        ansArray1[index] = 1;
+        $('#item' + index).addClass('active');
+      }
     }
 
     function confirm() {
-      event.stopPropagation();
-      if (answer == correctAnswer) {
-        $('#right_div').fadeIn();
+      if (ansArray1[1] == 1
+        && ansArray1[2] == 0
+        && ansArray1[3] == 1
+        && ansArray1[4] == 1) {
+        $('#right_div').show();
       } else {
-        $('#error_div').fadeIn();
+        $('#error_div').show();
+        return;
       }
     }
   </script>
